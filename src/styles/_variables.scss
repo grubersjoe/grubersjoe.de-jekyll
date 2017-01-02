@@ -1,0 +1,47 @@
+// Colors
+$body-bg: hsl(184, 30%, 90%);
+$color-p: hsl(184, 80%, 40%);
+$color-s: hsl(184, 13%, 46%);
+$color-e: hsl(246, 14%, 29%);
+$text-color: #2a2829;
+$link-color: $color-p;
+$link-hover-color: darken($link-color, 12%);
+$brand-primary: $color-p;
+
+// Typography
+$line-height-base: 1.4;
+
+$font-family-base: 'calluna-sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: 'calluna', Georgia, "Times New Roman", Times, serif;
+
+$font-size-base: 26px;
+$font-size-h1: 128px;
+$font-size-h2: 1.75 * $font-size-base;
+$font-size-h3: 1.5 * $font-size-base;
+$font-size-h4: 1.25 * $font-size-base;
+$font-size-h5: $font-size-base;
+$font-size-h6: 0.9 * $font-size-base;
+
+// Headings
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
+$headings-font-family: $font-family-serif;
+$headings-color: $color-s;
+
+// Layout
+$grid-gutter-width: 32px;
+$block: $grid-gutter-width;
+
+$container-tablet:        840px;
+$container-desktop:       $container-tablet;
+$container-large-desktop: $container-desktop;
+
+$padding-base-vertical:     8px;
+$padding-base-horizontal:   16px;
+
+// Navs
+$nav-link-hover-bg: transparent;
+$nav-link-padding: 4px 0;
+
+// Blockquotes
+//$blockquote-font-size:

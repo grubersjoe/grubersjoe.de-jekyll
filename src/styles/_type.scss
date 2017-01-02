@@ -1,0 +1,113 @@
+html {
+	font-size: 8px; // set a reasonable base value for rem unit
+}
+
+body {
+	padding-top: 114px;
+}
+
+h1 {
+	margin: 0 0 48px 0;
+	text-transform: lowercase;
+	line-height: 1.2;
+	color: $color-p;
+
+	a {
+		display: inline;
+		border-bottom: solid 6px darken($body-bg, 16%);
+		transition: border 0.3s ease;
+		will-change: border;
+
+		&:hover,
+		&:focus {
+			color: inherit;
+			text-decoration: none;
+			border-color: darken($body-bg, 28%);
+		}
+	}
+}
+
+h2 {
+	color: $color-s;
+}
+
+nav a, main a {
+	transition: all 0.3s ease;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: fade_out($body-bg, 0.1);
+	padding: 24px 0 ;
+
+	.nav > li {
+		float: left;
+		margin-right: 32px;
+
+		> a {
+			color: $color-s;
+			font-size: floor(($font-size-base * 1.1));
+			font-weight: 600;
+
+			&:hover,
+			&:focus {
+				color: $color-e;
+			}
+		}
+
+		&:first-of-type a {
+			padding-left: 0;
+		}
+
+		&.active > a {
+			&,
+			&:hover,
+			&:focus {
+				cursor: default;
+				color: $color-e;
+				border-bottom: solid 2px $color-e;
+			}
+		}
+	}
+
+
+	//font-family: $font-family-serif;
+	font-weight: 700;
+}
+
+.subtitle {
+	margin-bottom: 2 * $block;
+	font-size: floor(($font-size-base * 1.15));
+	font-weight: 400;
+	//font-style: italic;
+	color: $color-s;
+	text-transform: lowercase;
+
+	@media (min-width: $screen-sm-min) {
+		font-size: ($font-size-base * 1.5);
+	}
+}
+
+blockquote {
+	@include clearfix;
+	padding: 0;
+	font-family: $font-family-serif;
+	font-weight: 700;
+	font-style: italic;
+	color: $color-e;
+	border-left: 0;
+
+	.author {
+		//float: right;
+		//margin-top: 24px;
+		display: block;
+		text-align: right;
+		color: $color-s;
+		font-family: $font-family-base;
+		font-size: $font-size-base;
+		font-weight: 600;
+	}
+}
