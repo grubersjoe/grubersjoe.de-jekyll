@@ -7,13 +7,14 @@ body {
 }
 
 h1 {
-	margin: 0 0 48px 0;
+	margin: 0 0 16px 0;
 	text-transform: lowercase;
 	line-height: 1.2;
 	color: $color-p;
 
 	a {
-		display: inline;
+		padding-bottom: 12px;
+		display: inline-block;
 		border-bottom: solid 6px darken($body-bg, 16%);
 		transition: border 0.3s ease;
 		will-change: border;
@@ -28,11 +29,32 @@ h1 {
 }
 
 h2 {
+	font-weight: 900;
 	color: $color-s;
+}
+
+h3 {
+	color: $color-e;
+	font-family: $font-family-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+	}
 }
 
 nav a, main a {
 	transition: all 0.3s ease;
+}
+
+main a {
+	font-weight: 600;
 }
 
 nav {
@@ -79,7 +101,7 @@ nav {
 }
 
 .subtitle {
-	margin-bottom: 2 * $block;
+	margin-bottom: 48px;
 	font-size: floor(($font-size-base * 1.15));
 	font-weight: 400;
 	//font-style: italic;
@@ -93,6 +115,7 @@ nav {
 
 blockquote {
 	@include clearfix;
+	margin: 32px 0;
 	padding: 0;
 	font-family: $font-family-serif;
 	font-weight: 700;
@@ -101,11 +124,9 @@ blockquote {
 	border-left: 0;
 
 	.author {
-		//float: right;
-		//margin-top: 24px;
-		display: block;
-		text-align: right;
-		color: $color-s;
+		margin-top: 6px;
+		display: inline-block;
+		margin-left: 8px;
 		font-family: $font-family-base;
 		font-size: $font-size-base;
 		font-weight: 600;
