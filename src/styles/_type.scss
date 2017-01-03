@@ -30,7 +30,7 @@ h1 {
 
 h2 {
 	font-weight: 900;
-	color: $color-s;
+	color: $color-p;
 }
 
 h3 {
@@ -100,16 +100,16 @@ nav {
 	font-weight: 700;
 }
 
-.subtitle {
+.lead {
 	margin-bottom: 48px;
-	font-size: floor(($font-size-base * 1.15));
+	font-size: floor(($font-size-base * 1.25));
 	font-weight: 400;
 	//font-style: italic;
 	color: $color-s;
 	text-transform: lowercase;
 
 	@media (min-width: $screen-sm-min) {
-		font-size: ($font-size-base * 1.5);
+		font-size: floor($font-size-base * 1.5);
 	}
 }
 
@@ -118,17 +118,25 @@ blockquote {
 	margin: 32px 0;
 	padding: 0;
 	font-family: $font-family-serif;
-	font-weight: 700;
+	font-weight: 600;
 	font-style: italic;
 	color: $color-e;
 	border-left: 0;
+
+	a {
+		&,
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+	}
 
 	.author {
 		margin-top: 6px;
 		display: inline-block;
 		margin-left: 8px;
 		font-family: $font-family-base;
-		font-size: $font-size-base;
+		font-size: ceil(0.9 * $font-size-base);
 		font-weight: 600;
 	}
 }
