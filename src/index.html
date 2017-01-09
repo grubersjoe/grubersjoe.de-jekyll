@@ -16,21 +16,25 @@
 	<!-- endbuild -->
 
 	<script type="text/javascript">
-		//		var _paq = _paq || [];
-		//		_paq.push(['trackPageView']);
-		//		_paq.push(['enableLinkTracking']);
-		//		(function() {
-		//			var u="//piwik.grubersjoe.de/";
-		//			_paq.push(['setTrackerUrl', u+'piwik.php']);
-		//			_paq.push(['setSiteId', '1']);
-		//			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-		//			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/'; s.parentNode.insertBefore(g,s);
-		//		})();
+		var _paq = _paq || [];
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function () {
+			var u = "//piwik.grubersjoe.de/";
+			_paq.push(['setTrackerUrl', u + 'piwik.php']);
+			_paq.push(['setSiteId', '1']);
+			var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+			g.type = 'text/javascript';
+			g.async = true;
+			g.defer = true;
+			g.src = u + 'js/';
+			s.parentNode.insertBefore(g, s);
+		})();
 	</script>
 </head>
 <body>
 
-<nav>
+<nav id="nav">
 	<div class="container">
 		<ul class="nav">
 			<li class="active"><a href="#about">Über mich</a></li>
@@ -56,7 +60,8 @@
 			Webentwicklung. Ich hatte das große Glück meine Leidenschaft zum Beruf machen zu können, indem ich
 			Informatik
 			studiert habe.</p>
-		<p>Nach zwei Jahren als Webentwickler bei <a href="http://www.ercasdieagentur.de" target="_blank">ercas. die agentur</a> bin ich inzwischen im
+		<p>Nach zwei Jahren als Webentwickler bei <a href="http://www.ercasdieagentur.de" target="_blank">ercas. die
+			agentur</a> bin ich inzwischen im
 			Master-Studium an der <a href="http://www.htwk-leipzig.de">Hochschule für Technik, Wirtschaft und Kultur</a>
 			im schönen
 			Leipzig angelangt.</p>
@@ -70,17 +75,77 @@
 		<header>
 			<h2>Projekte</h2>
 
+			<!--  ontouchstart="this.classList.toggle('hover');" -->
+
+			<!--<div class="project-list">
+				<article class="project card">
+					<div class="flip">
+						<div class="front">
+							<h3 class="title">Chameleon</h3>
+						</div>
+						<div class="back">
+							<p>le back</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="project card">
+					<div class="flip">
+						<div class="front">
+							<h3 class="title">Slide Menu</h3>
+						</div>
+						<div class="back">
+							<p>le back</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="project card">
+					<div class="flip">
+						<div class="front">
+							<h3 class="title">dotfiles</h3>
+						</div>
+						<div class="back">
+							<p>le back</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="project card">
+					<div class="flip">
+						<div class="front">
+							<h3 class="title">Bing Daily Photo</h3>
+						</div>
+						<div class="back">
+							<p>le back</p>
+						</div>
+					</div>
+				</article>
+
+				<article class="project card">
+					<div class="flip">
+						<div class="front">
+							<h3 class="title">WP MVC</h3>
+						</div>
+						<div class="back">
+							<p>le back</p>
+						</div>
+					</div>
+				</article>
+			</div>-->
+
+
 			<div class="project-list">
-				<article class="project-list-item">
+				<article class="project">
 					<header>
 						<h3><a href="https://git.grubersjoe.de/joe/chameleon" target="_blank">Chameleon</a></h3>
 					</header>
 					<div class="body">
 						<div class="description">
-							<p>Chameleon ist ein kleines Python-Modul zur Farb-Manipulation und Umwandlung diverser
+							<p>Chameleon ist ein Python-Modul zur Farb-Manipulation und Umwandlung diverser
 								Farbmodelle. Derzeit ist es ein 1:1 Port der <a
 										href="https://github.com/bgrins/TinyColor" target="_blank">TinyColor</a>
-								JavaScript-Bibliothek und verfügt über den gleichen Funktionsumfang.</p>
+								JavaScript-Bibliothek und verfügt somit über den gleichen Funktionsumfang.</p>
 						</div>
 						<div class="tags">
 							<span class="tag tag-python">Python</span>
@@ -94,7 +159,29 @@
 					</div>
 				</article>
 
-				<article class="project-list-item">
+				<article class="project">
+					<header>
+						<h3><a href="https://github.com/grubersjoe/slide-menu" target="_blank">Slide Menu</a></h3>
+					</header>
+					<div class="body">
+						<div class="description">
+							<p>Slide Menu ist ein kleines jQuery Plugin das ein Standard CSS-Menü in eine
+								multihierarchische Sidebar mit einem Gleit-Effekt verpackt. Die Animationen basieren auf CSS3 Transitions.</p>
+							<p>Das Menü hat viele Optionen und legt Methoden offen, um es programmatisch zu steuern.</p>
+						</div>
+						<div class="tags">
+							<span class="tag">CSS</span>
+							<span class="tag">JavaScript</span>
+						</div>
+						<div class="links">
+							<a href="https://github.com/grubersjoe/slide-menu" target="_blank">
+								<i class="fa fa-github" aria-hidden="true"></i> GitHub Repository
+							</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="project">
 					<header>
 						<h3><a href="https://github.com/grubersjoe/dotfiles" target="_blank">dotfiles</a></h3>
 					</header>
@@ -118,7 +205,7 @@
 					</div>
 				</article>
 
-				<article class="project-list-item">
+				<article class="project">
 					<header>
 						<h3><a href="https://github.com/grubersjoe/bing-daily-photo" target="_blank">Bing Daily
 							Photo</a></h3>
@@ -147,6 +234,7 @@
 	<section id="blog">
 		<header>
 			<h2>Blog</h2>
+			<p>Here be blog posts</p>
 		</header>
 	</section>
 </main>

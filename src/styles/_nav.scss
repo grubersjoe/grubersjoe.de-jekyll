@@ -1,0 +1,45 @@
+nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: fade_out($body-bg, 0.1);
+	padding: 32px 0 24px 0;
+	z-index: $zindex-navbar-fixed;
+
+	.nav > li {
+		float: left;
+		margin-right: 40px;
+
+		> a {
+			color: $color-s;
+			font-size: floor(($font-size-base * 1.1));
+			font-weight: 600;
+			border-bottom: solid 3px transparent;
+
+			&:hover,
+			&:focus {
+				color: $color-t;
+				border-color: darken($body-bg, 12%);
+			}
+		}
+
+		&:first-of-type a {
+			padding-left: 0;
+		}
+
+		&.active > a {
+			&,
+			&:hover,
+			&:focus {
+				cursor: default;
+				color: $color-t;
+				border-bottom: solid 3px $color-t;
+			}
+		}
+	}
+
+
+	//font-family: $font-family-serif;
+	font-weight: 700;
+}

@@ -1,0 +1,60 @@
+.project-list {
+	@include clearfix;
+	margin: 48px 0;
+
+	.card {
+		float: left;
+
+		.title {
+			margin: 0;
+			padding-bottom: 4px;
+			border-bottom: 2px solid #fff;
+			font-weight: 600;
+			//text-align: center;
+		}
+	}
+}
+
+// TODO: move a common file
+.card {
+	perspective: 1000px;
+
+	&, .front, .back {
+		width: (768px / 3);
+		height: (768px / 3);
+	}
+
+	&:hover .flip, &.hover .flip {
+		transform: rotateY(180deg);
+	}
+
+	.flip {
+		position: relative;
+		height: 100%;
+		transition: 0.8s ease;
+		transform-style: preserve-3d;
+	}
+
+	.front, .back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: $block;
+		border-right: solid 16px $body-bg;
+		border-bottom: solid 16px $body-bg;
+		backface-visibility: hidden;
+		background: $color-s;
+	}
+
+	.front {
+		z-index: 2;
+	}
+
+	.back {
+		transform: rotateY(180deg);
+	}
+
+	&, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}

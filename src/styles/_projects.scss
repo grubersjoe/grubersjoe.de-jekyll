@@ -1,0 +1,33 @@
+.project-list {
+	h3 {
+		position: relative;
+		color: $text-color;
+	}
+
+	.links, .tags, .description {
+		margin: 0 0 4rem;
+	}
+
+	.description {
+		padding: 0.5rem 3rem;
+		border-left: 4px solid $color-b;
+
+		p, ul, ol {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.tag {
+	margin: 2rem 0;
+	color: #fff;
+	white-space: nowrap;
+	vertical-align: baseline;
+	cursor: default;
+
+	& + & {
+		margin-left: 6px;
+	}
+}
