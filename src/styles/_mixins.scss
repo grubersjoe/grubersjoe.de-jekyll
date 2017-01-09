@@ -1,0 +1,19 @@
+@mixin media-min($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin media-max($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin include-icon($icon) {
+	@include fa-icon;
+
+	&:before {
+		content: $icon;
+	}
+}

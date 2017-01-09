@@ -8,23 +8,16 @@ body {
 
 h1 {
 	margin: 0 0 16px 0;
-	text-transform: lowercase;
-	line-height: 1.2;
 	color: $color-p;
+	cursor: default;
+	font-weight: 600;
+	line-height: 1.2;
+	text-transform: lowercase;
 
-	a {
+	> span {
 		padding-bottom: 12px;
 		display: inline-block;
 		border-bottom: solid 6px $color-b;
-		transition: border 0.3s ease;
-		will-change: border;
-
-		&:hover,
-		&:focus {
-			color: inherit;
-			text-decoration: none;
-			border-color: darken($color-b, 8%);
-		}
 	}
 }
 
@@ -49,14 +42,21 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-main a {
+section a {
 	font-weight: 600;
+	border-bottom: solid 2px transparent;
+	
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		border-bottom: 2px solid;
+	}
 }
 
 blockquote {
 	@include clearfix;
 	margin: 32px 0;
-	padding: 0;
+	padding: 1rem 4rem;
 	font-family: $font-family-serif;
 	font-weight: 600;
 	font-style: italic;
@@ -73,30 +73,41 @@ blockquote {
 	}
 
 	.author {
-		margin-top: 6px;
-		display: inline-block;
-		margin-left: 8px;
-		font-family: $font-family-base;
-		font-size: $font-size-base;
-		font-weight: 600;
+		margin-top: 1rem;
+		display: block;
+		border-bottom: none !important;
+		font-size: 22px;
+		font-style: normal;
+		font-variant-caps: small-caps;
+
+		&:before {
+			content: '― ';
+		}
 	}
 }
 
-nav a, main a, .btn, .tag {
+nav a,
+main a,
+.btn,
+.tag {
 	transition: color 0.3s, background 0.3s, border 0.3s;
 	will-change: color, background, border;
 }
 
-.btn, .tag {
-	padding: 0.75rem 1.5rem;
-	background: $color-s;
-	border-radius: 2px;
+main a > i {
+	margin-right: 4px;
+}
+
+.btn, .tags {
 	font-size: $font-size-small;
-	font-weight: 600;
 }
 
 .btn {
+	padding: 0.75rem 1.5rem;
+	background: $color-s;
 	border: none;
+	border-radius: 2px;
+	font-weight: 600;
 
 	&.btn-default {
 		border: none;
@@ -109,10 +120,11 @@ nav a, main a, .btn, .tag {
 }
 
 .lead {
-	margin-bottom: 56px;
+	margin-bottom: 40px;
 	font-size: 32px;
 	font-weight: 400;
 	color: $color-s;
+	cursor: default;
 	text-transform: lowercase;
 
 	@media (min-width: $screen-sm-min) {

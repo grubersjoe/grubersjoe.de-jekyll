@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
@@ -19,5 +20,7 @@
 // endbower
 
 @import "type";
+@import "layout";
 @import "nav";
+@import "contact";
 @import "projects";

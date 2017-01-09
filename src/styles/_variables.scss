@@ -24,13 +24,20 @@ $font-size-h2: 48px;
 $font-size-h3: ceil(1.4 * $font-size-base);
 $font-size-h4: ceil(1.2 * $font-size-base);
 
-$blockquote-font-size: 30px;
+$blockquote-font-size: 28px;
 
 // Headings
 $headings-font-weight: 700;
 $headings-line-height: 1.2;
 $headings-font-family: $font-family-serif;
 $headings-color: $color-s;
+
+// Links
+$link-hover-decoration: none;
+
+// Nav
+$nav-link-hover-bg: transparent;
+$nav-link-padding: 2px 0;
 
 // Layout
 $grid-gutter-width: 32px;
@@ -42,10 +49,3 @@ $container-large-desktop: $container-desktop;
 
 $padding-base-vertical:     8px;
 $padding-base-horizontal:   16px;
-
-// Navs
-$nav-link-hover-bg: transparent;
-$nav-link-padding: 2px 0;
-
-// Blockquotes
-//$blockquote-font-size:

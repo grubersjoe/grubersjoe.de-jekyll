@@ -1,0 +1,46 @@
+
+// As is often the case, some devices/browsers need additional code to get CSS to work
+// in the most desired way. These mixins are used to quickly drop in hacks for each element.
+
+.contact {
+	margin-bottom: 56px;
+
+	.icon-mail {
+		@include include-icon($fa-var-paper-plane-o);
+	}
+
+	.icon-github {
+		@include include-icon($fa-var-github);
+	}
+
+	.icon-gitlab {
+		@include include-icon($fa-var-gitlab);
+	}
+
+	.icon-xing {
+		@include include-icon($fa-var-xing);
+	}
+
+	.icon-instagram {
+		@include include-icon($fa-var-instagram);
+	}
+
+	// the order does matter here! (above mixin sets e.g. the font-size)
+	.icon {
+		margin-right: 4rem;
+		font-size: 6rem;
+		color: $color-p;
+		background: transparent;
+		text-align: center;
+
+		& {
+			transition: color 0.3s, transform 1s;
+			will-change: color, transform;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-t;
+		}
+	}
+}

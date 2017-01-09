@@ -1,33 +1,50 @@
 .project-list {
+	.project {
+		margin-bottom: 6rem;
+	}
+
 	h3 {
 		position: relative;
 		color: $text-color;
 	}
 
-	.links, .tags, .description {
-		margin: 0 0 4rem;
-	}
-
 	.description {
-		padding: 0.5rem 3rem;
+		margin-bottom: 3rem;
+		padding: .5rem 0 .5rem 3rem;
 		border-left: 4px solid $color-b;
 
-		p, ul, ol {
-			&:last-child {
-				margin-bottom: 0;
-			}
+		:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
 
-.tag {
-	margin: 2rem 0;
-	color: #fff;
-	white-space: nowrap;
-	vertical-align: baseline;
-	cursor: default;
+.tags {
+	@include list-unstyled;
+	@include clearfix;
 
-	& + & {
-		margin-left: 6px;
+	margin-bottom: 2rem;
+	font-weight: 600;
+
+	> a {
+		position: relative;
+		float: left;
+		border-bottom: none !important;
+
+		&:after {
+			position: relative;
+			top: 3px;
+			margin: 0 1rem;
+			content: '*';
+		}
+
+		&:last-of-type:after {
+			content: '';
+		}
 	}
 }
+
+header + .tags {
+	margin-top: -1rem;
+}
+
