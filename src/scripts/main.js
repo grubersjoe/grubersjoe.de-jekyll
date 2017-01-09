@@ -10,7 +10,7 @@ function easeInOutQuart(t) {
 
 function scrollTo(top) {
 	// FIXME: subtract navbar height
-	viewport.animate({scrollTop: top}, 2000, easeInOutQuart);
+	viewport.stop().animate({scrollTop: top}, 2000, easeInOutQuart);
 }
 
 $('.to-top').click(function () {
@@ -21,12 +21,21 @@ $('.to-top').click(function () {
 $('nav a').click(function (e) {
 	e.preventDefault();
 
-	let to = $($(this).attr('href'));
+	let target = $($(this).attr('href')), top;
 
-	if (!to.length)
+	if (!target.length)
 		return false;
 
-	let top = clamp(to.offset().top, 0, $(document).height());
+	$('nav .active').removeClass('active');
+	$(this).parent().addClass('active');
+
+	if (target.attr('id') == 'about') {
+		top = 0;
+	} else {
+		let offset = target.offset().top - $('#nav').outerHeight() - 32;
+		top = clamp(offset, 0, $(document).height()); // FIXME: not working correctly
+	}
+
 	scrollTo(top);
 });
 
