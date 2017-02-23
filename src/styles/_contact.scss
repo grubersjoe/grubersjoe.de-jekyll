@@ -2,13 +2,12 @@
 // As is often the case, some devices/browsers need additional code to get CSS to work
 // in the most desired way. These mixins are used to quickly drop in hacks for each element.
 
-.contact {
-	@include clearfix;
-	display: inline-block;
-	margin-bottom: 56px;
-	//border: 4px solid scale-color($color-t, $lightness: 80%);
-	//border-left: none;
-	//border-right: none;
+#contact {
+	// @include clearfix;
+	// display: inline-block;
+	margin: 5rem 0;
+	padding-top: 2rem;
+	border-top: 3px solid scale-color($color-s, $lightness: 50%);
 
 	.icon-mail {
 		@include include-icon($fa-var-paper-plane-o);
@@ -34,7 +33,7 @@
 	> .icon {
 		margin-right: 4rem;
 		font-size: 44px;
-		color: $color-p;
+		color: $color-s;
 		text-align: center;
 
 		& {
@@ -44,7 +43,8 @@
 
 		&:hover,
 		&:focus {
-			color: $color-t;
+			color: $color-p;
+			border-bottom: none;
 		}
 	}
 }

@@ -19,7 +19,7 @@ $font-size-base: 22px;
 $font-size-large: floor(($font-size-base * 1.2));
 $font-size-small: floor(($font-size-base * 0.85));
 
-$font-size-h1: 96px;
+$font-size-h1: 92px;
 $font-size-h2: 52px;
 $font-size-h3: floor(1.5 * $font-size-base);
 $font-size-h4: floor(1.25 * $font-size-base);
@@ -43,13 +43,13 @@ $nav-link-padding: 2px 0;
 $grid-gutter-width: 32px;
 $block: $grid-gutter-width;
 
-$container-tablet:        768px;
+$container-tablet:        752px;
 $container-desktop:       $container-tablet;
 $container-large-desktop: $container-desktop;
 
 $padding-base-vertical:     8px;
 $padding-base-horizontal:   16px;
 
-$page-padding-top: 48px;
-// $page-padding-top: 112px;
-$sidebar-width: 200px;
+// $page-padding-top: 48px;
+$page-padding-top: 104px;
+$sidebar-width: 168px;

@@ -1,6 +1,11 @@
 .project-list {
 	.project {
-		margin-bottom: 6rem;
+		padding-top: 4rem;
+		margin-bottom: 4rem;
+
+		&:first-of-type {
+			padding-top: 0;
+		}
 
 		&:last-of-type {
 			margin-bottom: 0;
@@ -13,12 +18,13 @@
 
 	h3 {
 		position: relative;
+		margin-top: 0;
 		color: $text-color;
 	}
 
 	.body {
 		margin-bottom: 3rem;
-		padding: 1rem 0 1rem 3rem;
+		padding: 0.8rem 0 1rem 3rem;
 		// border-left: 3px solid scale-color($color-b, $lightness: 40%);
 		// border-left: 3px solid scale-color($color-s, $lightness: 60%);
 		border-left: 3px solid $color-b;
