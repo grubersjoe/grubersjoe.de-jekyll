@@ -1,45 +1,99 @@
-nav {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	background: fade_out($body-bg, 0.1);
-	padding: 32px 0 24px 0;
-	z-index: $zindex-navbar-fixed;
+#nav-old {
+    display: none;
 
-	.nav > li {
-		float: left;
-		margin-right: 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: fade_out($body-bg, 0.1);
+    padding: 32px 0 24px 0;
+    //font-family: $font-family-serif;
+    font-weight: 700;
+    z-index: $zindex-navbar-fixed;
 
-		> a {
-			color: $color-s;
-			font-size: floor(($font-size-base * 1.1));
-			font-weight: 600;
-			border-bottom: solid 3px transparent;
+    .nav > li {
+        float: left;
+        margin-right: 40px;
 
-			&:hover,
-			&:focus {
-				color: $color-t;
-				border-color: darken($body-bg, 12%);
-			}
-		}
+        > a {
+            color: $color-s;
+            font-size: floor(($font-size-base * 1.1));
+            font-weight: 600;
+            border-bottom: solid 3px transparent;
 
-		&:first-of-type a {
-			padding-left: 0;
-		}
+            &:hover,
+            &:focus {
+                color: $color-t;
+                border-color: darken($body-bg, 12%);
+            }
+        }
 
-		&.active > a {
-			&,
-			&:hover,
-			&:focus {
-				cursor: default;
-				color: $color-t;
-				border-bottom: solid 3px $color-t;
-			}
-		}
-	}
+        &:first-of-type a {
+            padding-left: 0;
+        }
+
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                cursor: default;
+                color: $color-t;
+                border-bottom: solid 3px $color-t;
+            }
+        }
+    }
+}
 
 
-	//font-family: $font-family-serif;
-	font-weight: 700;
+#sidebar {
+    position: fixed;
+    width: $sidebar-width;
+    top: $page-padding-top;
+    left: 50%;
+    margin-left: -$container-tablet / 2 - $sidebar-width;
+    padding: 24px $grid-gutter-width $grid-gutter-width 0;
+    z-index: $zindex-navbar-fixed;
+}
+
+#nav {
+    // display: none;
+
+    // top level
+    > .nav > li > {
+        a {
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+    }
+
+    .nav > li {
+        > a {
+            display: inline-block;
+            padding: .5rem 0;
+            color: $color-t;
+
+            &:hover,
+            &:focus {
+                color: scale-color($color-p, $lightness: -20%)
+            }
+        }
+
+        &.active > a {
+            &, &:focus, &:hover {
+                cursor: default;
+                color: scale-color($color-p, $lightness: -16%);
+            }
+        }
+
+        // sub menus
+        .nav {
+            margin: -1rem 0 1rem 2rem;
+            list-style: circle;
+
+            > li > a {
+                font-size: $font-size-small;
+                font-weight: 400;
+            }
+        }
+    }
 }

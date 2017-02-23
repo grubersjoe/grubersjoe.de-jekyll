@@ -5,6 +5,10 @@
 		&:last-of-type {
 			margin-bottom: 0;
 		}
+
+		& + .project {
+			border-top: 3px double scale-color($color-s, $lightness: 50%);
+		}
 	}
 
 	h3 {
@@ -12,10 +16,12 @@
 		color: $text-color;
 	}
 
-	.description {
+	.body {
 		margin-bottom: 3rem;
-		padding: .5rem 0 .5rem 3rem;
-		border-left: 4px solid $color-b;
+		padding: 1rem 0 1rem 3rem;
+		// border-left: 3px solid scale-color($color-b, $lightness: 40%);
+		// border-left: 3px solid scale-color($color-s, $lightness: 60%);
+		border-left: 3px solid $color-b;
 
 		:last-child {
 			margin-bottom: 0;

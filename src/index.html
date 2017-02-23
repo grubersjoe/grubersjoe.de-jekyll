@@ -1,201 +1,215 @@
 <!doctype html>
 <html lang="de">
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Jonathan Gruber</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jonathan Gruber</title>
 
-	<!-- build:css styles/vendor.css -->
-	<!-- bower:css -->
-	<!-- endbower -->
-	<!-- endbuild -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
 
-	<!-- build:css styles/main.css -->
-	<link rel="stylesheet" href="styles/main.css">
-	<!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 
-	<script type="text/javascript">
-		var _paq = _paq || [];
-		_paq.push(['trackPageView']);
-		_paq.push(['enableLinkTracking']);
-		(function () {
-			var u = "//piwik.grubersjoe.de/";
-			_paq.push(['setTrackerUrl', u + 'piwik.php']);
-			_paq.push(['setSiteId', '1']);
-			var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-			g.type = 'text/javascript';
-			g.async = true;
-			g.defer = true;
-			g.src = u + 'js/';
-			s.parentNode.insertBefore(g, s);
-		})();
-	</script>
+    <script type="text/javascript">
+        // var _paq = _paq || [];
+        // _paq.push(['trackPageView']);
+        // _paq.push(['enableLinkTracking']);
+        // (function () {
+        //     var u = "//piwik.grubersjoe.de/";
+        //     _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        //     _paq.push(['setSiteId', '1']);
+        //     var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        //     g.type = 'text/javascript';
+        //     g.async = true;
+        //     g.defer = true;
+        //     g.src = u + 'js/';
+        //     s.parentNode.insertBefore(g, s);
+        // })();
+    </script>
 </head>
 <body>
 
-<nav id="nav">
-	<div class="container">
-		<ul class="nav">
-			<li class="active"><a href="#about">Über mich</a></li>
-			<li><a href="#projects">Projekte</a></li>
-			<li><a href="#blog">Blog</a></li>
-		</ul>
-	</div>
+<nav id="nav-old">
+    <div class="container">
+        <ul class="nav">
+            <li class="active"><a href="#about">Über mich</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </div>
 </nav>
 
+<div id="sidebar">
+    <nav id="nav">
+        <ul class="nav">
+            <li class="active"><a href="#about">Über mich</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li>
+                <a href="#projects">Projekte</a>
+                <ul class="nav">
+                    <li><a href="">dotfiles</a></li>
+                    <li><a href="">Chameleon</a></li>
+                    <li><a href="">Slide Menu</a></li>
+                    <li><a href="">Bing Photo</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Impressum</a></li>
+        </ul>
+    </nav>
+</div>
 <main class="container">
-	<header>
-		<h1><span>Jonathan Gruber</span></h1>
-		<div class="lead">B. Sc. Informatik • Webentwickler</div>
-	</header>
+    <header>
+        <h1><span>Jonathan Gruber</span></h1>
+        <div class="lead">B. Sc. Informatik <span class="asterisk">*</span> Webentwickler</div>
+    </header>
 
 
-	<div class="contact">
-		<a class="icon icon-mail" title="Mail" href="mailto:hi@grubersjoe.de"></a>
-		<a class="icon icon-github" title="GitHub" href="https://github.com/grubersjoe" target="_blank"></a>
-		<a class="icon icon-gitlab" title="GitLab" href="https://git.grubersjoe.de" target="_blank"></a>
-		<a class="icon icon-xing" title="XING" href="https://www.xing.com/profile/Jonathan_Gruber" target="_blank"></a>
-		<a class="icon icon-instagram" title="Instagram" href="https://www.instagram.com/grubersjoe/"
-		   target="_blank"></a>
-	</div>
+    <div class="contact">
+        <a class="icon icon-mail" title="Mail" href="mailto:hi@grubersjoe.de"></a>
+        <a class="icon icon-github" title="GitHub" href="https://github.com/grubersjoe" target="_blank"></a>
+        <a class="icon icon-gitlab" title="GitLab" href="https://git.grubersjoe.de" target="_blank"></a>
+        <a class="icon icon-xing" title="XING" href="https://www.xing.com/profile/Jonathan_Gruber" target="_blank"></a>
+        <a class="icon icon-instagram" title="Instagram" href="https://www.instagram.com/grubersjoe/"
+           target="_blank"></a>
+    </div>
 
-	<section id="about">
-		<p>Ich bin Jo. Seit etwa zehn Jahren beschäftige ich mich leidenschaftlich mit der Web- und
-			Softwareentwicklung. Schon in früher Jugend hatte ich den Traum meine Passion zum Beruf zu machen und konnte dies
-			durch ein Informatik-Studium tatsächlich realisieren.</p>
+    <section id="about">
+        <p>Ich bin Jo. Seit etwa zehn Jahren beschäftige ich mich intensiv mit der Web- und
+            Softwareentwicklung. Früher hatte ich immer den Traum meine Leidenschaft zum Beruf zu machen und dies hat glücklicherweise tatsächlich geklappt.</p>
 
-		<blockquote>
-			“We are what we repeatedly do. Excellence, then, is not an act, but a habit.”
-			<a class="author" href="https://de.wikipedia.org/wiki/William_James_Durant">Will Durant</a>
-		</blockquote>
+        <blockquote>
+            “We are what we repeatedly do. Excellence, then, is not an act, but a habit.”
+            <a class="author" href="https://de.wikipedia.org/wiki/William_James_Durant">Will Durant</a>
+        </blockquote>
 
-		<p>Die letzten zwei Jahren habe ich als Webentwickler bei <a href="http://www.ercasdieagentur.de" target="_blank">ercas. die
-			agentur</a> gearbeitet und bin nun für den Master an der <a href="http://www.htwk-leipzig.de">Hochschule
-			für Technik, Wirtschaft und Kultur</a> im schönen Leipzig angekommen.</p>
+        <p>Die letzten zwei Jahren habe ich als Webentwickler bei <a href="http://www.ercasdieagentur.de" target="_blank">ercas. die
+            agentur</a> gearbeitet und bin nun für den Master an der <a href="http://www.htwk-leipzig.de">Hochschule
+            für Technik, Wirtschaft und Kultur</a> im schönen Leipzig angekommen.</p>
 
-		<!--<p>Auch ist mein bescheidener <a href="#sec-blog" class="scroll-to">Blog</a> hier zuhause. Inhaltlich geht es-->
-		<!--(natürlich) um die Web- und Softwareentwicklung, aber auch um allgemeinere Themen aus der FOSS und-->
-		<!--GNU/Linux-Welt.</p>-->
-	</section>
+        <!--<p>Auch ist mein bescheidener <a href="#sec-blog" class="scroll-to">Blog</a> hier zuhause. Inhaltlich geht es-->
+        <!--(natürlich) um die Web- und Softwareentwicklung, aber auch um allgemeinere Themen aus der FOSS und-->
+        <!--GNU/Linux-Welt.</p>-->
+    </section>
 
-	<section id="projects">
-		<header>
-			<h2>Projekte</h2>
-		</header>
+   <section id="blog">
+        <header>
+            <h2>Blog</h2>
+            <p>Here be blog posts</p>
+        </header>
+    </section>
 
-		<p>Ich habe einige, kleinere OpenSource Projekte:</p>
+    <section id="projects">
+        <header>
+            <h2>Projekte</h2>
+        </header>
 
-		<div class="project-list">
-			<article class="project">
-				<header>
-					<h3><a href="https://git.grubersjoe.de/joe/chameleon" target="_blank">Chameleon</a></h3>
-				</header>
-				<div class="tags">
-					<a href="#">Python</a>
-					<a href="#">JavaScript</a>
-				</div>
+        <p>Ich habe einige, kleinere OpenSource Projekte:</p>
 
-				<div class="description">
-					<p>Chameleon ist ein Python-Modul zur Farb-Manipulation und Umwandlung diverser
-						Farbmodelle. Derzeit ist es ein 1:1 Port der <a
-								href="https://github.com/bgrins/TinyColor" target="_blank">TinyColor</a>
-						JavaScript-Bibliothek und verfügt über den gleichen Funktionsumfang.</p>
-				</div>
+        <div class="project-list">
+            <article class="project">
+                <header>
+                    <h3><a href="https://git.grubersjoe.de/joe/chameleon" target="_blank">Chameleon</a></h3>
+                </header>
+                <div class="tags">
+                    <a href="#">Python</a>
+                    <a href="#">JavaScript</a>
+                </div>
 
-				<div class="links">
-					<a href="https://git.grubersjoe.de/joe/chameleon" target="_blank">
-						<i class="fa fa-gitlab" aria-hidden="true"></i> GitLab Repository
-					</a>
-				</div>
-			</article>
+                <div class="body">
+                    <p>Chameleon ist ein Python-Modul zur Farb-Manipulation und Umwandlung diverser
+                        Farbmodelle. Derzeit ist es ein 1:1 Port der <a
+                                href="https://github.com/bgrins/TinyColor" target="_blank">TinyColor</a>
+                        JavaScript-Bibliothek und verfügt über den gleichen Funktionsumfang.</p>
+                </div>
 
-			<article class="project">
-				<header>
-					<h3><a href="https://github.com/grubersjoe/slide-menu" target="_blank">Slide Menu</a></h3>
-				</header>
-				<div class="tags">
-					<a href="#">CSS</a>
-					<a href="#">JavaScript</a>
-				</div>
+                <div class="links">
+                    <a href="https://git.grubersjoe.de/joe/chameleon" target="_blank">
+                        <i class="fa fa-gitlab" aria-hidden="true"></i> GitLab Repository
+                    </a>
+                </div>
+            </article>
 
-				<div class="description">
-					<p>Slide Menu ist ein kleines jQuery Plugin das ein Standard CSS-Menü in eine
-						multihierarchische Sidebar mit einem Gleit-Effekt verpackt. Die Animationen basieren auf
-						CSS3 Transitions.</p>
-					<p>Das Menü hat viele Optionen und legt Methoden offen, um es programmatisch zu steuern.</p>
-				</div>
-				<div class="links">
-					<a href="https://github.com/grubersjoe/slide-menu" target="_blank">
-						<i class="fa fa-github" aria-hidden="true"></i> GitHub Repository
-					</a>
-				</div>
-			</article>
+            <article class="project">
+                <header>
+                    <h3><a href="https://github.com/grubersjoe/slide-menu" target="_blank">Slide Menu</a></h3>
+                </header>
+                <div class="tags">
+                    <a href="#">CSS</a>
+                    <a href="#">JavaScript</a>
+                </div>
 
-			<article class="project">
-				<header>
-					<h3><a href="https://github.com/grubersjoe/dotfiles" target="_blank">dotfiles</a></h3>
-				</header>
+                <div class="body">
+                    <p>Slide Menu ist ein kleines jQuery Plugin das ein Standard CSS-Menü in eine
+                        multihierarchische Sidebar mit einem Gleit-Effekt verpackt. Die Animationen basieren auf
+                        CSS3 Transitions.</p>
+                    <p>Das Menü hat viele Optionen und legt Methoden offen, um es programmatisch zu steuern.</p>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/grubersjoe/slide-menu" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i> GitHub Repository
+                    </a>
+                </div>
+            </article>
 
-				<div class="tags">
-					<a href="#">Linux</a>
-					<a href="#">Shell</a>
-					<a href="#">i3</a>
-					<a href="#">Python</a>
-				</div>
+            <article class="project">
+                <header>
+                    <h3><a href="https://github.com/grubersjoe/dotfiles" target="_blank">dotfiles</a></h3>
+                </header>
 
-				<div class="description">
-					<p>Meine persönlichen in sorgfältiger Handarbeit geschmiedeten GNU/Linux
-						Konfigurationsdateien. Im Fokus steht der famose <a
-								href="https://i3wm.org/"><code>i3</code></a> Window Manager.
-					</p>
-				</div>
+                <div class="tags">
+                    <a href="#">Linux</a>
+                    <a href="#">Shell</a>
+                    <a href="#">i3</a>
+                    <a href="#">Python</a>
+                </div>
 
-				<div class="links">
-					<a href="https://github.com/grubersjoe/dotfiles" target="_blank">
-						<i class="fa fa-github" aria-hidden="true"></i> GitHub Repository
-					</a>
-				</div>
-			</article>
+                <div class="body">
+                    <p>Meine persönlichen in sorgfältiger Handarbeit geschmiedeten GNU/Linux
+                        Konfigurationsdateien. Im Fokus steht der famose <a
+                                href="https://i3wm.org/"><code>i3</code></a> Window Manager.
+                    </p>
+                </div>
 
-			<article class="project">
-				<header>
-					<h3><a href="https://github.com/grubersjoe/bing-daily-photo" target="_blank">Bing Daily
-						Photo</a></h3>
-				</header>
+                <div class="links">
+                    <a href="https://github.com/grubersjoe/dotfiles" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i> GitHub Repository
+                    </a>
+                </div>
+            </article>
 
-				<div class="tags">
-					<a href="#">PHP</a>
-				</div>
+            <article class="project">
+                <header>
+                    <h3><a href="https://github.com/grubersjoe/bing-daily-photo" target="_blank">Bing Daily
+                        Photo</a></h3>
+                </header>
 
-				<div class="description">
-					<p>Eine simple PHP-Klasse, die das aktuelle <a href="http://www.bing.com/gallery/"
-					                                               target="_blank">Foto des Tages</a>™ von
-						Microsofts Suchmaschine <em>Bing</em> mit diversen Metadaten lädt.</p>
-				</div>
+                <div class="tags">
+                    <a href="#">PHP</a>
+                </div>
 
-				<div class="links">
-					<a href="https://github.com/grubersjoe/bing-daily-photo" target="_blank">
-						<i class="fa fa-github" aria-hidden="true"></i> GitHub Repository
-					</a>
-				</div>
-			</article>
-		</div>
-	</section>
+                <div class="body">
+                    <p>Eine simple PHP-Klasse, die das aktuelle <a href="http://www.bing.com/gallery/"
+                                                                   target="_blank">Foto des Tages</a>™ von
+                        Microsofts Suchmaschine <em>Bing</em> mit diversen Metadaten lädt.</p>
+                </div>
 
-	<section id="blog">
-		<header>
-			<h2>Blog</h2>
-			<p>Here be blog posts</p>
-		</header>
-	</section>
+                <div class="links">
+                    <a href="https://github.com/grubersjoe/bing-daily-photo" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i> GitHub Repository
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
 </main>
 
 <script src="https://use.typekit.net/bsn2wqh.js"></script>
-<script> try {
-	Typekit.load({async: true});
-} catch (e) {
-} </script>
+<script> try { Typekit.load({async: true}); } catch (e) {} </script>
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->

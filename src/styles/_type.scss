@@ -2,10 +2,6 @@ html {
 	font-size: 8px; // set a reasonable base value for rem unit
 }
 
-body {
-	padding-top: 114px;
-}
-
 h1 {
 	@include clearfix;
 	display: inline-block;
@@ -53,7 +49,7 @@ p {
 section a {
 	font-weight: 600;
 	border-bottom: solid 2px transparent;
-	
+
 	&:hover,
 	&:focus {
 		text-decoration: none;
@@ -67,7 +63,9 @@ blockquote {
 	padding: 1rem 4rem;
 	font-family: $font-family-serif;
 	font-weight: 600;
-	color: $color-t;
+	font-style: italic;
+	font-variant-ligatures: discretionary-ligatures;
+	color: $color-s;
 	line-height: 1.3;
 	border-left: 0;
 
@@ -80,13 +78,12 @@ blockquote {
 	}
 
 	.author {
-		margin-top: 1rem;
 		display: block;
+		margin-top: 1rem;
 		border-bottom: none !important;
-		font-size: 22px;
+		font-size: $font-size-base;
 		font-style: normal;
 		font-variant-caps: small-caps;
-		color: $text-color;
 
 		&:before {
 			content: '― ';
@@ -94,10 +91,7 @@ blockquote {
 	}
 }
 
-nav a,
-main a,
-.btn,
-.tag {
+nav a, main a, .btn, .tag {
 	transition: color 0.3s, background 0.3s, border 0.3s;
 	will-change: color, background, border;
 }
@@ -128,14 +122,19 @@ main a > i {
 }
 
 .lead {
-	margin-bottom: 40px;
-	font-size: 32px;
+	margin-bottom: 5rem;
+	font-size: floor(1.5 * $font-size-base);
 	font-weight: 400;
 	color: $color-s;
 	cursor: default;
 	text-transform: lowercase;
 
+	.asterisk {
+		position: relative;
+		top: 7px;
+	}
+
 	@media (min-width: $screen-sm-min) {
-		font-size: 38px;
+		font-size: floor(1.75 * $font-size-base);
 	}
 }

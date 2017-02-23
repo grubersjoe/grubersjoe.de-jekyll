@@ -18,7 +18,7 @@ $('.to-top').click(function () {
 	return false;
 });
 
-$('nav a').click(function (e) {
+$('#nav a').click(function (e) {
 	e.preventDefault();
 
 	let target = $($(this).attr('href')), top;
@@ -26,13 +26,13 @@ $('nav a').click(function (e) {
 	if (!target.length)
 		return false;
 
-	$('nav .active').removeClass('active');
+	$('#nav .active').removeClass('active');
 	$(this).parent().addClass('active');
 
 	if (target.attr('id') == 'about') {
 		top = 0;
 	} else {
-		let offset = target.offset().top - $('#nav').outerHeight() - 32;
+		let offset = target.offset().top;
 		top = clamp(offset, 0, $(document).height()); // FIXME: not working correctly
 	}
 

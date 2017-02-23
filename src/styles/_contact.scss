@@ -5,7 +5,7 @@
 .contact {
 	@include clearfix;
 	display: inline-block;
-	margin-bottom: 48px;
+	margin-bottom: 56px;
 	//border: 4px solid scale-color($color-t, $lightness: 80%);
 	//border-left: none;
 	//border-right: none;
@@ -34,7 +34,7 @@
 	> .icon {
 		margin-right: 4rem;
 		font-size: 44px;
-		color: $color-t;
+		color: $color-p;
 		text-align: center;
 
 		& {
