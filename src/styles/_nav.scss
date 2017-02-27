@@ -1,6 +1,4 @@
-#nav-old {
-    // display: none;
-
+#nav {
     position: fixed;
     width: 100%;
     top: 0;
@@ -55,7 +53,7 @@
     z-index: $zindex-navbar-fixed;
 }
 
-#nav {
+#nav-alt {
     display: none;
 
     // top level
