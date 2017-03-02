@@ -18,7 +18,7 @@ $('.to-top').click(function () {
 	return false;
 });
 
-$('#nav a').click(function (e) {
+$('#nav-alt a').click(function (e) {
 	e.preventDefault();
 
 	let target = $($(this).attr('href')), top;

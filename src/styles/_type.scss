@@ -1,5 +1,5 @@
-html {
-	font-size: 8px; // set a reasonable base value for rem unit
+body {
+	//font-weight: 300;
 }
 
 h1 {
@@ -40,18 +40,24 @@ h3 {
 	}
 }
 
-p {
-	margin: 0 0 20px;
-}
 
-section a {
-	font-weight: 600;
-	border-bottom: solid 2px transparent;
 
-	&:hover,
-	&:focus {
-		text-decoration: none;
-		border-bottom: 2px solid;
+main {
+	p {
+		margin: 0 0 3rem;
+		hyphens: auto;
+		hyphenate-limit-chars: 3;
+	}
+
+	a {
+		font-weight: 600;
+		border-bottom: solid 2px transparent;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			border-bottom: 1px solid;
+		}
 	}
 }
 
@@ -120,7 +126,7 @@ main a > i {
 }
 
 .lead {
-	margin-bottom: 5rem;
+	margin: 0;
 	font-size: floor(1.4 * $font-size-base);
 	font-weight: 400;
 	color: $color-s;
@@ -132,6 +138,6 @@ main a > i {
 	}
 
 	@media (min-width: $screen-sm-min) {
-		font-size: floor(1.6 * $font-size-base);
+		font-size: floor(1.5 * $font-size-base);
 	}
 }

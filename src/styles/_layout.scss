@@ -1,9 +1,21 @@
+html {
+    font-size: 8px; // set a reasonable base value for rem unit
+}
+
 body {
     padding-top: $page-padding-top;
 }
 
-main > section:first-of-type {
-    h2:first-of-type {
-        margin-top: 1rem;
+main {
+    > section:first-of-type {
+        h2:first-of-type {
+            margin-top: 1rem;
+        }
     }
+
+    > .title {
+        display: block;
+        margin-bottom: 6rem;
+    }
+
 }
