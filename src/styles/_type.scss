@@ -22,9 +22,11 @@ h2 {
 	padding: 1.25rem 2rem 2rem 2rem;
 	line-height: 1;
 	border: 6px solid $color-b;
+	border-left: none;
+	border-right: none;
 	font-weight: 900;
 
-	&, a {	
+	&, a {
 		color: $color-t;
 	}
 }
@@ -119,11 +121,10 @@ main a > i {
 
 .lead {
 	margin-bottom: 5rem;
-	font-size: floor(1.5 * $font-size-base);
+	font-size: floor(1.4 * $font-size-base);
 	font-weight: 400;
 	color: $color-s;
 	cursor: default;
-	text-transform: lowercase;
 
 	.asterisk {
 		position: relative;
@@ -131,6 +132,6 @@ main a > i {
 	}
 
 	@media (min-width: $screen-sm-min) {
-		font-size: floor(1.75 * $font-size-base);
+		font-size: floor(1.6 * $font-size-base);
 	}
 }
