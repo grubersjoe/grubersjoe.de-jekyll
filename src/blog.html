@@ -18,36 +18,41 @@
 <body>
 
 <nav id="nav">
-    <div class="container">
-        <ul class="nav">
-            <li><a href="/">Über mich</a></li>
-            <li><a href="projects.html">Projekte</a></li>
-            <li class="active"><a href="blog.html">Blog</a></li>
-        </ul>
-    </div>
+    <ul class="nav container">
+        <li><a href="/">Über mich</a></li>
+        <li><a href="projects.html">Projekte</a></li>
+        <li class="active"><a href="blog.html">Blog</a></li>
+	    <!--<li><a href="tips.html">Tipps</a></li>-->
+    </ul>
 </nav>
 
-<main class="container">
-    <div class="title">
-        <h1>Jonathan Gruber</h1>
-        <div class="lead">B. Sc. Informatik <span class="asterisk">*</span> Webentwickler</div>
-    </div>
+<div id="page" class="container">
+	<header id="title">
+		<h1>Jonathan Gruber</h1>
+		<div class="lead">B. Sc. Informatik <span class="asterisk">*</span> Webentwickler</div>
+	</header>
 
-    <section id="blog">
-        <header>
-            <h2>Blog</h2>
-        </header>
-        <p>Kommt noch...</p>
-    </section>
+	<main role="main">
+		<section id="blog">
+			<header>
+				<h2>Blog</h2>
+			</header>
+			<p>Kommt noch...</p>
+		</section>
+	</main>
 
-    <section id="contact">
-        <a class="icon icon-mail" title="Mail" href="mailto:hi@grubersjoe.de"></a> 
-        <a class="icon icon-github" title="GitHub" href="https://github.com/grubersjoe" target="_blank"></a> 
-        <a class="icon icon-gitlab" title="GitLab" href="https://git.grubersjoe.de" target="_blank"></a> 
-        <a class="icon icon-xing" title="XING" href="https://www.xing.com/profile/Jonathan_Gruber" target="_blank"></a> 
-        <a class="icon icon-instagram" title="Instagram" href="https://www.instagram.com/grubersjoe/" target="_blank"></a>
-    </section>
-</main>
+	<footer id="footer">
+		<div class="contact">
+			<a class="icon icon-mail" title="Mail" href="mailto:hi@grubersjoe.de"></a>
+			<a class="icon icon-github" title="GitHub" href="https://github.com/grubersjoe" target="_blank"></a>
+			<a class="icon icon-gitlab" title="GitLab" href="https://git.grubersjoe.de" target="_blank"></a>
+			<a class="icon icon-xing" title="XING" href="https://www.xing.com/profile/Jonathan_Gruber"
+			   target="_blank"></a>
+			<a class="icon icon-instagram" title="Instagram" href="https://www.instagram.com/grubersjoe/"
+			   target="_blank"></a>
+		</div>
+	</footer>
+</div>
 
 <script src="https://use.typekit.net/bsn2wqh.js"></script>
 <script> try { Typekit.load({async: true}); } catch (e) {} </script>

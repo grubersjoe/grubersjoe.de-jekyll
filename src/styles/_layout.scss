@@ -6,16 +6,22 @@ body {
     padding-top: $page-padding-top;
 }
 
+#title {
+	margin-bottom: 6rem;
+}
+
 main {
+
+	hyphens: auto;
+	-webkit-hyphens: auto;
+
+	p {
+		hyphens: auto;
+	}
+
     > section:first-of-type {
         h2:first-of-type {
             margin-top: 1rem;
         }
     }
-
-    > .title {
-        display: block;
-        margin-bottom: 6rem;
-    }
-
 }

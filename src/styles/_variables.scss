@@ -4,23 +4,23 @@ $color-p: hsl(184, 80%, 40%);  // primary
 $color-s: hsl(184, 13%, 46%);  // secondary
 $color-t: hsl(246, 14%, 29%);  // tertiary
 $color-b: scale-color($color-t, $lightness: 72%);  // borders
-$text-color: #2a2829;
+$text-color: hsl(184, 16%, 16%);
 $link-color: $color-t; // FIXME: find a good link color
 $link-hover-color: $link-color;
 $brand-primary: $color-p;
 
 // Typography
-$line-height-base: 1.45;
+$line-height-base: 1.35;
 
 $font-family-base: 'calluna-sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif: 'calluna', "Times New Roman", Times, serif;
 
 $font-size-base: 22px;
 $font-size-large: floor(($font-size-base * 1.2));
-$font-size-small: floor(($font-size-base * 0.85));
+$font-size-small: floor(($font-size-base * 0.9));
 
-$font-size-h1: 92px;
-$font-size-h2: 52px;
+$font-size-h1: 88px;
+$font-size-h2: floor(2.1 * $font-size-base);
 $font-size-h3: floor(1.5 * $font-size-base);
 $font-size-h4: floor(1.25 * $font-size-base);
 
@@ -43,7 +43,7 @@ $nav-link-padding: 2px 0;
 $grid-gutter-width: 32px;
 $block: $grid-gutter-width;
 
-$container-tablet:        752px;
+$container-tablet:        720px;
 $container-desktop:       $container-tablet;
 $container-large-desktop: $container-desktop;
 

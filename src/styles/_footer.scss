@@ -1,47 +1,54 @@
 
 #footer {
-	// @include clearfix;
-	// display: inline-block;
 	margin: 5rem 0;
-	padding-top: 2.5rem;
+	padding-top: 3rem;
 	border-top: 3px solid scale-color($color-s, $lightness: 50%);
 
-	.icon-mail {
-		@include include-icon($fa-var-paper-plane-o);
-	}
+	.contact {
+		// @include clearfix;
+		// display: inline-block;
 
-	.icon-github {
-		@include include-icon($fa-var-github);
-	}
-
-	.icon-gitlab {
-		@include include-icon($fa-var-gitlab);
-	}
-
-	.icon-xing {
-		@include include-icon($fa-var-xing);
-	}
-
-	.icon-instagram {
-		@include include-icon($fa-var-instagram);
-	}
-
-	// the order does matter here! (above mixin sets e.g. the font-size)
-	> .icon {
-		margin-right: 5rem;
-		font-size: 44px;
-		color: $color-s;
-		text-align: center;
-
-		& {
-			transition: color 0.3s, transform 1s;
-			will-change: color, transform;
+		.icon-mail {
+			@include include-icon($fa-var-paper-plane-o);
 		}
 
-		&:hover,
-		&:focus {
-			color: $color-p;
-			border-bottom: none;
+		.icon-github {
+			@include include-icon($fa-var-github);
 		}
+
+		.icon-gitlab {
+			@include include-icon($fa-var-gitlab);
+		}
+
+		.icon-xing {
+			@include include-icon($fa-var-xing);
+		}
+
+		.icon-instagram {
+			@include include-icon($fa-var-instagram);
+		}
+
+		// the order does matter here! (above mixin sets e.g. the font-size)
+		> .icon {
+			margin-right: 5rem;
+			font-size: 44px;
+			color: $color-s;
+			text-align: center;
+
+			& {
+				transition: color 0.3s, transform 1s;
+				will-change: color, transform;
+			}
+
+			&:hover,
+			&:focus {
+				color: $color-p;
+				border-bottom: none;
+			}
+		}
+	}
+
+	.legal {
+
 	}
 }

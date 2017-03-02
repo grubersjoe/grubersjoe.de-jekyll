@@ -9,6 +9,10 @@
     font-weight: 700;
     z-index: $zindex-navbar-fixed;
 
+	.nav {
+		padding: 0 $grid-gutter-width / 2;
+	}
+
     .nav > li {
         float: left;
         margin-right: 40px;
