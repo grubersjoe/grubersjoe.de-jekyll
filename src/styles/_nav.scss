@@ -15,9 +15,10 @@
 
     .nav > li {
         float: left;
-        margin-right: 40px;
+        margin-right: 5rem;
 
         > a {
+	        padding: 2px 0;
             color: $color-s;
             font-size: floor(($font-size-base * 1.1));
             font-weight: 600;

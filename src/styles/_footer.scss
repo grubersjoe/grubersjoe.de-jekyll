@@ -3,8 +3,25 @@
 	margin: 5rem 0;
 	padding-top: 3rem;
 	border-top: 3px solid scale-color($color-s, $lightness: 50%);
+	font-size: $font-size-small;
+
+	a {
+		color: $color-s;
+		transition: color 0.3s, transform 1s;
+		will-change: color, transform;
+
+		&:hover,
+		&:focus {
+			color: $color-p;
+		}
+	}
+
+	//.nav > li {
+	//	margin-right: 3rem;
+	//}
 
 	.contact {
+		margin-bottom: 3rem;
 		// @include clearfix;
 		// display: inline-block;
 
@@ -30,25 +47,26 @@
 
 		// the order does matter here! (above mixin sets e.g. the font-size)
 		> .icon {
-			margin-right: 5rem;
-			font-size: 44px;
-			color: $color-s;
+			margin-right: 4rem;
+			font-size: 5rem;
 			text-align: center;
-
-			& {
-				transition: color 0.3s, transform 1s;
-				will-change: color, transform;
-			}
 
 			&:hover,
 			&:focus {
-				color: $color-p;
 				border-bottom: none;
 			}
 		}
 	}
 
 	.legal {
+		//float: right;
 
+		//.nav > li a {
+		//	padding: 0;
+		//}
+
+		//.nav {
+		//	padding-top: 1.1rem;
+		//}
 	}
 }

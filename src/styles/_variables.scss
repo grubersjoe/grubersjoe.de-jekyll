@@ -32,12 +32,19 @@ $headings-line-height: 1.2;
 $headings-font-family: $font-family-serif;
 $headings-color: $color-s;
 
+// Borders
+$border-radius-base: 0;
+$border-radius-small: $border-radius-base;
+$border-radius-large: $border-radius-base;
+
 // Links
 $link-hover-decoration: none;
 
 // Nav
 $nav-link-hover-bg: transparent;
-$nav-link-padding: 2px 0;
+$nav-link-padding: 1rem 0;
+$nav-pills-active-link-hover-bg: transparent;
+$nav-pills-active-link-hover-color: transparent;
 
 // Layout
 $grid-gutter-width: 32px;
