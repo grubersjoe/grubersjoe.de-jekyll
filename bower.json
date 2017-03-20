@@ -2,7 +2,7 @@
   "name": "grubersjoe-de",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
+    "bootstrap-sass": "^3.3.0",
     "components-font-awesome": "^4.7.0"
   },
   "overrides": {
