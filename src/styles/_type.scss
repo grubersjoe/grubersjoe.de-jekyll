@@ -75,7 +75,7 @@ main {
 	}
 
 	p {
-		margin: 0 0 3rem;
+		margin: 0 0 4rem;
 		hyphens: auto;
 		hyphenate-limit-chars: 3;
 
@@ -91,7 +91,7 @@ strong {
 
 blockquote {
 	@include clearfix;
-	margin: 32px 0;
+	margin: 5rem 0;
 	padding: 1rem 4rem;
 	border-left: none;
 	font-weight: 400;
