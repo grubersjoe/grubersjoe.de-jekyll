@@ -174,3 +174,11 @@ a, .btn, .tag {
 		font-size: floor(1.5 * $font-size-base);
 	}
 }
+
+.crypted-mail {
+	cursor: pointer;
+
+	&:after {
+		content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+	}
+}

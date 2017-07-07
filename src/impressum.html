@@ -1,26 +1,26 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jonathan Gruber</title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jonathan Gruber</title>
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<!-- endbower -->
+	<!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+	<!-- build:css styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
 </head>
 <body>
 
 <nav id="nav">
 	<ul class="nav container">
 		<li class="active"><a href="/">Über mich</a></li>
-		<li><a href="projects.html">Projekte</a></li>
+		<li><a href="projekte.html">Projekte</a></li>
 		<li><a href="blog.html">Blog</a></li>
 		<!--<li><a href="tips.html">Tipps</a></li>-->
 	</ul>
@@ -33,20 +33,22 @@
 	</header>
 
 	<main role="main">
-	    <section id="legal">
-            <header>  
-		      <h2>Impressum</h2>
-            </header>
+		<section id="legal">
+			<header>
+				<h2>Impressum</h2>
+			</header>
 
-            <h3>Angaben gemäß § 5 TMG</h3>
-            <p>Jonathan Gruber<br>
-            Karl-Liebknecht-Straße 9<br>
-            04107 Leipzig</p>
+			<h3>Angaben gemäß § 5 TMG</h3>
+			<p>Jonathan Gruber<br>
+				Karl-Liebknecht-Straße 9<br>
+				04107 Leipzig</p>
 
-            <h3>Kontakt</h3>
-            <p>E-Mail: <a href="mailto:gruberjonathan@gmail.com">gruberjonathan@gmail.com</a></p>
+			<h3>Kontakt</h3>
+			<p>E-Mail: <a class="crypted-mail" title="E-Mail schreiben" data-name="gruberjonathan" data-domain="gmail" data-tld="com"
+			              onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld"></a>
+			</p>
 
-	    </section>
+		</section>
 	</main>
 
 	<footer id="footer">
@@ -62,23 +64,33 @@
 
 		<div class="legal">
 			<ul class="nav nav-pills">
-                <li><a href="impressum.html">Impressum</a></li>
+				<li><a href="impressum.html">Impressum</a></li>
 			</ul>
 		</div>
 	</footer>
 </div>
 
 <script src="https://use.typekit.net/bsn2wqh.js"></script>
-<script> try { Typekit.load({async: true}); } catch (e) {} </script>
+<script> try {
+	Typekit.load({async: true});
+} catch (e) {
+} </script>
 
 <script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 	ga('create', 'UA-92968020-1', 'auto');
-    ga('set', 'anonymizeIp', true);
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 </script>
 
