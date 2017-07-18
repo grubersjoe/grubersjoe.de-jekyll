@@ -7,9 +7,9 @@
 	font-weight: 600;
 
 	a {
-		color: $color-s;
 		transition: color 0.3s, transform 1s;
 		will-change: color, transform;
+		color: $color-s;
 
 		&:hover,
 		&:focus {
@@ -19,6 +19,15 @@
 
 	.contact {
 		margin-bottom: 3rem;
+
+		//a {
+		//	color: $color-t;
+		//
+		//	&:hover,
+		//	&:focus {
+		//		color: $color-p;
+		//	}
+		//}
 
 		.icon-mail {
 			@include include-icon($fa-var-paper-plane-o);

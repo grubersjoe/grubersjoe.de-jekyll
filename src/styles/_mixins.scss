@@ -25,3 +25,7 @@
 		content: $icon;
 	}
 }
+
+@mixin circle() {
+	border-radius: 50%;
+}

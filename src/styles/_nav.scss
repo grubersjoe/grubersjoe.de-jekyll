@@ -19,7 +19,7 @@
         > a {
 	        padding: 2px 0;
             color: $color-s;
-            font-size: floor(($font-size-base * 1.1));
+            font-size: round(($font-size-base * 1.1));
             font-weight: 600;
             border-bottom: solid 3px transparent;
 

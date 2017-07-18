@@ -39,7 +39,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		padding: $block;
+		padding: $grid-gutter-width;
 		border-right: solid 16px $body-bg;
 		border-bottom: solid 16px $body-bg;
 		backface-visibility: hidden;

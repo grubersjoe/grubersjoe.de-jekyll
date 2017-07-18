@@ -41,11 +41,13 @@
 	@include list-unstyled;
 	@include clearfix;
 	margin-bottom: 2rem;
+	font-size: $font-size-small;
 	font-weight: 600;
 
 	> a {
 		position: relative;
 		float: left;
+		color: scale-color($color-s, $lightness: -16%);
 		border-bottom: none !important;
 
 		&:after {

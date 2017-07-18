@@ -1,12 +1,13 @@
 // Colors
-$body-bg: hsl(184, 30%, 92%);
-$color-p: hsl(184, 80%, 40%);  // primary
-$color-s: hsl(184, 13%, 46%);  // secondary
+$body-bg: hsl(194, 30%, 92%);
+$color-p: hsl(194, 54%, 48%);  // primary
+$color-s: hsl(194, 14%, 44%);  // secondary
 $color-t: hsl(246, 14%, 29%);  // tertiary
 $color-b: scale-color($color-t, $lightness: 72%);  // borders
 $text-color: hsl(184, 16%, 16%);
-$link-color: $color-t;
-$link-hover-color: inherit;
+$link-color: $color-p;
+$text-link-color: scale-color($link-color, $lightness: -24%);
+$link-hover-color: $link-color;
 $brand-primary: $color-p;
 
 // Typography
@@ -14,19 +15,19 @@ $line-height-base: 1.4;
 
 $font-family-sans-serif: 'calluna-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-serif: 'calluna', 'Times New Roman', Times, serif;
-$font-family-monospace: Fira Mono, Menlo, Monaco, Consolas, 'Courier New', monospace;
+$font-family-monospace: Roboto Mono, Menlo, Monaco, Consolas, 'Courier New', monospace;
 $font-family-base: $font-family-sans-serif;
 
-$font-size-base: 22px;
-$font-size-large: floor(($font-size-base * 1.2));
-$font-size-small: floor(($font-size-base * 0.9));
+$font-size-base: 21px;
+$font-size-large: round($font-size-base * 1.2);
+$font-size-small: round($font-size-base * 0.9);
 
-$font-size-h1: 88px;
-$font-size-h2: floor(2 * $font-size-base);
-$font-size-h3: floor(1.4 * $font-size-base);
-$font-size-h4: floor(1.25 * $font-size-base);
+$font-size-h1: 4 * $font-size-base;
+$font-size-h2: round(1.9 * $font-size-base);
+$font-size-h3: round(1.4 * $font-size-base);
+$font-size-h4: round(1.25 * $font-size-base);
 
-$blockquote-font-size: floor(1.4 * $font-size-base);
+$blockquote-font-size: round(1.4 * $font-size-base);
 
 // Headings
 $headings-font-weight: 700;
@@ -49,18 +50,21 @@ $nav-pills-active-link-hover-bg: transparent;
 $nav-pills-active-link-hover-color: transparent;
 
 // Layout
+$grid-columns: 4;
 $grid-gutter-width: 32px;
-$block: $grid-gutter-width;
 
-$container-tablet:        736px;
+$container-tablet:        720px;
 $container-desktop:       $container-tablet;
 $container-large-desktop: $container-desktop;
 
 $padding-base-vertical:     8px;
 $padding-base-horizontal:   16px;
 
+$dl-horizontal-offset: 4rem;
+$dl-horizontal-breakpoint: 0; // disable it
+
+$bs: 8px; // (= Blocksize)
 $page-padding-top: 104px;
-$sidebar-width: 168px;
 
 // Code
 $code-color: $text-color;
