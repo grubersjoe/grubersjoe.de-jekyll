@@ -1,0 +1,7 @@
+---
+layout: page
+title: Impressum
+permalink: /impressum/
+exclude: true
+---
+

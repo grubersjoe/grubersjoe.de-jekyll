@@ -1,5 +1,10 @@
-.tmp
-.idea
-node_modules
-bower_components
-dist
+.idea/
+
+_site/
+assets/dist/
+assets/fonts/
+
+node_modules/
+
+.sass-cache
+.jekyll-metadata

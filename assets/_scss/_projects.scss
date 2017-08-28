@@ -1,0 +1,70 @@
+.project-list {
+	.project {
+		padding-bottom: 4rem;
+		margin-bottom: 4rem;
+		border-bottom: 3px double scale-color($color-s, $lightness: 60%);
+
+		&:first-of-type {
+			padding-top: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	h3 {
+		position: relative;
+		margin-top: 0;
+		color: $text-color;
+		font-size: $font-size-h4;
+	}
+
+	.body {
+		margin-bottom: 3rem;
+		padding: 0.75rem 0 1rem 2.5rem;
+		// border-left: 3px solid scale-color($color-b, $lightness: 40%);
+		// border-left: 3px solid scale-color($color-s, $lightness: 60%);
+		border-left: 3px solid $color-b;
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.links {
+		font-weight: 600;
+	}
+}
+
+.tags {
+	@include list-unstyled;
+	@include clearfix;
+	margin-bottom: 2rem;
+	font-size: $font-size-small;
+	font-weight: 600;
+
+	> a {
+		position: relative;
+		float: left;
+		color: scale-color($color-s, $lightness: -16%);
+		border-bottom: none !important;
+
+		&:after {
+			position: relative;
+			top: 3px;
+			margin: 0 1rem;
+			content: '*';
+		}
+
+		&:last-of-type:after {
+			content: '';
+		}
+	}
+}
+
+header + .tags {
+	margin-top: -1rem;
+}
+

@@ -1,0 +1,246 @@
+body {
+	font-variant-ligatures: common-ligatures;
+}
+
+h1 {
+	@include clearfix;
+	display: inline-block;
+	margin: 0 0 2rem 0;
+	padding-bottom: 12px;
+	border-bottom: 6px solid $color-b;
+	color: $color-p;
+	cursor: default;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: lowercase;
+}
+
+h2 {
+	@include clearfix;
+	display: inline-block;
+	margin: 6rem 0 4rem;
+	padding: 2rem 0;
+	border: 5px solid $color-b;
+	border-left: none;
+	border-right: none;
+	font-weight: 900;
+
+	&:before,
+	&:after {
+		display: inline;
+	}
+
+	&:before {
+		content: '~ ';
+	}
+
+	&:after {
+		content: ' ~';
+	}
+
+	&, a {
+		color: $color-t;
+	}
+}
+
+h3 {
+	margin: 4rem 0 2.5rem;
+
+	&, a, a:focus, a:hover {
+		//color: scale-color($color-p, $lightness: -8%);
+		color: $color-s;
+	}
+
+	a:focus, a:hover {
+		border-bottom: 2px solid !important;
+	}
+
+	&.sm {
+		font-size: $font-size-h4;
+		font-weight: 600;
+	}
+}
+
+h4 {
+	margin: 3rem 0 1.5rem;
+	font-weight: 600;
+}
+
+h5 {
+	margin: 2rem 0 1rem;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+	font-feature-settings: "lnum";
+}
+
+h4, h5 {
+	&, a, a:focus, a:hover {
+		color: scale-color($color-p, $lightness: -12%);
+	}
+}
+
+h2 + h3 {
+	margin-top: 0;
+}
+
+a {
+	border-bottom: solid 1px transparent;
+	//font-weight: 600;
+
+	&, &:focus, &:hover {
+		color: $text-link-color;
+	}
+
+	&:focus, &:hover {
+		text-decoration: none;
+		border-bottom: 1px solid;
+	}
+
+	> i {
+		margin-right: 4px;
+	}
+}
+
+main {
+
+	p {
+		margin: 0 0 3rem;
+		hyphens: auto;
+		hyphenate-limit-chars: 3;
+	}
+
+	ul, ol {
+		margin: 0 0 3rem;
+		//font-size: $font-size-small;
+
+		li {
+			margin-bottom: .5rem;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+
+		li:before {
+			position: relative;
+			top: .18em;
+			margin-left: -1em;
+			margin-right: .5em;
+			content: '*';
+			font-weight: 600;
+			color: darken($color-s, 12%);
+		}
+	}
+}
+
+strong {
+	font-weight: 600;
+}
+
+blockquote {
+	margin: 4rem 0;
+	padding: 1rem 0 1rem 4rem;
+	border-left: none;
+	font-weight: 400;
+	color: $color-t;
+	line-height: 1.25;
+	font-style: italic;
+
+	a {
+		&, &:focus,	&:hover {
+			color: inherit;
+		}
+	}
+
+	.author {
+		display: block;
+		margin-top: 1.75rem;
+		border-bottom: none !important;
+		font-size: $font-size-base;
+		font-style: normal;
+		font-weight: 600;
+
+		&:before {
+			content: '― ';
+		}
+	}
+}
+
+pre, code {
+	background: darken($body-bg, 4%);
+	border: none;
+	border-radius: 3px;
+}
+
+pre {
+	font-size: round(.7 * $font-size-base);
+}
+
+code {
+	font-size: 80%;
+	margin: 0 2px;
+	padding: 3px 6px;
+
+	a, a:focus, a:hover {
+		border-bottom: none;
+	}
+}
+
+a, .btn, .tag {
+	transition: color 0.3s, background 0.3s, border 0.3s;
+	will-change: color, background, border;
+}
+
+.btn, .text-btn {
+	color: $color-t;
+}
+
+.btn {
+	padding: 0.75rem 1.5rem;
+	background: $color-s;
+	border: none;
+	border-radius: 2px;
+	font-weight: 600;
+
+	&.btn-default {
+		border: none;
+		background: $color-p;
+	}
+
+	&.btn-default:hover {
+		background: darken($color-p, 8%);
+	}
+}
+
+.lead {
+	margin: 0;
+	font-size: round(0.3 * $font-size-h1);
+	font-weight: 600;
+	font-family: $font-family-sans-serif;
+	color: $color-s;
+	cursor: default;
+
+	.asterisk {
+		position: relative;
+		top: 7px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		font-size: round(0.36 * $font-size-h1);
+	}
+}
+
+.crypted-mail {
+	cursor: pointer;
+
+	&:after {
+		content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+	}
+}
+
+.footnote {
+	font-weight: 600;
+}
+

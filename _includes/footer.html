@@ -1,0 +1,25 @@
+<footer id="footer">
+	<div class="contact">
+		{% if site.author %}
+			<a class="icon icon-mail" title="Mail" href="mailto:{{ site.email }}"></a>
+		{% endif %}
+
+		<a class="icon icon-github" title="GitHub" href="https://github.com/grubersjoe" target="_blank"></a>
+		<a class="icon icon-git" title="Private Git Repositories" href="https://git.grubersjoe.de" target="_blank"></a>
+		<a class="icon icon-xing" title="XING" href="https://www.xing.com/profile/Jonathan_Gruber" target="_blank"></a>
+		<a class="icon icon-instagram" title="Instagram" href="https://www.instagram.com/grubersjoe/" target="_blank"></a>
+	</div>
+
+	<div class="legal">
+		<ul class="nav nav-pills">
+			<li><a href="/impressum">Impressum</a></li>
+		</ul>
+	</div>
+</footer>
+
+<script src="https://use.typekit.net/bsn2wqh.js"></script>
+<script> try { Typekit.load({async: true}); } catch (e) {} </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script src="{{ "/assets/dist/main.js" | prepend: site.baseurl }}" type="text/javascript"></script>

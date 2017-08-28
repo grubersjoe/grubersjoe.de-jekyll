@@ -1,0 +1,46 @@
+.post-list {
+	h3 {
+		margin: 1rem 0;
+	}
+
+	> article {
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+		border-bottom: 2px solid scale-color($color-s, $lightness: 72%);
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+}
+
+.post {
+	h2 {
+		font-style: italic;
+
+		&:before,
+		&:after {
+			content: '';
+		}
+	}
+
+	h3 {
+		$padding-v: .5rem;
+		$padding-h: 1rem;
+		@include clearfix;
+		font-style: italic;
+		font-weight: 600;
+		width: calc(100% - 2 * #{padding-h});
+
+		> span {
+			display: inline;
+			//color: $text-color;
+			color: $color-s;
+			background: scale-color($color-p, $lightness: -8%);
+			background: darken($body-bg, 4%);
+			padding: $padding-v $padding-h;
+			box-decoration-break: clone;
+			line-height: 1.6;
+		}
+	}
+}

@@ -1,155 +1,145 @@
-// generated on 2017-06-14 using generator-webapp 3.0.1
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
-const browserSync = require('browser-sync').create();
+const cp = require('child_process');
 const del = require('del');
-const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
-
+const browserSync = require('browser-sync').create();
 const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
+
+const BUILD_DIR = 'assets/dist/';
+const FONTS = [
+    'node_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}',
+    'node_modules/bootstrap-sass/assets/fonts/bootstrap/*.{eot,svg,ttf,woff,woff2}'
+];
 
 let dev = true;
 
+// Minify the Jekyll's output
+gulp.task('html', () => {
+    return gulp.src('_site/**/*.html')
+        .pipe($.htmlmin({
+            collapseWhitespace: true,
+            minifyCSS: true,
+            minifyJS: {compress: {drop_console: true}},
+            processConditionalComments: true,
+            removeComments: true,
+            removeEmptyAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true
+        }))
+        .pipe(gulp.dest('_site'));
+});
+
+// Handle SCSS code
 gulp.task('styles', () => {
-    return gulp.src('src/styles/*.scss')
-    .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
-      includePaths: ['.']
-    }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-    .pipe($.if(dev, $.sourcemaps.write()))
-    .pipe(gulp.dest('.tmp/styles'))
-    .pipe(reload({stream: true}));
+    return gulp.src('assets/_scss/main.scss')
+        .pipe($.plumber())
+        .pipe($.if(dev, $.sourcemaps.init()))
+        .pipe($.sass.sync({
+            outputStyle: 'compressed',
+            precision: 8
+        }).on('error', $.sass.logError))
+        .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
+        .pipe($.if(dev, $.sourcemaps.write()))
+        .pipe($.rename({suffix: '.min'}))
+        .pipe(gulp.dest(BUILD_DIR))
+        .pipe(gulp.dest('_site/' + BUILD_DIR)) // copy the CSS to the _site directory to be able to use stream reloading
+        .pipe(browserSync.reload({stream: true}))
 });
 
+// Handle JavaScript code
 gulp.task('scripts', () => {
-    return gulp.src('src/scripts/**/*.js')
-    .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
-    .pipe($.babel())
-    .pipe($.if(dev, $.sourcemaps.write('.')))
-    .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({stream: true}));
+    return gulp.src('assets/_js/**/*.js')
+        .pipe($.plumber())
+        .pipe($.if(dev, $.sourcemaps.init()))
+        .pipe($.babel())
+        .pipe($.if(dev, $.sourcemaps.write('.')))
+        .pipe(gulp.dest(BUILD_DIR))
+        .pipe($.if('*.js', $.uglify({compress: {drop_console: true}})))
+        .pipe($.if('*.js', $.rename({suffix: '.min'})))
+        .pipe(gulp.dest(BUILD_DIR))
 });
 
-function lint(files) {
-  return gulp.src(files)
-    .pipe($.eslint({ fix: true }))
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
-}
-
-gulp.task('lint', () => {
-    return lint('src/scripts/**/*.js')
-        .pipe(gulp.dest('src/scripts'));
-});
-
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('src/*.html')
-    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
-      processConditionalComments: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    })))
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('images', () => {
-    return gulp.src('src/images/**/*')
-    .pipe($.cache($.imagemin()))
-    .pipe(gulp.dest('dist/images'));
-});
-
+// Copy web fonts to asset directory
 gulp.task('fonts', () => {
-  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('src/fonts/**/*'))
-    .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
+    return gulp.src(FONTS).pipe(gulp.dest('assets/fonts'));
 });
 
-gulp.task('extras', () => {
-  return gulp.src([
-        'src/*.*',
-        '!src/*.html'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'));
+// Optimize image files
+gulp.task('images', () => {
+    return gulp.src('assets/images/**/*')
+        .pipe($.cache($.imagemin([
+            $.imagemin.jpegtran({progressive: true})
+        ])))
+        .pipe(gulp.dest('assets/images'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+// Print the size (gziped)
+gulp.task('size', () => {
+    return gulp.src('_site/**/*')
+        .pipe($.size({title: 'build', gzip: true}))
+});
 
-gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
+// Build the Jekyll Site
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify('Building Jekyll');
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'}).on('close', done);
+});
+
+
+// Rebuild Jekyll & do page reload
+gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
+    browserSync.notify('Rebuilded Jekyll');
+    browserSync.reload();
+});
+
+// Wait for jekyll-build, then launch the Server
+gulp.task('server', ['jekyll-build'], (done) => {
     browserSync.init({
-      notify: false,
-      port: 9000,
-      server: {
-        baseDir: ['.tmp', 'src'],
-        routes: {
-          '/bower_components': 'bower_components'
-        }
-      }
+        notify: false,
+        server: {
+            baseDir: '_site'
+        },
+        host: "localhost"
+    }, done);
+});
+
+// Build the page, start a server and watch files for changes
+gulp.task('serve', () => {
+    gulp.watch('assets/_scss/**/*.scss', ['styles']);
+    gulp.watch('assets/_js/**/*.js', ['scripts']);
+    gulp.watch('assets/_images/**/*', ['images']);
+
+    runSequence('build', 'server', () => {
+        gulp.watch([
+            '!./node_modules/**/*',
+            '_includes/**/*',
+            '_layouts/**/*',
+            '_posts/**/*',
+            '*.html',
+            './**/*.md',
+            'assets/fonts/**/*',
+            'assets/images/**/*',
+            BUILD_DIR + '**/*.js'
+        ], ['jekyll-rebuild']);
     });
-
-    gulp.watch([
-      'src/*.html',
-      'src/images/**/*',
-      '.tmp/fonts/**/*'
-    ]).on('change', reload);
-
-    gulp.watch('src/styles/**/*.scss', ['styles']);
-    gulp.watch('src/scripts/**/*.js', ['scripts']);
-    gulp.watch('src/fonts/**/*', ['fonts']);
-    gulp.watch('bower.json', ['wiredep', 'fonts']);
-  });
 });
 
-gulp.task('serve:dist', ['default'], () => {
-  browserSync.init({
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: ['dist']
-    }
-  });
+// Build all assets and then the Jekyill Site
+gulp.task('build', () => {
+    runSequence(['styles', 'scripts', 'fonts'], 'jekyll-build');
 });
 
-// inject bower components
-gulp.task('wiredep', () => {
-  gulp.src('src/styles/*.scss')
-    .pipe($.filter(file => file.stat && file.stat.size))
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('src/styles'));
-
-  gulp.src('src/*.html')
-    .pipe(wiredep({
-      exclude: ['bootstrap-sass'],
-      ignorePath: /^(\.\.\/)*\.\./
-    }))
-    .pipe(gulp.dest('src'));
+// Cleanup
+gulp.task('clean', () => {
+    del('assets/dist');
+    return cp.spawn('jekyll', ['clean'], {stdio: 'inherit'});
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
-});
-
+// Default action: build the complete in production mode
 gulp.task('default', () => {
-  return new Promise(resolve => {
-    dev = false;
-    runSequence(['clean', 'wiredep'], 'build', resolve);
-  });
+    return new Promise(resolve => {
+        dev = false;
+        runSequence('clean', ['styles', 'scripts', 'fonts', 'images'], 'jekyll-build', 'html', 'size', resolve);
+    });
 });
