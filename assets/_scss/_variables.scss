@@ -1,12 +1,15 @@
 // Colors
-$body-bg: #e4eef1;
-$color-p: hsl(194, 48%, 48%);  // primary
-$color-s: hsl(258, 10%, 38%);  // secondary
-$color-t: hsl(246, 14%, 29%);  // tertiary
-$color-b: scale-color($color-t, $lightness: 72%);  // borders
-$text-color: hsl(184, 16%, 16%);
+$hue: 194;
+$body-bg: hsl($hue, 32%, 92%);   // Background
+$color-p: hsl($hue, 48%, 48%);   // Primary
+$color-s: hsl(180,  92%, 24%);   // Secondary
+$color-t: hsl($hue, 74%, 20%);   // Tertiary
+$color-b: hsl($hue, 32%, 74%);   // Borders
+$color-b-light: lighten($color-b, 6%);
+$text-color: hsl($hue, 16%, 16%);
+
 $link-color: $color-p;
-$text-link-color: scale-color($link-color, $lightness: -24%);
+$text-link-color: change_color($link-color, $lightness: 40%);
 $link-hover-color: $link-color;
 $brand-primary: $color-p;
 

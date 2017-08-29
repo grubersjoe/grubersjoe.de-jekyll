@@ -21,12 +21,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  grubersjoe
-
-# Build settings
 markdown: kramdown
-#theme: minima
-plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -41,3 +36,11 @@ exclude:
     - package.json
     - package-lock.json
     - npm-debug.log
+
+# Plugins
+plugins:
+    - jekyll-feed
+    - jekyll-language-plugin
+
+language_data: data.lang.%%
+language_includes_dir: _i18n

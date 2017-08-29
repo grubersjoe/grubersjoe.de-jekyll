@@ -1,0 +1,8 @@
+---
+post:
+  date_format: '%d.%m.%Y'
+date:
+  abbr_daynames: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
+  daynames: ['Sonntag', 'Montag', 'Dienstag', 'Mitwoch', 'Donnerstag', 'Freitag', 'Samstag']
+  abbr_monthnames: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez']
+  monthnames: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']

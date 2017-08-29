@@ -2,7 +2,7 @@
 	.project {
 		padding-bottom: 4rem;
 		margin-bottom: 4rem;
-		border-bottom: 3px double scale-color($color-s, $lightness: 60%);
+		border-bottom: 2px solid $color-b-light;
 
 		&:first-of-type {
 			padding-top: 0;
@@ -48,8 +48,11 @@
 	> a {
 		position: relative;
 		float: left;
-		color: scale-color($color-s, $lightness: -16%);
-		border-bottom: none !important;
+		//color: scale-color($color-s, $lightness: -16%);
+
+		&, &:hover {
+			border-bottom: none;
+		}
 
 		&:after {
 			position: relative;

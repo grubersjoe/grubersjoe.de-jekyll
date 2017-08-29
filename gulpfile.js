@@ -41,7 +41,7 @@ gulp.task('styles', () => {
         }).on('error', $.sass.logError))
         .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
         .pipe($.if(dev, $.sourcemaps.write()))
-        .pipe($.rename({suffix: '.min'}))
+        // .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest(BUILD_DIR))
         .pipe(gulp.dest('_site/' + BUILD_DIR)) // copy the CSS to the _site directory to be able to use stream reloading
         .pipe(browserSync.reload({stream: true}))
@@ -83,7 +83,7 @@ gulp.task('size', () => {
 // Build the Jekyll Site
 gulp.task('jekyll-build', function (done) {
     browserSync.notify('Building Jekyll');
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'}).on('close', done);
+    return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('close', done);
 });
 
 
@@ -108,13 +108,15 @@ gulp.task('server', ['jekyll-build'], (done) => {
 gulp.task('serve', () => {
     gulp.watch('assets/_scss/**/*.scss', ['styles']);
     gulp.watch('assets/_js/**/*.js', ['scripts']);
-    gulp.watch('assets/_images/**/*', ['images']);
+    gulp.watch('assets/images/**/*', ['images']);
 
     runSequence('build', 'server', () => {
         gulp.watch([
             '!./node_modules/**/*',
+            '_data/**/*',
             '_includes/**/*',
             '_layouts/**/*',
+            '_plugins/**/*',
             '_posts/**/*',
             '*.html',
             './**/*.md',
@@ -127,13 +129,13 @@ gulp.task('serve', () => {
 
 // Build all assets and then the Jekyill Site
 gulp.task('build', () => {
-    runSequence(['styles', 'scripts', 'fonts'], 'jekyll-build');
+    runSequence(['styles', 'scripts', 'fonts', 'images'], 'jekyll-build');
 });
 
 // Cleanup
 gulp.task('clean', () => {
     del('assets/dist');
-    return cp.spawn('jekyll', ['clean'], {stdio: 'inherit'});
+    return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], {stdio: 'inherit'});
 });
 
 // Default action: build the complete in production mode

@@ -4,6 +4,7 @@ _site/
 assets/dist/
 assets/fonts/
 
+.vendor/
 node_modules/
 
 .sass-cache

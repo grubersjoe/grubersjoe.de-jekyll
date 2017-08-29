@@ -2,18 +2,18 @@
 #footer {
 	margin: 6rem 0;
 	padding-top: 3rem;
-	border-top: 4px solid scale-color($color-s, $lightness: 50%);
+	border-top: 4px solid $color-b;
 	font-family: $font-family-sans-serif;
 	font-weight: 600;
 
 	a {
 		transition: color 0.3s, transform 1s;
 		will-change: color, transform;
-		color: $color-s;
+		color: $color-t;
 
 		&:hover,
 		&:focus {
-			color: $color-p;
+			color: lighten($color-s, 4%);
 		}
 	}
 

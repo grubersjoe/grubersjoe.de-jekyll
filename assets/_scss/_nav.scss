@@ -18,14 +18,14 @@
 
         > a {
 	        padding: 2px 0;
-            color: scale_color($color-t, $lightness: 32%, $saturation: -48%);
+            color: change_color($color-t, $lightness: 54%, $saturation: 20%);
             font-size: round($font-size-base * 1.1);
             font-weight: 600;
             border-bottom: solid 3px transparent;
 
             &:hover,
             &:focus {
-                border-color: scale_color($color-t, $lightness: 54%, $saturation: -48%);
+                border-color: change_color($color-t, $lightness: 72%, $saturation: 20%);
             }
         }
 
