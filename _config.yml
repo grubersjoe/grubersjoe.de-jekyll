@@ -23,6 +23,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  grubersjoe
 markdown: kramdown
 
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+      start_line: 1
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
