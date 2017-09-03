@@ -89,6 +89,14 @@ gulp.task('jekyll-build', function (done) {
     return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('close', done);
 });
 
+// Build the Jekyll Site (Production mode)
+gulp.task('jekyll-build-prod', function (done) {
+    browserSync.notify('Building Jekyll (Production)');
+	let env = Object.create(process.env);
+	env.JEKYLL_ENV = 'production';
+    return cp.spawn('bundle', ['exec', 'jekyll', 'build', ], {stdio: 'inherit', env: env}).on('close', done);
+});
+
 
 // Rebuild Jekyll & do page reload
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
@@ -145,6 +153,6 @@ gulp.task('clean', () => {
 gulp.task('default', () => {
     return new Promise(resolve => {
         dev = false;
-        runSequence('clean', ['styles', 'scripts', 'fonts', 'images'], 'jekyll-build', 'html', 'size', resolve);
+        runSequence('clean', ['styles', 'scripts', 'fonts', 'images'], 'jekyll-build-prod', 'html', 'size', resolve);
     });
 });
