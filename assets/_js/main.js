@@ -20,4 +20,6 @@ $(document).ready(function () {
     viewport.on('scroll mousedown wheel keydown touchstart', function () {
         viewport.stop();
     });
+
+    console.log(`TODO: Set language to ${navigator.language}`)
 });

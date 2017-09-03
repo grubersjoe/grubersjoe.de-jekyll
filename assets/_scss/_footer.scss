@@ -1,7 +1,7 @@
 
 #footer {
-	margin: 6rem 0;
-	padding-top: 3rem;
+	margin: 3rem 0;
+	padding-top: 1.5rem;
 	border-top: 4px solid $color-b;
 	font-family: $font-family-sans-serif;
 	font-weight: 600;
@@ -18,7 +18,7 @@
 	}
 
 	.contact {
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem;
 
 		//a {
 		//	color: $color-t;
@@ -51,8 +51,8 @@
 
 		// the order does matter here! (above mixin sets e.g. the font-size)
 		> .icon {
-			margin-right: 4rem;
-			font-size: 6rem;
+			margin-right: 2rem;
+			font-size: 3rem;
 			text-align: center;
 
 			&:hover,

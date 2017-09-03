@@ -1,5 +1,5 @@
-@mixin media-min($width) {
-	@media (max-width: $width) {
+@mixin media($width) {
+	@media (min-width: $width) {
 		@content;
 	}
 }
@@ -10,11 +10,15 @@
 	}
 }
 
-@mixin container() {
-	@include container-fixed;
+@mixin media-sm {
+	@media (min-width: $screen-sm) {
+		@content;
+	}
+}
 
-	@media (min-width: $screen-sm-min) {
-		width: $container-sm;
+@mixin media-md {
+	@media (min-width: $screen-md) {
+		@content;
 	}
 }
 

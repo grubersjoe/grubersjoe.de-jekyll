@@ -1,92 +1,100 @@
 .post-list {
-	$box-width: 48px;
-	$box-margin: 16px;
-	$gradient-width: 32px;
+	$box-width: 2.75rem;
+	$box-margin: 1rem;
+	$gradient-width: 2rem;
 
 	> article {
-		position: relative;
-		overflow-x: hidden;
-		margin-bottom: 2rem;
-		padding-bottom: 2rem;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
 		border-bottom: 2px solid $color-b-light;
-
-		&:after {
-			position: absolute;
-			top: 0;
-			right: 0;
-			content: '';
-			display: block;
-			width: $gradient-width;
-			height: 100%;
-			z-index: 100;
-			background: url(../images/fadout.png) repeat-y top right;
-		}
 
 		&:last-of-type {
 			border-bottom: none;
 		}
-
-		> .slider {
-			display: flex;
-			width: calc(100% + #{$box-width} + #{$box-margin} - #{2/3 * $gradient-width});
-			transition: all .3s ease-in-out;
-			transform: translateX(-$box-width - $box-margin);
-
-			&:hover {
-				transform: translateX(0);
-
-				.box {
-					opacity: 1;
-				}
-			}
-		}
-
+		
 		.box {
-			flex: 0 0 $box-width;
-			transition: opacity .3s ease-in-out;
-			opacity: 0;
-			margin-right: $box-margin;
-			padding-top: .25rem;
-			color: $color-t;
-			font-weight: 900;
-			font-size: $font-size-small;
-			border-right: 3px double $color-b-light;
-			border-top: none;
-			border-bottom: none;
-
-			.reading-time, .reading-time-label {
-				line-height: 1;
-				display: block;
-			}
-
-			.reading-time {
-				font-size: round(2.5 * $font-size-base);
-				font-variant-numeric: lining-nums;
-				//font-variant-numeric: lining-nums;
-			}
-
-			.reading-time-label {
-				font-size: round(.7 * $font-size-base);
-				text-transform: uppercase;
-			}
+			display: none;
 		}
 
 		.post-meta {
 			color: $text-color;
 			//font-weight: 700;
-			//font-variant-numeric: tabular-nums;
+			//font-variant-numeric: lining-nums;
 		}
 
 		header {
 			width: 100%;
 
 			h3 {
-				margin: 1rem 0 0 ;
+				margin: .5rem 0 0;
 				font-weight: 600;
 				font-style: italic;
+				font-size: 1.75rem;
 
 				a, a:focus, a:hover {
 					border-bottom: none;
+				}
+			}
+		}
+
+		@include media-sm {
+			position: relative;
+			overflow-x: hidden;
+
+			&:after {
+				position: absolute;
+				top: 0;
+				right: 0;
+				content: '';
+				display: block;
+				width: $gradient-width;
+				height: 100%;
+				z-index: 100;
+				background: url(../images/fadout.png) repeat-y top right;
+			}
+
+			> .slider {
+				display: flex;
+				width: calc(100% + #{$box-width} + #{$box-margin} - #{2/3 * $gradient-width});
+				transform: translateX(-$box-width - $box-margin);
+				transition: all .3s ease-in-out;
+
+				&:hover {
+					transform: translateX(0);
+
+					.box {
+						opacity: 1;
+					}
+				}
+			}
+
+			.box {
+				display: block;
+				flex: 0 0 $box-width;
+				margin-right: $box-margin;
+				padding-top: .125rem;
+				transition: opacity .3s ease-in-out;
+				opacity: 0;
+				color: $color-t;
+				font-weight: 900;
+				font-size: $font-size-small-rel;
+				border-right: 3px double $color-b-light;
+				border-top: none;
+				border-bottom: none;
+
+				.reading-time, .reading-time-label {
+					line-height: 1;
+					display: block;
+				}
+
+				.reading-time {
+					font-size: round(2.5 * $font-size-base);
+					font-variant-numeric: lining-nums;
+				}
+
+				.reading-time-label {
+					font-size: round(.7 * $font-size-base);
+					text-transform: uppercase;
 				}
 			}
 		}
@@ -104,9 +112,10 @@
 	}
 
 	h3 {
-		$padding-v: .5rem;
-		$padding-h: 1.25rem;
+		$padding-v: .25rem;
+		$padding-h: .625rem;
 		@include clearfix;
+		color: $text-color;
 		font-style: italic;
 		font-weight: 600;
 		width: calc(100% - 2 * #{$padding-h});
@@ -120,7 +129,11 @@
 			color: #fff;
 			padding: $padding-v $padding-h;
 			box-decoration-break: clone;
-			line-height: 1.6;
+			line-height: 1.55;
 		}
+	}
+
+	.post-content {
+		//font-family: $font-family-serif;
 	}
 }
