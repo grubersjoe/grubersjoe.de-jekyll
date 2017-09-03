@@ -36,15 +36,18 @@ gulp.task('styles', () => {
         .pipe($.plumber())
         .pipe($.if(dev, $.sourcemaps.init()))
         .pipe($.sass.sync({
-            outputStyle: 'compressed',
+            outputStyle: 'expanded',
             precision: 8
         }).on('error', $.sass.logError))
         .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
         .pipe($.if(dev, $.sourcemaps.write()))
-        // .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest(BUILD_DIR))
-        .pipe(gulp.dest('_site/' + BUILD_DIR)) // copy the CSS to the _site directory to be able to use stream reloading
-        .pipe(browserSync.reload({stream: true}))
+	    .pipe(gulp.dest('_site/' + BUILD_DIR))
+	    .pipe(browserSync.reload({stream: true}))
+	    .pipe($.if(!dev, $.cssnano({safe: true, autoprefixer: false})))
+	    .pipe($.if(!dev, $.rename({suffix: '.min'})))
+	    .pipe($.if(!dev, gulp.dest(BUILD_DIR)))
+	    .pipe($.if(!dev, gulp.dest('_site/' + BUILD_DIR)))
 });
 
 // Handle JavaScript code
