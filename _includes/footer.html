@@ -22,4 +22,10 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<script src="{{ "/assets/dist/main.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+{% if jekyll.environment == 'production' %}
+	<script src="{{ "/assets/dist/build.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+{% else %}
+	<script src="{{ "/assets/dist/build.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+{% endif %}
+
+
