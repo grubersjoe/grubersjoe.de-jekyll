@@ -54,7 +54,8 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
     return gulp.src('assets/_js/**/*.js')
         .pipe($.plumber())
-        .pipe($.if(dev, $.sourcemaps.init()))
+	    .pipe($.if(dev, $.sourcemaps.init()))
+	    .pipe($.concat('build.js'))
         .pipe($.babel())
         .pipe($.if(dev, $.sourcemaps.write('.')))
         .pipe(gulp.dest(BUILD_DIR))
