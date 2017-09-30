@@ -1,6 +1,7 @@
 ---
 layout: blog-post
 title: "This post demonstrates post content styles"
+published: false
 language: de
 ---
 
