@@ -14,7 +14,7 @@ const FONTS = [
 
 let dev = true;
 
-// Minify the Jekyll's output
+// Minify Jekyll's output
 gulp.task('html', () => {
     return gulp.src('_site/**/*.html')
         .pipe($.htmlmin({
@@ -120,7 +120,6 @@ gulp.task('server', ['jekyll-build'], (done) => {
 gulp.task('serve', () => {
     gulp.watch('assets/_scss/**/*.scss', ['styles']);
     gulp.watch('assets/_js/**/*.js', ['scripts']);
-    gulp.watch('assets/images/**/*', ['images']);
 
     runSequence('build', 'server', () => {
         gulp.watch([
