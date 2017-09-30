@@ -1,3 +1,12 @@
+html {
+	// set a reasonable base value for rem unit
+	font-size: 12px;
+
+	@include media-sm {
+		font-size: 16px;
+	}
+}
+
 body {
 	font-variant-ligatures: common-ligatures;
 }
@@ -13,6 +22,7 @@ h1 {
 	font-weight: 700;
 	line-height: 1.2;
 	text-transform: lowercase;
+	letter-spacing: -.015em;
 
 	@include media-sm {
 		font-size: 5.25rem;
