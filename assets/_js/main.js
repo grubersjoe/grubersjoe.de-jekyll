@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
     $('.post h3').wrapInner('<span>');
 
     let viewport = $('html, body');
@@ -20,6 +20,11 @@ $(document).ready(function () {
     viewport.on('scroll mousedown wheel keydown touchstart', function () {
         viewport.stop();
     });
+
+	$('.collapse-list').click(function () {
+		$(this).find('.fa').toggleClass('open');
+		$(this).next('ul, ol').stop().slideToggle();
+	});
 
     console.log(`TODO: Set language to ${navigator.language}`)
 });

@@ -4,9 +4,13 @@
     top: 0;
     left: 0;
     background: fade_out($color-s, 0.08);
-    padding: 1.25rem 0;
+    padding: 1rem 0;
     font-weight: 700;
     z-index: $zindex-navbar-fixed;
+
+	@include media-sm {
+		padding: 1.25rem 0;
+	}
 
 	.nav {
 		padding: 0 $grid-gutter-width / 2;

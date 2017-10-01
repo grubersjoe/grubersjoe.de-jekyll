@@ -1,14 +1,27 @@
 body {
     padding-top: $page-padding-top;
-
-	@include media-sm {
-		padding-top: $page-padding-top - .5rem;
-		font-size: 21px;
-	}
 }
 
 #title {
 	margin: 0 0 2.5rem;
+
+	.subtitle {
+		margin: 0;
+		font-size: 0.38 * $font-size-h1;
+		font-weight: 600;
+		font-family: $font-family-sans-serif;
+		color: $color-s;
+		cursor: default;
+
+		.asterisk {
+			position: relative;
+			top: .32rem;
+		}
+
+		@include media-max(360px) {
+			font-size: 0.3 * $font-size-h1;
+		}
+	}
 }
 
 main {
@@ -38,5 +51,27 @@ main {
 	hr {
 		background: transparent;
 		border-bottom: 3px double scale-color($color-s, $lightness: 60%);
+	}
+}
+
+.collapse-list {
+	cursor: pointer;
+
+	& + ul,
+	& + ol {
+		display: none;
+	}
+
+	.fa {
+		position: relative;
+		top: -.1em;
+		margin-right: .4rem;
+		transition: transform .3s ease-in-out;
+		font-size: 80%;
+
+		&.open {
+			transform: rotate(180deg);
+			transform-origin: 50%;
+		}
 	}
 }

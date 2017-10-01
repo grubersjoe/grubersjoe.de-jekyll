@@ -12,7 +12,7 @@
 	$border-width: 4px;
 	padding-top: 1rem;
 	border-left: $border-width solid $color-b;
-	font-size: 90%;
+	font-size: $font-size-small-rel;
 
 	> article {
 		position: relative;
@@ -59,5 +59,10 @@
 		strong {
 			font-weight: 600;
 		}
+	}
+
+	.list-heading {
+		font-weight: 600;
+		border-bottom: none;
 	}
 }

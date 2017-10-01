@@ -29,7 +29,6 @@
 				margin: .5rem 0 0;
 				font-weight: 600;
 				font-style: italic;
-				font-size: 1.75rem;
 
 				a, a:focus, a:hover {
 					border-bottom: none;
@@ -116,8 +115,9 @@
 		$padding-h: .625rem;
 		@include clearfix;
 		color: $text-color;
-		font-style: italic;
+		font-size: 1.9rem;
 		font-weight: 600;
+		font-style: italic;
 		width: calc(100% - 2 * #{$padding-h});
 
 		> span {
@@ -133,7 +133,16 @@
 		}
 	}
 
-	.post-content {
-		//font-family: $font-family-serif;
+	h4 {
+		font-size: 1.8rem;
 	}
+
+	h5 {
+		font-size: 1.7rem;
+	}
+
+	.post-meta {
+		font-style: italic;
+	}
+
 }
