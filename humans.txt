@@ -1,0 +1,17 @@
+~~~~~~~~~~~~~
+GRUBERSJOE.DE
+~~~~~~~~~~~~~
+
+This website was build with lots of love in many, many sleepless nights. It
+took me in truth years to get to this point, where I am finally completely 
+happy and proud of this personal piece of web design.
+
+After building four different web sites over time with varying technologies I
+settled in the end with the following:
+
+* Jekyll as blogging software
+* A subset of Bootstrap as Frontend framework
+* SCSS as CSS preprocessor
+* Adobe Typekit as web fonts distributor
+* A Gulp / NPM / Browsersync combination for development, asset management and 
+  build automation
