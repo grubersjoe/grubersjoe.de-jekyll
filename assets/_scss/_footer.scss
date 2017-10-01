@@ -6,28 +6,19 @@
 	font-family: $font-family-sans-serif;
 	font-weight: 600;
 
-	a {
-		transition: color 0.3s, transform 1s;
-		will-change: color, transform;
-		color: $color-t;
-
-		&:hover,
-		&:focus {
-			color: lighten($color-s, 4%);
-		}
-	}
-
 	.contact {
-		margin-bottom: 1.5rem;
+		margin-bottom: 2rem;
 
-		//a {
-		//	color: $color-t;
-		//
-		//	&:hover,
-		//	&:focus {
-		//		color: $color-p;
-		//	}
-		//}
+		a {
+			transition: color 0.3s, transform 1s;
+			will-change: color, transform;
+			color: $color-t;
+
+			&:hover,
+			&:focus {
+				color: $link-color;
+			}
+		}
 
 		.icon-mail {
 			@include include-icon($fa-var-paper-plane-o);
@@ -49,7 +40,8 @@
 			@include include-icon($fa-var-instagram);
 		}
 
-		// the order does matter here! (above mixin sets e.g. the font-size)
+		// the order of rules *does* matter here!
+		// (above mixin sets e.g. the font-size)
 		> .icon {
 			margin-right: 2rem;
 			font-size: 3rem;
@@ -62,7 +54,22 @@
 		}
 	}
 
-	.legal {
+	.footer-note {
+		margin-bottom: 1.5rem;
+		font-size: $font-size-small-rel;
 
+		.sep {
+			display: inline-block;
+			position: relative;
+			top: .28rem;
+			margin: 0 .6em;
+		}
+
+		.heart {
+			position: relative;
+			top: .06em;
+			margin-left: .1em;
+			color: hsl(350, 65%, 46%);
+		}
 	}
 }

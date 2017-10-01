@@ -9,8 +9,7 @@ $color-b: adjust_color($body-bg, $lightness: -18%); // Borders
 $color-b-light: lighten($color-b, 6%);              // Borders light
 
 $text-color: hsl($hue, 16%, 16%);
-$link-color: $color-p;
-$text-link-color: change_color($link-color, $lightness: 40%);
+$link-color: change_color($color-p, $lightness: 40%);
 $link-hover-color: $link-color;
 $brand-primary: $color-p;
 
@@ -19,7 +18,7 @@ $line-height-base: 1.3;
 
 $font-family-sans-serif: 'calluna-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-serif: 'calluna', 'Times New Roman', Times, serif;
-$font-family-monospace: 'Hack', 'Fira Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+$font-family-monospace: 'Roboto Mono', 'Fira Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
 $font-family-base: $font-family-sans-serif;
 
 // TODO: *maybe* migrate thisto rem unit

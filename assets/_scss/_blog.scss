@@ -110,27 +110,33 @@
 		}
 	}
 
-	h3 {
-		$padding-v: .25rem;
-		$padding-h: .625rem;
-		@include clearfix;
-		color: $text-color;
-		font-size: 1.9rem;
-		font-weight: 600;
-		font-style: italic;
-		width: calc(100% - 2 * #{$padding-h});
+	//h3 {
+	//	$padding-v: .25rem;
+	//	$padding-h: .625rem;
+	//	@include clearfix;
+	//	color: $text-color;
+	//	font-size: 1.9rem;
+	//	font-weight: 600;
+	//	font-style: italic;
+	//	width: calc(100% - 2 * #{$padding-h});
+	//
+	//	> span {
+	//		display: inline;
+	//		//color: $text-color;
+	//		//color: $color-s;
+	//		//background: darken($body-bg, 4%);
+	//		background: $color-s;
+	//		color: #fff;
+	//		padding: $padding-v $padding-h;
+	//		box-decoration-break: clone;
+	//		line-height: 1.55;
+	//	}
+	//}
 
-		> span {
-			display: inline;
-			//color: $text-color;
-			//color: $color-s;
-			//background: darken($body-bg, 4%);
-			background: $color-s;
-			color: #fff;
-			padding: $padding-v $padding-h;
-			box-decoration-break: clone;
-			line-height: 1.55;
-		}
+	h3 {
+		font-size: 1.9rem;
+		font-weight: 900;
+		color: $color-s;
 	}
 
 	h4 {
