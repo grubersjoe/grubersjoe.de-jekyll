@@ -8,8 +8,7 @@ const $ = gulpLoadPlugins();
 
 const BUILD_DIR = 'assets/dist/';
 const FONTS = [
-    'node_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}',
-    'node_modules/bootstrap-sass/assets/fonts/bootstrap/*.{eot,svg,ttf,woff,woff2}'
+    'node_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
 ];
 
 let dev = true;
@@ -145,7 +144,7 @@ gulp.task('build', () => {
 
 // Cleanup
 gulp.task('clean', () => {
-    del('assets/dist');
+    del(['assets/dist', 'assets/fonts']);
     return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], {stdio: 'inherit'});
 });
 
