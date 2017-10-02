@@ -4,7 +4,7 @@
 	padding-top: 1.5rem;
 	border-top: 4px solid $color-b;
 	font-family: $font-family-sans-serif;
-	font-weight: 600;
+	//font-weight: 600;
 
 	.contact {
 		margin-bottom: 2rem;
@@ -56,7 +56,7 @@
 
 	.footer-note {
 		margin-bottom: 1.5rem;
-		font-size: $font-size-small-rel;
+		font-size: $font-size-small-relative;
 
 		.sep {
 			display: inline-block;
@@ -65,11 +65,14 @@
 			margin: 0 .6em;
 		}
 
+		// TODO: add pulse CSS animation
 		.heart {
 			position: relative;
 			top: .06em;
 			margin-left: .1em;
+			border-bottom: none;
 			color: hsl(350, 65%, 46%);
+			font-weight: bold; // reset by fa to 'normal'
 		}
 	}
 }

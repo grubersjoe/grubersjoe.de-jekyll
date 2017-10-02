@@ -24,15 +24,15 @@ $font-family-base: $font-family-sans-serif;
 // TODO: *maybe* migrate thisto rem unit
 $font-size-base: 18px;
 $font-size-large: round($font-size-base * 1.2);
-$font-size-small: round($font-size-base * 0.9);
-$font-size-small-rel: 90%;
+$font-size-small: round($font-size-base * 0.88);
+$font-size-small-relative: 88%;
 
 // TODO: figure out reasonable font-sizes
 // TODO: h3 in post -> own font-size, others: default from below!
 $font-size-h1: 4.2rem;
 $font-size-h2: 2.2rem;
-$font-size-h3: 1.7rem;
-$font-size-h4: 1.6rem;
+$font-size-h3: 1.6rem;
+$font-size-h4: 1.5rem;
 $font-size-h5: 1.5rem;
 
 $blockquote-font-size: 1.8rem;

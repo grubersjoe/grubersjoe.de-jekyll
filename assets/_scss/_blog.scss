@@ -76,7 +76,7 @@
 				opacity: 0;
 				color: $color-t;
 				font-weight: 900;
-				font-size: $font-size-small-rel;
+				font-size: $font-size-small-relative;
 				border-right: 3px double $color-b-light;
 				border-top: none;
 				border-bottom: none;
@@ -140,11 +140,12 @@
 	}
 
 	h4 {
-		font-size: 1.8rem;
+		font-size: 1.7rem;
+		font-weight: 700;
 	}
 
 	h5 {
-		font-size: 1.7rem;
+		font-size: 1.6rem;
 	}
 
 	.post-meta {

@@ -1,14 +1,14 @@
-#about {
-	h3 {
-		font-size: $font-size-h4;
-	}
-}
+//#about {
+//	h3 {
+//		font-size: $font-size-h4;
+//	}
+//}
 
 .cv {
 	$border-width: 4px;
 	padding-top: 1rem;
 	border-left: $border-width solid $color-b;
-	font-size: $font-size-small-rel;
+	font-size: $font-size-small-relative;
 
 	> article {
 		position: relative;

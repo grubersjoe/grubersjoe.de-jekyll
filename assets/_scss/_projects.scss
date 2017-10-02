@@ -17,6 +17,7 @@
 
 	h3 {
 		position: relative;
+		margin-top: 0;
 		margin-bottom: 1rem;
 		color: $text-color;
 	}
@@ -40,7 +41,7 @@
 	@include list-unstyled;
 	@include clearfix;
 	margin-bottom: 1rem;
-	font-size: $font-size-small-rel;
+	font-size: $font-size-small-relative;
 	font-weight: 600;
 
 	> a {
