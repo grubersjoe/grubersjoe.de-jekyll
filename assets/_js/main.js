@@ -1,6 +1,4 @@
 $(document).ready(() => {
-    $('.post h3').wrapInner('<span>');
-
     let viewport = $('html, body');
 
     function easeInOutCubic(t) {
