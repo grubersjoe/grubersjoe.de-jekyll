@@ -144,7 +144,7 @@ gulp.task('build', () => {
 
 // Cleanup
 gulp.task('clean', () => {
-    del(['assets/dist', 'assets/fonts']);
+    del(['assets/dist', 'assets/fonts/*']);
     return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], {stdio: 'inherit'});
 });
 
