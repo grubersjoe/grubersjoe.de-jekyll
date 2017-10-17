@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "animations";
 
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
@@ -22,7 +23,7 @@
 @import "layout";
 @import "nav";
 @import "footer";
-@import "cv";
+@import "about";
 @import "blog";
 @import "projects";
 @import "poetry";

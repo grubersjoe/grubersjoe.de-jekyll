@@ -1,12 +1,12 @@
-//#about {
-//	h3 {
-//		font-size: $font-size-h4;
-//	}
-//}
+#about {
+	small, .small {
+		font-size: 80%;
+	}
+}
 
 .cv {
 	$border-width: 4px;
-	padding-top: 1rem;
+	padding-top: .5rem;
 	border-left: $border-width solid $color-b;
 	font-size: $font-size-small-relative;
 
@@ -20,7 +20,7 @@
 			@include square($size);
 			@include circle;
 			position: absolute;
-			top: round(.30 * $size);
+			top: .2 * $size;
 			left: -$size / 2 - $border-width / 2;
 			display: block;
 			content: '';
@@ -32,8 +32,12 @@
 	header {
 		font-weight: 700;
 
-		.note {
+		.note, .subtitle {
 			font-weight: normal;
+		}
+
+		.subtitle {
+			display: block;
 		}
 	}
 

@@ -23,9 +23,10 @@ $font-family-base: $font-family-sans-serif;
 
 // TODO: *maybe* migrate thisto rem unit
 $font-size-base: 18px;
+$font-size-base-lg: 20px;
 $font-size-large: round($font-size-base * 1.2);
-$font-size-small: round($font-size-base * 0.88);
-$font-size-small-relative: 88%;
+$font-size-small: round($font-size-base * 0.9);
+$font-size-small-relative: 90%;
 
 // TODO: figure out reasonable font-sizes
 // TODO: h3 in post -> own font-size, others: default from below!

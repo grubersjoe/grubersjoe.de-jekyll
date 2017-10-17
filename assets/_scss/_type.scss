@@ -2,7 +2,7 @@ body {
 	font-variant-ligatures: common-ligatures;
 
 	@include media-sm {
-		font-size: 21px;
+		font-size: $font-size-base-lg;
 	}
 }
 
@@ -69,7 +69,7 @@ h3 {
 }
 
 h4 {
-	margin: 1.75rem 0 .75rem;
+	margin: 1.75rem 0 1rem;
 
 	&, a, a:focus, a:hover {
 		color: scale-color($color-p, $lightness: -12%);
@@ -77,7 +77,7 @@ h4 {
 }
 
 h5 {
-	margin: 1.5rem 0 .5rem;
+	margin: 1.5rem 0 1rem;
 	font-weight: 600;
 	color: $color-t;
 }
@@ -99,7 +99,7 @@ a {
 
 main {
 	p {
-		margin: 0 0 1.25rem;
+		margin: 0 0 1rem;
 		hyphens: auto;
 		hyphenate-limit-chars: 3;
 	}
@@ -144,8 +144,8 @@ main, #footer {
 }
 
 blockquote {
-	margin: 2rem 0;
-	padding: .5rem 0 .5rem 2rem;
+	margin: 2.5rem 0;
+	padding: 0 0 0 2rem;
 	border-left: none;
 	font-weight: 400;
 	color: $color-t;
@@ -171,13 +171,13 @@ blockquote {
 		}
 
 		@include media-sm {
-			font-size: round(21px * 0.9);
+			font-size: round($font-size-base-lg * 0.95);
 		}
 	}
 }
 
 small, .small {
-	font-size: 80%;
+	font-size: $font-size-small-relative;
 }
 
 a, .btn, .tag {
