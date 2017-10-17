@@ -19,10 +19,29 @@ $(document).ready(() => {
         viewport.stop();
     });
 
-	$('.collapse-list').click(function () {
-		$(this).find('.fa').toggleClass('open');
-		$(this).next('ul, ol').stop().slideToggle();
-	});
+    $('.collapse-list').click(function () {
+        $(this).find('.fa').toggleClass('open');
+        $(this).next('ul, ol').stop().slideToggle();
+    });
 
     console.log(`TODO: Set language to ${navigator.language}`)
 });
+
+// TODO: try max-height approach
+// window.getHeight = function (elem) {
+// 	let style = getComputedStyle(elem);
+//
+// 	if (style.display !== 'none') {
+// 		return elem.clientHeight;
+// 	}
+//
+// 	elem.style.display = 'block';
+// 	elem.style.visibility = 'hidden';
+//
+// 	let height = elem.clientHeight;
+//
+// 	elem.style.display = 'none';
+// 	elem.style.visibility = 'visible';
+//
+// 	return height;
+// };
