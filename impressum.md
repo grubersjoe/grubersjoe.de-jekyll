@@ -13,4 +13,4 @@ Karl-Liebknecht-Straße 9<br>
 
 ### Kontakt
 
-E-Mail: [gruberjonathan@gmail.com](gruberjonathan@gmail.com)
+E-Mail: [hi@grubersjoe.de](mailto:hi@grubersjoe.de)
