@@ -1,0 +1,40 @@
+.project-list {
+	margin-top: 2rem;
+
+	.project {
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
+		border-bottom: 3px double $color-b-light;
+
+		&:first-of-type {
+			padding-top: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	h3 {
+		position: relative;
+		margin-top: 0;
+		margin-bottom: .5rem;
+		color: $text-color;
+	}
+
+	.body {
+		margin-bottom: 1.5rem;
+		padding: .25rem 0 .45rem 1.25rem;
+		border-left: 3px solid $color-b;
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.links {
+		font-weight: 600;
+	}
+}

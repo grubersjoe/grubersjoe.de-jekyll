@@ -6,7 +6,7 @@ const runSequence = require('run-sequence');
 const browserSync = require('browser-sync').create();
 const $ = gulpLoadPlugins();
 
-const BUILD_DIR = 'assets/dist/';
+const BUILD_DIR = 'assets/build/';
 const FONTS = [
     'node_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
 ];
@@ -31,7 +31,7 @@ gulp.task('html', () => {
 
 // Handle SCSS code
 gulp.task('styles', () => {
-    return gulp.src('assets/_scss/main.scss')
+    return gulp.src('src/scss/main.scss')
         .pipe($.plumber())
         .pipe($.if(dev, $.sourcemaps.init()))
         .pipe($.sass.sync({
@@ -51,10 +51,10 @@ gulp.task('styles', () => {
 
 // Handle JavaScript code
 gulp.task('scripts', () => {
-    return gulp.src('assets/_js/**/*.js')
+    return gulp.src('src/js/**/*.js')
         .pipe($.plumber())
 	    .pipe($.if(dev, $.sourcemaps.init()))
-	    .pipe($.concat('build.js'))
+	    .pipe($.concat('main.js'))
         .pipe($.babel())
         .pipe($.if(dev, $.sourcemaps.write('.')))
         .pipe(gulp.dest(BUILD_DIR))
@@ -117,8 +117,8 @@ gulp.task('server', ['jekyll-build'], (done) => {
 
 // Build the page, start a server and watch files for changes
 gulp.task('serve', () => {
-    gulp.watch('assets/_scss/**/*.scss', ['styles']);
-    gulp.watch('assets/_js/**/*.js', ['scripts']);
+    gulp.watch('src/scss/**/*.scss', ['styles']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
 
     runSequence('build', 'server', () => {
         gulp.watch([
@@ -144,7 +144,7 @@ gulp.task('build', () => {
 
 // Cleanup
 gulp.task('clean', () => {
-    del(['assets/dist', 'assets/fonts/*']);
+    del([BUILD_DIR, 'assets/fonts/*']);
     return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], {stdio: 'inherit'});
 });
 

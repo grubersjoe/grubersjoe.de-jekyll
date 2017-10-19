@@ -1,0 +1,21 @@
+#title {
+	margin: 0 0 2.5rem;
+
+	.subtitle {
+		margin: 0;
+		font-size: 0.38 * $font-size-h1;
+		font-weight: 600;
+		font-family: $font-family-sans-serif;
+		color: $color-s;
+		cursor: default;
+
+		.asterisk {
+			position: relative;
+			top: .32rem;
+		}
+
+		@include media-max(360px) {
+			font-size: 0.3 * $font-size-h1;
+		}
+	}
+}

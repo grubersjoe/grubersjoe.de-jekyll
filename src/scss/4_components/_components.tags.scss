@@ -1,0 +1,28 @@
+.tags {
+	@include list-unstyled;
+	@include clearfix;
+	margin-bottom: 1rem;
+	font-size: $font-size-small-relative;
+	font-weight: 600;
+
+	> a {
+		position: relative;
+		float: left;
+		//color: scale-color($color-s, $lightness: -16%);
+
+		&, &:hover {
+			border-bottom: none;
+		}
+
+		&:after {
+			position: relative;
+			top: 3px;
+			margin: 0 .5rem;
+			content: '*';
+		}
+
+		&:last-of-type:after {
+			content: '';
+		}
+	}
+}

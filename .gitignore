@@ -1,7 +1,7 @@
 .idea/
 
 _site/
-assets/dist/
+assets/build/
 assets/fonts/
 
 .vendor/

@@ -1,0 +1,21 @@
+a {
+	border-bottom: solid 1px transparent;
+
+	&, &:focus, &:hover {
+		color: $link-color;
+	}
+
+	&:focus, &:hover {
+		text-decoration: none;
+		border-bottom: 1px solid;
+	}
+
+	> i {
+		margin-right: 4px;
+	}
+}
+
+a, .btn, .tag {
+	transition: color .3s ease-in-out, background .3s ease-in-out, border .3s ease-in-out;
+	will-change: color, background, border;
+}

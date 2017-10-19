@@ -1,0 +1,18 @@
+.collapsible--with-icon {
+	.collapse {
+		margin-top: .5rem;
+	}
+
+	.icon {
+		position: relative;
+		top: -.1em;
+		margin-right: .4rem;
+		transition: transform .3s ease-in-out;
+		font-size: 80%;
+	}
+
+	&.open .icon {
+		transform: rotate(180deg);
+		transform-origin: 50%;
+	}
+}

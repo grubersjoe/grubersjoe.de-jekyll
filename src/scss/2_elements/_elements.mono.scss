@@ -1,0 +1,20 @@
+pre, code {
+	border: none;
+	border-radius: 3px;
+}
+
+pre {
+	margin: 0;
+	font-size: 70%;
+}
+
+code {
+	margin: 0 2px;
+	padding: 3px 6px;
+	font-size: 75%;
+
+	a, a:focus, a:hover {
+		border-bottom: none;
+	}
+}
+

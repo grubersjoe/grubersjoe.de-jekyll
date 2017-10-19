@@ -1,0 +1,33 @@
+main {
+	hyphens: auto;
+
+	p {
+		margin: 0 0 1rem;
+		hyphens: auto;
+		hyphenate-limit-chars: 3;
+	}
+
+	.footnote {
+		font-weight: 600;
+	}
+}
+
+small {
+	font-size: $font-size-small-relative;
+}
+
+blockquote {
+	margin: 2.5rem 0;
+	padding: 0 0 0 2rem;
+	border-left: none;
+	font-weight: 400;
+	color: $color-t;
+	line-height: 1.25;
+	font-style: italic;
+
+	a {
+		&, &:focus,	&:hover {
+			color: inherit;
+		}
+	}
+}

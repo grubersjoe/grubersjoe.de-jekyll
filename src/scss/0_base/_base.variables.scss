@@ -40,7 +40,7 @@ $blockquote-font-size: 1.8rem;
 
 // Headings
 $headings-font-weight: 700;
-$headings-line-height: 1.15;
+$headings-line-height: 1.2;
 $headings-font-family: $font-family-sans-serif;
 $headings-color: $color-s;
 
@@ -66,8 +66,39 @@ $container-tablet:        736px;
 $container-desktop:       $container-tablet;
 $container-large-desktop: $container-desktop;
 
-$padding-base-vertical:     8px;
-$padding-base-horizontal:   16px;
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+
+$padding-base-vertical:          8px;
+$padding-base-horizontal:       16px;
+$padding-base-vertical-rem:     .5rem;
+$padding-base-horizontal-rem:   .8rem;
+
+$padding-large-horizontal:      20px;
+$padding-large-vertical:        10px;
+$padding-large-vertical-rem:   .75rem;
+$padding-large-horizontal-rem: 1.5rem;
+
+$padding-small-horizontal:      14px;
+$padding-small-vertical:         7px;
+$padding-small-vertical-rem:    .4rem;
+$padding-small-horizontal-rem:  .8rem;
+
+$padding-xs-horizontal:         12px;
+$padding-xs-vertical:            6px;
+$padding-xs-vertical-rem:       .2rem;
+$padding-xs-horizontal-rem:     .5rem;
 
 $dl-horizontal-offset: 2rem;
 $dl-horizontal-breakpoint: 0; // disable it
@@ -80,3 +111,14 @@ $pre-bg: darken($body-bg, 4%);
 $pre-color: $text-color;
 $code-color: $text-color;
 $code-bg: $pre-bg;
+
+// Buttons
+$btn-font-weight:                600;
+$btn-default-color:              #fff;
+$btn-default-bg:                 adjust_color($color-p, $lightness: -6, $saturation: 8);
+$btn-default-border:             transparent;
+$btn-link-disabled-color:        $color-b-light;
+
+$btn-border-radius-base:         2px;
+$btn-border-radius-small:        2px;
+$btn-border-radius-large:        3px;

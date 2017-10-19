@@ -1,0 +1,84 @@
+h1 {
+	@include clearfix;
+	display: inline-block;
+	margin: 0 0 1rem 0;
+	padding-bottom: 12px;
+	border-bottom: .45rem solid $color-b;
+	color: $color-p;
+	cursor: default;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: lowercase;
+	letter-spacing: -.015em;
+
+	@include media-sm {
+		font-size: 5.25rem;
+	}
+
+	@include media-max(360px) {
+		font-size: 3.5rem;
+	}
+}
+
+h2 {
+	@include clearfix;
+	display: inline-block;
+	margin: 3rem 0 2rem;
+	padding: .75rem 0;
+	border: .3rem solid lighten($color-b, 4%);
+	border-left: none;
+	border-right: none;
+	font-weight: 900;
+
+	&:before,
+	&:after {
+		display: inline;
+	}
+
+	&:before {
+		content: '~ ';
+	}
+
+	&:after {
+		content: ' ~';
+	}
+
+	&, a {
+		color: $color-t;
+	}
+}
+
+h3 {
+	margin: 2rem 0 1.25rem;
+
+	&, a, a:focus, a:hover {
+		color: $color-s;
+	}
+
+	a:focus, a:hover {
+		border-bottom: 2px solid;
+	}
+}
+
+h4 {
+	margin: 1.75rem 0 1rem;
+
+	&, a, a:focus, a:hover {
+		color: scale-color($color-p, $lightness: -12%);
+	}
+}
+
+h5 {
+	margin: 1.5rem 0 1rem;
+	font-weight: 600;
+	color: $color-t;
+}
+
+h1, h2, h3, h4, h5 {
+	font-feature-settings: "lnum";
+}
+
+// FIXME: this indicates bad styling choices
+h2 + h3 {
+	margin-top: 0;
+}

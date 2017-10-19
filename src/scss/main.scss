@@ -1,0 +1,64 @@
+/**
+ * Following loosely the ideas of ITCSS - Inverted Triangle CSS
+ * (https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture)
+ */
+
+// Base /Settings
+@import "0_base/base.variables";
+
+// Bootstrap: Core variables and mixins
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Bootstrap: Reset and dependencies
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
+
+// Bootstrap: Core CSS
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// Bootstrap: Components
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+// Font Awesome
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+// Tools
+@import "1_tools/tools.mixins";
+@import "1_tools/tools.animations";
+
+// Objects
+@import "3_objects/objects.collapsible";
+@import "3_objects/objects.text-icon";
+
+// Elements
+@import "2_elements/elements.page";
+@import "2_elements/elements.headings";
+@import "2_elements/elements.text";
+@import "2_elements/elements.anchors";
+@import "2_elements/elements.lists";
+@import "2_elements/elements.mono";
+
+// Components
+@import "4_components/components.nav";
+@import "4_components/components.title";
+@import "4_components/components.footer";
+@import "4_components/components.button";
+@import "4_components/components.tags";
+@import "4_components/components.asterisk";
+@import "4_components/components.quote";
+@import "4_components/components.cv";
+@import "4_components/components.collapsible";
+@import "4_components/components.project-list";
+@import "4_components/components.post-list";
+@import "4_components/components.post";
+@import "4_components/components.code";
+
+// obsolete
+// @import "poetry";

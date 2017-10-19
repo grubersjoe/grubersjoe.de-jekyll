@@ -4,8 +4,8 @@
 		{% for item in pages %}
 			{% unless item.exclude %}
 				{% if item.title %}
-					<li class="{% if item.url == page.url or (item.layout == 'blog' and page.id) %} active {% endif %}">
-						<a class="page-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+					<li>
+						<a class="page-link {% if item.url == page.url or (item.layout == 'blog' and page.id) %}active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
 					</li>
 				{% endif %}
 			{% endunless %}

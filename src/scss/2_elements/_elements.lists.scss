@@ -1,0 +1,23 @@
+main {
+	ul, ol {
+		margin: 0 0 1.5rem;
+
+		li {
+			margin-bottom: .25rem;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+
+		li:before {
+			position: relative;
+			top: .18em;
+			margin-left: -1em;
+			margin-right: .5em;
+			content: '*';
+			font-weight: 600;
+			color: darken($color-s, 12%);
+		}
+	}
+}

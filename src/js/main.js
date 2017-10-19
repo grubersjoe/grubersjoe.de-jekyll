@@ -19,9 +19,9 @@ $(document).ready(() => {
         viewport.stop();
     });
 
-    $('.collapse-list').click(function () {
-        $(this).find('.fa').toggleClass('open');
-        $(this).next('ul, ol').stop().slideToggle();
+    $('.collapsible').click(function () {
+        $(this).toggleClass('open');
+        $(this).find('.collapse').stop().slideToggle();
     });
 
     console.log(`TODO: Set language to ${navigator.language}`)

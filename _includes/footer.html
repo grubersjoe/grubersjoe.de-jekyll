@@ -1,5 +1,5 @@
 <footer id="footer">
-	<div class="contact">
+	<div class="footer-icons">
 		{% if site.author %}
 			<a class="icon icon-mail" title="Mail" href="mailto:{{ site.email }}"></a>
 		{% endif %}
@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="footer-note">
-		Made with <a href="/humans.txt" target="_blank" class="heart fa fa-heart-o"></a><span class="sep hidden-xs">*</span><span class="hidden-xs">powered by <a href='https://jekyllrb.com'>Jekyll</a></span><span class="sep">*</span><a href="/impressum">Impressum</a>
+		Made with <a href="/humans.txt" target="_blank" class="heart fa fa-heart-o"></a><span class="asterisk hidden-xs"></span><span class="hidden-xs">powered by <a href='https://jekyllrb.com'>Jekyll</a></span><span class="asterisk"></span><a href="/impressum">Impressum</a><span class="asterisk"></span><a rel="alternate" type="application/rss+xml" href="/feed.xml" title="Atom Feed" class="text-icon fa fa-rss"></a>
 	</div>
 </footer>
 
@@ -21,9 +21,9 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 {% if jekyll.environment == 'production' %}
-	<script src="{{ "/assets/dist/build.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+	<script src="{{ "/assets/build/build.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 {% else %}
-	<script src="{{ "/assets/dist/build.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+	<script src="{{ "/assets/build/main.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 {% endif %}
 
 
