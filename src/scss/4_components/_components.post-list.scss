@@ -10,6 +10,8 @@ $gradient-width: 2rem;
 
 	&:last-of-type {
 		border-bottom: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
 	.post-meta {
@@ -29,22 +31,29 @@ $gradient-width: 2rem;
 
 	.post__excerpt {
 		color: $text-color;
+
+		:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 
 	.post__read-on {
+		margin: 1rem 0 0 0;
 		font-style: italic;
 	}
 
 	@include media-sm {
-		display: flex;
-		align-items: flex-start;
+		.flexbox {
+			display: flex;
+			align-items: stretch;
+		}
 
 		.post-meta {
 			display: flex;
 			flex-flow: column wrap;
 			flex: 0 0 $box-width;
-			justify-content: center;
-			margin: .35rem $box-margin 0 0;
+			justify-content: flex-start;
+			margin: .35rem 0 0 $box-margin;
 			padding: $box-padding;
 			background: $color-p;
 			border-radius: 2px;

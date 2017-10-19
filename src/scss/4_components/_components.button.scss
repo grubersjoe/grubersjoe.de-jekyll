@@ -2,7 +2,6 @@
 	@include button-size($padding-base-vertical-rem, $padding-base-horizontal-rem, $font-size-base, $line-height-base, $btn-border-radius-base);
 	display: inline-block;
 	margin-bottom: 1rem;
-	//padding: .375rem .75rem;
 	background-color: $btn-default-bg;
 	border: none;
 	color: $btn-default-color;

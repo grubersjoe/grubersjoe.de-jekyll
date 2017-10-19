@@ -1,19 +1,21 @@
 <div class="post-list">
 	{% for post in site.posts %}
 	<article class="post-list__post">
-		<aside class="post-meta">
-			<div class="post-meta__row">{{ post.content | reading_time }}</div>
-			<div class="post-meta__row"><hr></div>
-			<div class="post-meta__row date post-meta__day">{{ post.date | date: '%d.' }}</div>
-			<div class="post-meta__row date post-meta__date">{{ post.date | date: '%b %Y' }}</div>
-		</aside>
-		<div>
-			<a class="post__link" href="{{ post.url | relative_url }}">
-				<h3>{{ post.title | escape }}</h3>
-			</a>
-			<p class="post__excerpt">{{ post.content | strip_html | truncatewords: 40 }}</p>
-			<a class="post__read-on" href="{{ post.url | relative_url }}">weiterlesen …</a>
+		<div class="flexbox">
+			<div>
+				<a class="post__link" href="{{ post.url | relative_url }}">
+					<h3>{{ post.title | escape }}</h3>
+				</a>
+				<div class="post__excerpt">{{ post.content | truncatewords: 48 }}</div>
+			</div>
+			<aside class="post-meta">
+				<div class="post-meta__row">{{ post.content | reading_time }}</div>
+				<div class="post-meta__row"><hr></div>
+				<div class="post-meta__row date post-meta__day">{{ post.date | date: '%d.' }}</div>
+				<div class="post-meta__row date post-meta__date">{{ post.date | date: '%b %Y' }}</div>
+			</aside>
 		</div>
+		<a class="post__read-on btn btn-sm btn--secondary" href="{{ post.url | relative_url }}">weiterlesen …</a>
 	</article>
 	{% endfor %}
 </div>
