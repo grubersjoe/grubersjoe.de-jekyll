@@ -12,7 +12,7 @@ def calculate_time(input)
 end
 
 def output(minutes, label)
-  "<span class='reading-time'>#{minutes}</span> <span class='reading-time-label'>#{label}</span>"
+  "<div class='reading-time'><span class='reading-time__min'>#{minutes}</span> <span class='reading-time__label'>#{label}</span></div>"
 end
 
 module ReadingTimeFilterAsInteger
