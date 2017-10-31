@@ -21,7 +21,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 {% if jekyll.environment == 'production' %}
-	<script src="{{ "/assets/build/build.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+	<script src="{{ "/assets/build/main.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 {% else %}
 	<script src="{{ "/assets/build/main.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 {% endif %}
