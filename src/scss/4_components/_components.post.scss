@@ -1,52 +1,26 @@
 .post {
 	h2 {
+		display: block;
+		padding: 0;
+		font-weight: 700;
 		font-style: italic;
-
-		&:before,
-		&:after {
-			content: '';
-		}
+		border: none;
 	}
-
-	//h3 {
-	//	$padding-v: .25rem;
-	//	$padding-h: .625rem;
-	//	@include clearfix;
-	//	color: $text-color;
-	//	font-size: 1.9rem;
-	//	font-weight: 600;
-	//	font-style: italic;
-	//	width: calc(100% - 2 * #{$padding-h});
-	//
-	//	> span {
-	//		display: inline;
-	//		//color: $text-color;
-	//		//color: $color-s;
-	//		//background: darken($body-bg, 4%);
-	//		background: $color-s;
-	//		color: #fff;
-	//		padding: $padding-v $padding-h;
-	//		box-decoration-break: clone;
-	//		line-height: 1.55;
-	//	}
-	//}
 
 	h3 {
-		font-size: 2rem;
-		//font-weight: 900;
-		letter-spacing: -.01em;
+		font-size: 1.7rem;
 	}
 
-	h4 {
-		font-size: 1.8rem;
-		font-weight: 700;
-	}
-
-	h5 {
-		font-size: 1.6rem;
+	.post-title {
+		margin-bottom: .75rem;
 	}
 
 	.post-meta {
+		display: inline-block;
+		padding-top: .75rem;
+		border-top: .2rem solid $color-b-light;
+		margin-bottom: 2rem;
+		font-weight: 600;
 		font-style: italic;
 	}
 

@@ -20,6 +20,7 @@ $gradient-width: 2rem;
 
 	h3 {
 		margin: 0 0 .75rem;
+		color: $color-t;
 		font-size: 1.1 * $font-size-h3;
 		font-weight: 700;
 		font-style: italic;
@@ -32,12 +33,13 @@ $gradient-width: 2rem;
 	.post__excerpt {
 		color: $text-color;
 
-		:last-of-type {
+		:last-child {
 			margin-bottom: 0;
 		}
 	}
 
 	.post__read-on {
+		display: inline-block;
 		margin: 1rem 0 0 0;
 		font-style: italic;
 	}
@@ -45,7 +47,7 @@ $gradient-width: 2rem;
 	@include media-sm {
 		.flexbox {
 			display: flex;
-			align-items: stretch;
+			align-items: flex-start;
 		}
 
 		.post-meta {
@@ -53,7 +55,7 @@ $gradient-width: 2rem;
 			flex-flow: column wrap;
 			flex: 0 0 $box-width;
 			justify-content: flex-start;
-			margin: .35rem 0 0 $box-margin;
+			margin: .3rem $box-margin 0 0;
 			padding: $box-padding;
 			background: $color-p;
 			border-radius: 2px;

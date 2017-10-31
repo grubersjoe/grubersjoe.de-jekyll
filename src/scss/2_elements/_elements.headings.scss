@@ -1,3 +1,4 @@
+// TODO: this is just the title, the current h2 should actually be h1s
 h1 {
 	@include clearfix;
 	display: inline-block;
@@ -23,25 +24,10 @@ h1 {
 h2 {
 	@include clearfix;
 	display: inline-block;
-	margin: 3rem 0 2rem;
-	padding: .75rem 0;
-	border: .3rem solid lighten($color-b, 4%);
-	border-left: none;
-	border-right: none;
+	margin: 0 0 2rem;
+	padding: 0 0 .75rem;
+	border-bottom: .3rem solid lighten($color-b, 4%);
 	font-weight: 900;
-
-	&:before,
-	&:after {
-		display: inline;
-	}
-
-	&:before {
-		content: '~ ';
-	}
-
-	&:after {
-		content: ' ~';
-	}
 
 	&, a {
 		color: $color-t;
@@ -51,7 +37,7 @@ h2 {
 h3 {
 	margin: 2rem 0 1.25rem;
 
-	&, a, a:focus, a:hover {
+	a, a:focus, a:hover {
 		color: $color-s;
 	}
 
@@ -62,6 +48,7 @@ h3 {
 
 h4 {
 	margin: 1.75rem 0 1rem;
+	font-weight: 600;
 
 	&, a, a:focus, a:hover {
 		color: scale-color($color-p, $lightness: -12%);
@@ -81,4 +68,8 @@ h1, h2, h3, h4, h5 {
 // FIXME: this indicates bad styling choices
 h2 + h3 {
 	margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	hyphens: none;
 }

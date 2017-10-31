@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: "Farbschemata für Dummies"
+title: "Farbschemata für Dummies und andere die es werden moechten"
 published: false
 language: de
 ---
