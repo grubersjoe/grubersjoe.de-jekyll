@@ -1,6 +1,6 @@
 $box-width: 6rem;
 $box-margin: 1.5rem;
-$box-padding: 1rem;
+$box-padding: .9rem;
 $gradient-width: 2rem;
 
 .post-list__post {
@@ -21,9 +21,6 @@ $gradient-width: 2rem;
 	h3 {
 		margin: 0 0 .75rem;
 		color: $color-t;
-		font-size: 1.1 * $font-size-h3;
-		font-weight: 700;
-		font-style: italic;
 
 		a, a:focus, a:hover {
 			border-bottom: none;
@@ -93,7 +90,6 @@ $gradient-width: 2rem;
 		.post-meta__date {
 			font-variant-numeric: lining-nums;
 			font-size: .8 * $font-size-base;
-			text-transform: uppercase;
 		}
 
 		.reading-time {

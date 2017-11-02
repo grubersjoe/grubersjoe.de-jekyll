@@ -2,7 +2,7 @@
 	<ul class="nav container">
 		{% assign pages = site.pages | sort: 'order' %}
 		{% for item in pages %}
-			{% unless item.exclude %}
+			{% unless item.exclude or item.type == "category" %}
 				{% if item.title %}
 					<li>
 						<a class="page-link {% if item.url == page.url or (item.layout == 'blog' and page.id) %}active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>

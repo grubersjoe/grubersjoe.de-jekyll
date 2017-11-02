@@ -1,4 +1,7 @@
 <div class="post-list">
+	{% if site.posts == empty %}
+	<p>Leider gibt es noch keine Beiträge :(</p>
+	{% else %}
 	{% for post in site.posts %}
 	<article class="post-list__post">
 		<div class="flexbox">
@@ -12,10 +15,11 @@
 				<a class="post__link" href="{{ post.url | relative_url }}">
 					<h3>{{ post.title | escape }}</h3>
 				</a>
-				<div class="post__excerpt">{{ post.content | truncatewords: 48 }}</div>
+				<div class="post__excerpt">{{ post.content | truncatewords: 32 }}</div>
 				<a class="post__read-on" href="{{ post.url | relative_url }}">weiterlesen …</a>
 			</div>
 		</div>
 	</article>
 	{% endfor %}
+	{% endif %}
 </div>

@@ -45,7 +45,7 @@
 
 	@include media-sm {
 		background: fade_out($body-bg, 0.1);
-		padding: 1.75rem 0;
+		padding: 1.5rem 0;
 
 		a {
 			color: change_color($color-t, $lightness: 54%, $saturation: 20%);
