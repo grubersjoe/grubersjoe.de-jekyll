@@ -15,7 +15,7 @@
 				<a class="post__link" href="{{ post.url | relative_url }}">
 					<h3>{{ post.title | escape }}</h3>
 				</a>
-				<div class="post__excerpt">{{ post.content | truncatewords: 32 }}</div>
+				<p class="post__excerpt">{{ post.content | strip_html | truncatewords: 28 }}</p>
 				<a class="post__read-on" href="{{ post.url | relative_url }}">weiterlesen …</a>
 			</div>
 		</div>

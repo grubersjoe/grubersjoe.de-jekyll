@@ -3,11 +3,11 @@ layout: skeleton
 exclude: true
 ---
 
-<h2>Kategorie „{{ page.title }}“</h2>
+<h2>Blog – {{ page.title  | capitalize }}</h2>
 <ul class="posts">
 	{% for post in page.posts %}
 	<li>
-		{{ post.date | date: "%-d. %b %Y" }}: <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		{{ post.date | date: "%-d. %B %Y" }}: <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 	</li>
 	{% endfor %}
 </ul>

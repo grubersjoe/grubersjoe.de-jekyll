@@ -28,16 +28,12 @@ $gradient-width: 2rem;
 	}
 
 	.post__excerpt {
+		margin: 0 0 .5rem;
 		color: $text-color;
-
-		:last-child {
-			margin-bottom: 0;
-		}
 	}
 
 	.post__read-on {
 		display: inline-block;
-		margin: 1rem 0 0 0;
 		font-style: italic;
 	}
 
@@ -55,7 +51,7 @@ $gradient-width: 2rem;
 			margin: .3rem $box-margin 0 0;
 			padding: $box-padding;
 			background: $color-p;
-			border-radius: 2px;
+			border-radius: 3px;
 			color: hsl($hue, 32%, 98%);
 			text-align: center;
 			font-weight: 700;
@@ -79,19 +75,6 @@ $gradient-width: 2rem;
 			}
 		}
 
-		.post-meta__day {
-			position: relative;
-			top: -.1em;
-			margin-bottom: .25rem;
-			font-variant-numeric: lining-nums;
-			font-size: 2.4 * $font-size-base;
-		}
-
-		.post-meta__date {
-			font-variant-numeric: lining-nums;
-			font-size: .8 * $font-size-base;
-		}
-
 		.reading-time {
 			&:before {
 				@include fa-icon;
@@ -101,6 +84,19 @@ $gradient-width: 2rem;
 
 			font-size: .85 * $font-size-base;
 			font-variant-numeric: lining-nums;
+		}
+
+		.post-meta__day {
+			position: relative;
+			top: -.1em;
+			margin-bottom: .25rem;
+			font-variant-numeric: lining-nums;
+			font-size: 220%;
+		}
+
+		.post-meta__date {
+			font-variant-numeric: lining-nums;
+			font-size: 80%;
 		}
 	}
 }
