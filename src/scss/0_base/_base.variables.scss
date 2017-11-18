@@ -1,12 +1,12 @@
 // Colors: https://coolors.co/e4eef1-409ab5-057676-0d4759-a7c8d2
 $hue: 194;
-$body-bg: hsl($hue, 32%, 94%);   // Background (92)
-$color-p: hsl($hue, 48%, 48%);   // Primary
+$body-bg: hsl($hue, 32%, 95%); // Background (92)
+$color-p: hsl($hue, 48%, 48%); // Primary
 $color-s: hsl(180,  92%, 24%);   // Secondary
 $color-t: hsl($hue, 74%, 20%);   // Tertiary
 
 $color-b: adjust_color($body-bg, $lightness: -18%); // Borders
-$color-b-light: lighten($color-b, 6%);              // Borders light
+$color-b-light: lighten($color-b, 6%); // Borders light
 
 $text-color: hsl($hue, 16%, 16%);
 $link-color: change_color($color-p, $lightness: 40%);
@@ -31,12 +31,12 @@ $font-size-small-relative: 90%;
 // TODO: figure out reasonable font-sizes
 // TODO: h3 in post -> own font-size, others: default from below!
 $font-size-h1: 4.2rem;
-$font-size-h2: 2.2rem;
+$font-size-h2: 2.1rem;
 $font-size-h3: 1.6rem;
 $font-size-h4: 1.5rem;
 $font-size-h5: 1.3rem;
 
-$blockquote-font-size: 1.8rem;
+$blockquote-font-size: 1.6rem;
 
 // Headings
 $headings-font-weight: 700;
@@ -62,43 +62,41 @@ $nav-pills-active-link-hover-color: transparent;
 $grid-columns: 4;
 $grid-gutter-width: 32px;
 
-$container-tablet:        736px;
-$container-desktop:       $container-tablet;
+$container-tablet: 736px;
+$container-desktop: $container-tablet;
 $container-large-desktop: $container-desktop;
 
+$padding-base-vertical: 6px !default;
+$padding-base-horizontal: 12px !default;
 
-$padding-base-vertical:     6px !default;
-$padding-base-horizontal:   12px !default;
+$padding-large-vertical: 10px !default;
+$padding-large-horizontal: 16px !default;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
+$padding-small-vertical: 5px !default;
+$padding-small-horizontal: 10px !default;
 
-$padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
+$padding-xs-vertical: 1px !default;
+$padding-xs-horizontal: 5px !default;
 
-$padding-xs-vertical:       1px !default;
-$padding-xs-horizontal:     5px !default;
+$padding-base-vertical: 8px;
+$padding-base-horizontal: 16px;
+$padding-base-vertical-rem: .5rem;
+$padding-base-horizontal-rem: .8rem;
 
-
-$padding-base-vertical:          8px;
-$padding-base-horizontal:       16px;
-$padding-base-vertical-rem:     .5rem;
-$padding-base-horizontal-rem:   .8rem;
-
-$padding-large-horizontal:      20px;
-$padding-large-vertical:        10px;
-$padding-large-vertical-rem:   .75rem;
+$padding-large-horizontal: 20px;
+$padding-large-vertical: 10px;
+$padding-large-vertical-rem: .75rem;
 $padding-large-horizontal-rem: 1.5rem;
 
-$padding-small-horizontal:      14px;
-$padding-small-vertical:         7px;
-$padding-small-vertical-rem:    .3rem;
-$padding-small-horizontal-rem:  .7rem;
+$padding-small-horizontal: 14px;
+$padding-small-vertical: 7px;
+$padding-small-vertical-rem: .3rem;
+$padding-small-horizontal-rem: .7rem;
 
-$padding-xs-horizontal:         12px;
-$padding-xs-vertical:            6px;
-$padding-xs-vertical-rem:       .2rem;
-$padding-xs-horizontal-rem:     .5rem;
+$padding-xs-horizontal: 12px;
+$padding-xs-vertical: 6px;
+$padding-xs-vertical-rem: .2rem;
+$padding-xs-horizontal-rem: .5rem;
 
 $dl-horizontal-offset: 2rem;
 $dl-horizontal-breakpoint: 0; // disable it
@@ -113,12 +111,12 @@ $code-color: $text-color;
 $code-bg: $pre-bg;
 
 // Buttons
-$btn-font-weight:                600;
-$btn-default-color:              #fff;
-$btn-default-bg:                 adjust_color($color-p, $lightness: -6, $saturation: 8);
-$btn-default-border:             transparent;
-$btn-link-disabled-color:        $color-b-light;
+$btn-font-weight: 600;
+$btn-default-color: #fff;
+$btn-default-bg: adjust_color($color-p, $lightness: -6, $saturation: 8);
+$btn-default-border: transparent;
+$btn-link-disabled-color: $color-b-light;
 
-$btn-border-radius-base:         2px;
-$btn-border-radius-small:        2px;
-$btn-border-radius-large:        3px;
+$btn-border-radius-base: 2px;
+$btn-border-radius-small: 2px;
+$btn-border-radius-large: 3px;

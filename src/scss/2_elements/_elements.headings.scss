@@ -6,14 +6,11 @@ h1 {
 	padding-bottom: 12px;
 	border-bottom: .45rem solid $color-b;
 	color: $color-p;
-	cursor: default;
 	font-weight: 700;
 	line-height: 1.2;
-	text-transform: lowercase;
-	letter-spacing: -.015em;
 
 	@include media-sm {
-		font-size: 5.25rem;
+		font-size: 5rem;
 	}
 
 	@include media-max(360px) {
@@ -25,8 +22,8 @@ h2 {
 	@include clearfix;
 	display: inline-block;
 	margin: 0 0 2rem;
-	padding: 0 0 .75rem;
-	border-bottom: .3rem solid lighten($color-b, 4%);
+	padding: 0 0 .5rem;
+	border-bottom: .3rem solid lighten($color-b, 6%);
 	font-weight: 900;
 
 	&, a {
