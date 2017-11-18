@@ -50,7 +50,7 @@ $gradient-width: 2rem;
 			justify-content: flex-start;
 			margin: .3rem $box-margin 0 0;
 			padding: $box-padding;
-			background: $color-s;
+			background: $color-p; // TODO: change to $color-t later
 			border-radius: 3px;
 			color: hsl($hue, 32%, 98%);
 			text-align: center;
