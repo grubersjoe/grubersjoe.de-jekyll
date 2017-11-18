@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'de' }}">
+
+{% include head.html %}
+
+<body class="template-frontpage">
+    <div id="page" class="container">
+        {% include title.html %}
+
+        <main aria-label="Content">
+            {{ content }}
+        </main>
+
+        {% include scripts.html %}
+
+    </div>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 ---
 layout: about
 title: Über mich
-permalink: /
+permalink: /about/
 order: 0
 language: de
 ---

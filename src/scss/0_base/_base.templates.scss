@@ -1,0 +1,48 @@
+.template-frontpage {
+    background: $color-p;
+    color: #fff;
+    font-size: 2.25rem;
+    font-weight: 400;
+
+    #title {
+        margin-bottom: 4rem;
+    }
+
+    h1, #subtitle {
+        color: #fff;
+    }
+
+    a {
+        border-width: .15rem;
+
+        &, &:hover {
+            color: #fff;
+            border-width: .15rem;
+        }
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+    h1 {
+        border-color: $color-b-light;
+    }
+
+    p {
+        margin-bottom: 3rem;
+    }
+
+    li {
+        line-height: 2;
+        font-size: 2.25rem * .8;
+
+        &:before {
+            color: $color-b-light;
+        }
+
+        a {
+            padding-bottom: 4px;
+        }
+    }
+}

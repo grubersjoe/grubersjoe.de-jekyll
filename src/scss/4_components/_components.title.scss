@@ -5,11 +5,15 @@
         // text-transform: lowercase;
         letter-spacing: -.015em;
     }
+
+    a {
+        border: none;
+    }
 }
 
 #subtitle {
 	margin: 0;
-	font-size: 0.38 * $font-size-h1;
+	font-size: 0.4 * $font-size-h1;
 	font-weight: 600;
 	font-family: $font-family-sans-serif;
 	color: $color-s;
