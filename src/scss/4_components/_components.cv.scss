@@ -36,9 +36,17 @@
 	}
 
 	.time-span {
-		margin: .5rem 0;
+		$width: 128px;
 		font-weight: 600;
-		font-style: italic;
+		font-size: $font-size-small-relative;
+		color: $color-t;
+
+		@include media-sm {
+			position: absolute;
+			top: 0;
+			left: -$width - 16px;
+			width: $width;
+		}
 	}
 
 	.desc {
@@ -53,10 +61,14 @@
 		strong {
 			font-weight: 600;
 		}
+
+		li {
+			margin-left: -1rem;
+		}
 	}
 
 	.collapsible a {
-		font-weight: 600;
+        color: $color-t;
 		border-bottom: none;
 	}
 }
