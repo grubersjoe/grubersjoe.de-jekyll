@@ -1,7 +1,7 @@
 ---
 layout: projects
 title: Projekte
-permalink: /projekte/
+permalink: /projects/
 order: 1
 language: de
 ---
