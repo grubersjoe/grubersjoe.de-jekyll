@@ -8,7 +8,9 @@ layout: skeleton
 		<h2 class="post-title" itemprop="name headline">{{ page.title | escape }}</h2>
 		<p class="post-meta">
 			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d. %B %Y" }}</time>
-			in <a href="/blog/{{ page.category }}">{{ page.category | capitalize }}</a>
+			{% if page.category %}
+				in <a href="/blog/{{ page.category }}">{{ page.category | capitalize }}</a>
+			{% endif %}
 		</p>
 	</header>
 
