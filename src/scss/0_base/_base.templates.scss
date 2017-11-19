@@ -1,24 +1,39 @@
 .template-frontpage {
     background: $color-p;
     color: #fff;
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 400;
 
-    #title {
-        margin-bottom: 4rem;
+	*, #subtitle {
+		color: #fff;
+	}
+
+	#title {
+		margin-bottom: 3rem;
+	}
+
+    p, ul, ol {
+        margin-bottom: 2.5rem;
     }
 
-    h1, #subtitle {
-        color: #fff;
-    }
+	h2 {
+		margin-top: .5rem;
+	}
 
     a {
-        border-width: .15rem;
+        border-width: .12rem;
 
-        &, &:hover {
+        &,
+        &:active,
+        &:focus,
+        &:hover {
             color: #fff;
-            border-width: .15rem;
+            border-width: .12rem;
         }
+
+	    &:hover {
+		    border-color: $color-b;
+	    }
     }
 
     a:hover {
@@ -29,12 +44,8 @@
         border-color: $color-b-light;
     }
 
-    p {
-        margin-bottom: 3rem;
-    }
-
     li {
-        line-height: 2;
+	    margin-bottom: 1rem;
         font-size: 2.25rem * .8;
 
         &:before {
@@ -45,4 +56,10 @@
             padding-bottom: 4px;
         }
     }
+
+	.posts {
+		.date {
+			font-size: 90%;
+		}
+	}
 }

@@ -9,5 +9,4 @@ Hey! Ich bin Jo. Seit vielen Jahre gestalte und realisiere ich Websites und Weba
 
 * [Über mich](/about)
 * [Projekte](/projects)
-* [Blog](/blog)
 
