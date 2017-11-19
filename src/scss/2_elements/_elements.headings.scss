@@ -5,9 +5,12 @@ h1 {
 	margin: 0 0 1rem 0;
 	padding-bottom: 12px;
 	border-bottom: .45rem solid $color-b;
-	color: $color-p;
 	font-weight: 700;
 	line-height: 1.2;
+
+	&, a {
+		color: $color-p;
+	}
 
 	@include media-sm {
 		font-size: 5rem;
