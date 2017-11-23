@@ -26,10 +26,6 @@ main {
 	// FIXME: refactor this mess. is this really necessary?
 	> section:first-of-type,
 	> article:first-of-type {
-		h2:first-of-type {
-			margin-top: .5rem;
-		}
-
 		> header + h3,
 		> header + h4 {
 			margin-top: .5rem;
