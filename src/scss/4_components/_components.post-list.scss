@@ -1,6 +1,7 @@
-$box-width: 6rem;
+$box-width: 6.5rem;
 $box-margin: 1.5rem;
 $box-padding: .9rem;
+$box-border-radius: 3px;
 $gradient-width: 2rem;
 
 .post-list__post {
@@ -48,14 +49,15 @@ $gradient-width: 2rem;
 			flex-flow: column wrap;
 			flex: 0 0 $box-width;
 			justify-content: flex-start;
+			width: $box-width;
 			margin: .3rem $box-margin 0 0;
-			padding: $box-padding;
-			background: $color-p; // TODO: change to $color-t later
-			border-radius: 3px;
+			padding: $box-padding 0;
+			background-color: $color-p; // TODO: change to $color-t later
+			border-radius: $box-border-radius;
 			color: hsl($hue, 32%, 98%);
 			text-align: center;
 			font-weight: 700;
-			font-size: $font-size-small-relative;
+			font-size: $font-size-small-rel;
 
 			hr {
 				margin: $box-padding 0;
@@ -65,8 +67,7 @@ $gradient-width: 2rem;
 		}
 
 		.post-meta__row {
-			display: block;
-			width: 100%;
+			padding: 0 $box-padding;
 			line-height: 1;
 			user-select: none;
 
@@ -97,6 +98,29 @@ $gradient-width: 2rem;
 		.post-meta__date {
 			font-variant-numeric: lining-nums;
 			font-size: 80%;
+		}
+
+		.post-meta__category {
+			@include text-overflow;
+			margin: $box-padding 0 (-$box-padding);
+			padding: 0;
+			background-color: darken($color-p, 12%);
+			border-top: 1px solid darken($color-p, 14%);
+			border-bottom-left-radius: $box-border-radius;
+			border-bottom-right-radius: $box-border-radius;
+			transition: background .3s ease-in-out;
+			font-weight: 600;
+			font-size: $font-size-small-rel;
+			hyphens: none;
+
+			a {
+				padding: ($box-padding / 3 * 2) $box-padding;
+				display: block;
+			}
+
+			&:hover {
+				background-color: darken($color-p, 16%);
+			}
 		}
 	}
 }

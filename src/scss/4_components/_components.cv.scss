@@ -2,7 +2,7 @@
 	$border-width: 4px;
 	padding-top: .5rem;
 	border-left: $border-width solid $color-b;
-	font-size: $font-size-small-relative;
+	font-size: $font-size-small-rel;
 
 	> article {
 		position: relative;
@@ -36,15 +36,15 @@
 	}
 
 	.time-span {
-		$width: 128px;
+		$width: 8rem;
 		font-weight: 600;
-		font-size: $font-size-small-relative;
+		font-size: $font-size-small-rel;
 		color: $color-t;
 
 		@include media-sm {
 			position: absolute;
 			top: 0;
-			left: -$width - 16px;
+			left: -$width - 1.25rem;
 			width: $width;
 		}
 	}
