@@ -1,13 +1,23 @@
 a {
 	border-bottom: solid 1px transparent;
 
-	&, &:focus, &:hover {
+	&,
+	&:active,
+	&:focus,
+	&:hover {
 		color: $link-color;
 	}
 
-	&:focus, &:hover {
+	&:active,
+	&:focus,
+	&:hover {
 		text-decoration: none;
 		border-bottom: 1px solid;
+	}
+
+	&.unstyled {
+		border: none;
+		color: inherit;
 	}
 
 	> i {
