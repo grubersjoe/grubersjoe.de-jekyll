@@ -8,7 +8,9 @@ h1 {
 	font-weight: 700;
 	line-height: 1.2;
 
-	&, a {
+	&,
+    a,
+    a:hover {
 		color: $color-p;
 	}
 
