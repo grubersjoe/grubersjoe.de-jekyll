@@ -1,7 +1,9 @@
 .idea/
 
 _site/
-assets/build/
+assets/*.css
+assets/*.js
+assets/*.map
 assets/fonts/
 
 .vendor/

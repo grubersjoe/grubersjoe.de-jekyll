@@ -6,7 +6,7 @@ const runSequence = require('run-sequence');
 const browserSync = require('browser-sync').create();
 const $ = gulpLoadPlugins();
 
-const BUILD_DIR = 'assets/build/';
+const BUILD_DIR = 'assets/';
 const FONTS = [
     'node_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
 ];
@@ -31,7 +31,7 @@ gulp.task('html', () => {
 
 // Handle SCSS code
 gulp.task('styles', () => {
-    return gulp.src('src/scss/main.scss')
+    return gulp.src('_scss/main.scss')
         .pipe($.plumber())
         .pipe($.if(dev, $.sourcemaps.init()))
         .pipe($.sass.sync({
@@ -51,7 +51,7 @@ gulp.task('styles', () => {
 
 // Handle JavaScript code
 gulp.task('scripts', () => {
-    return gulp.src('src/js/**/*.js')
+    return gulp.src('_scripts/**/*.js')
         .pipe($.plumber())
 	    .pipe($.if(dev, $.sourcemaps.init()))
 	    .pipe($.concat('main.js'))
@@ -117,8 +117,8 @@ gulp.task('server', ['jekyll-build'], (done) => {
 
 // Build the page, start a server and watch files for changes
 gulp.task('serve', () => {
-    gulp.watch('src/scss/**/*.scss', ['styles']);
-    gulp.watch('src/js/**/*.js', ['scripts']);
+    gulp.watch('_scss/**/*.scss', ['styles']);
+    gulp.watch('_scripts/**/*.js', ['scripts']);
 
     runSequence('build', 'server', () => {
         gulp.watch([
