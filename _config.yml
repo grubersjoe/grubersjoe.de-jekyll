@@ -2,25 +2,26 @@
 title: Jonathan Gruber
 author: Jonathan Gruber
 email: hi@grubersjoe.de
-description: >
-  Website von Jonathan Gruber
+description: Website von Jonathan Gruber - Webentwickler in Leipzig
+description: Website von Jonathan Gruber - Webentwickler in Leipzig
 baseurl: ""
 
 # Defaults
 defaults:
-  -
-    values:
-      layout: "post"
+  -values:
+    layout: "post"
 
 # Markdown config
 markdown: kramdown
-#kramdown:
-#  syntax_highlighter_opts:
-#    block:
-#      line_numbers: true
-#      start_line: 1
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+      start_line: 1
 
-# Exclude from processing
+include:
+  - _pages
+
 exclude:
     - README.md
     - LICENSE
@@ -31,6 +32,7 @@ exclude:
     - package.json
     - package-lock.json
     - npm-debug.log
+    - src
 
 # Plugins
 plugins:
