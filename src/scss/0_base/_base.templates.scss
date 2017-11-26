@@ -1,8 +1,8 @@
 .template-frontpage {
-	padding-bottom: $page-padding-top;
+    padding: 4rem 0;
     background: $color-p;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
 
 	*, #subtitle {
@@ -42,7 +42,6 @@
 
     li {
 	    margin-bottom: 1rem;
-        font-size: 2.25rem * .8;
 
         &:before {
             color: $color-b-light;
