@@ -9,7 +9,7 @@ layout: skeleton
 		<p class="post-meta">
 			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d. %B %Y" }}</time>
 			{% if page.category %}
-				in <a href="/blog/{{ page.category | downcase }}">{{ page.category | capitalize }}</a>
+				in <a href="{% link _pages/blog.md %}{{ page.category | downcase }}">{{ page.category | capitalize }}</a>
 			{% endif %}
 		</p>
 	</header>

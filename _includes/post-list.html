@@ -13,7 +13,7 @@
 
 						{% if post.category %}
 							<div class="post-meta__row post-meta__category">
-								<a class="unstyled" href="/blog/{{ post.category | downcase }}">{{ post.category | capitalize }}</a>
+								<a class="unstyled" href="{% link _pages/blog.md %}{{ post.category | downcase }}">{{ post.category | capitalize }}</a>
 							</div>
 						{% endif %}
 					</aside>
