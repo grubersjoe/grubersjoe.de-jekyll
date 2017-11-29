@@ -3,8 +3,4 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-{% if jekyll.environment == 'production' %}
-    <script src="{{ "/assets/main.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-{% else %}
-    <script src="{{ "/assets/main.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-{% endif %}
+<script src="{{ "/assets/bundle.js" | relative_url  }}" type="text/javascript"></script>

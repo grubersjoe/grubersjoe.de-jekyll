@@ -1,157 +1,142 @@
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
+const browserSync = require('browser-sync').create();
 const cp = require('child_process');
 const del = require('del');
 const runSequence = require('run-sequence');
-const browserSync = require('browser-sync').create();
+const webpack = require('webpack-stream');
+const webpackConfig = require('./webpack.config');
 const $ = gulpLoadPlugins();
 
 const BUILD_DIR = 'assets/';
 const FONTS = [
-    'node_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
+  'node_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}',
 ];
 
-let dev = true;
+let DEV = true;
 
 // Minify Jekyll's output
-gulp.task('html', () => {
-    return gulp.src('_site/**/*.html')
-        .pipe($.htmlmin({
-            collapseWhitespace: true,
-            minifyCSS: true,
-            minifyJS: {compress: {drop_console: true}},
-            processConditionalComments: true,
-            removeComments: true,
-            removeEmptyAttributes: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true
-        }))
-        .pipe(gulp.dest('_site'));
+gulp.task('html', () => gulp
+  .src('_site/**/*.html')
+  .pipe($.htmlmin({
+    collapseWhitespace: true,
+    minifyCSS: true,
+    minifyJS: { compress: { drop_console: true } },
+    processConditionalComments: true,
+    removeComments: true,
+    removeEmptyAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+  }))
+  .pipe(gulp.dest('_site')));
+
+gulp.task('styles', () => gulp
+  .src('_scss/styles.scss')
+  .pipe($.plumber())
+  .pipe($.if(DEV, $.sourcemaps.init()))
+  .pipe($.sass.sync({
+    outputStyle: 'expanded',
+    precision: 10,
+    includePaths: ['.'],
+  })
+    .on('error', $.sass.logError))
+  .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
+  .pipe($.if(DEV, $.sourcemaps.write()))
+  .pipe($.if(!DEV, $.cssnano({ safe: true, autoprefixer: false })))
+  .pipe(gulp.dest(BUILD_DIR))
+  .pipe(gulp.dest('_site/' + BUILD_DIR)) // required for hot reload
+  .pipe(browserSync.reload({ stream: true })));
+
+
+gulp.task('scripts', () => gulp
+  .src('_scripts/index.js')
+  .pipe($.plumber())
+  .pipe(webpack(DEV ? webpackConfig.dev : webpackConfig.prod))
+  .pipe(gulp.dest(BUILD_DIR)));
+
+gulp.task('lint', () => gulp
+  .src('_scripts/**/*.js')
+  .pipe($.eslint())
+  .pipe($.eslint.format())
+  .pipe($.eslint.failAfterError()));
+
+
+gulp.task('fonts', () => gulp
+  .src(FONTS)
+  .pipe(gulp.dest('assets/fonts')));
+
+gulp.task('images', () => gulp
+  .src('assets/images/**/*')
+  .pipe($.cache($.imagemin([
+    $.imagemin.jpegtran({ progressive: true }),
+    $.imagemin.optipng({ optimizationLevel: 5 }),
+  ])))
+  .pipe(gulp.dest('assets/images')));
+
+gulp.task('size', () => gulp
+  .src('_site/**/*')
+  .pipe($.size({ title: 'build', gzip: true })));
+
+gulp.task('jekyll-build', (done) => {
+  browserSync.notify('Building Jekyll');
+  return cp
+    .spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
+    .on('close', done);
 });
 
-// Handle SCSS code
-gulp.task('styles', () => {
-    return gulp.src('_scss/main.scss')
-        .pipe($.plumber())
-        .pipe($.if(dev, $.sourcemaps.init()))
-        .pipe($.sass.sync({
-            outputStyle: 'expanded',
-            precision: 8
-        }).on('error', $.sass.logError))
-        .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-        .pipe($.if(dev, $.sourcemaps.write()))
-        .pipe(gulp.dest(BUILD_DIR))
-	    .pipe(gulp.dest('_site/' + BUILD_DIR))
-	    .pipe(browserSync.reload({stream: true}))
-	    .pipe($.if(!dev, $.cssnano({safe: true, autoprefixer: false})))
-	    .pipe($.if(!dev, $.rename({suffix: '.min'})))
-	    .pipe($.if(!dev, gulp.dest(BUILD_DIR)))
-	    .pipe($.if(!dev, gulp.dest('_site/' + BUILD_DIR)))
+gulp.task('jekyll-build-prod', (done) => {
+  browserSync.notify('Building Jekyll (Production)');
+  const env = Object.create(process.env);
+  env.JEKYLL_ENV = 'production';
+  return cp
+    .spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit', env })
+    .on('close', done);
 });
 
-// Handle JavaScript code
-gulp.task('scripts', () => {
-    return gulp.src('_scripts/**/*.js')
-        .pipe($.plumber())
-	    .pipe($.if(dev, $.sourcemaps.init()))
-	    .pipe($.concat('main.js'))
-        .pipe($.babel())
-        .pipe($.if(dev, $.sourcemaps.write('.')))
-        .pipe(gulp.dest(BUILD_DIR))
-        .pipe($.if('*.js', $.uglify({compress: {drop_console: true}})))
-        .pipe($.if('*.js', $.rename({suffix: '.min'})))
-        .pipe(gulp.dest(BUILD_DIR))
-});
-
-// Copy web fonts to asset directory
-gulp.task('fonts', () => {
-    return gulp.src(FONTS).pipe(gulp.dest('assets/fonts'));
-});
-
-// Optimize image files
-gulp.task('images', () => {
-    return gulp.src('assets/images/**/*')
-        .pipe($.cache($.imagemin([
-            $.imagemin.jpegtran({progressive: true})
-        ])))
-        .pipe(gulp.dest('assets/images'));
-});
-
-// Print the size (gziped)
-gulp.task('size', () => {
-    return gulp.src('_site/**/*')
-        .pipe($.size({title: 'build', gzip: true}))
-});
-
-// Build the Jekyll Site
-gulp.task('jekyll-build', function (done) {
-    browserSync.notify('Building Jekyll');
-    return cp.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('close', done);
-});
-
-// Build the Jekyll Site (Production mode)
-gulp.task('jekyll-build-prod', function (done) {
-    browserSync.notify('Building Jekyll (Production)');
-	let env = Object.create(process.env);
-	env.JEKYLL_ENV = 'production';
-    return cp.spawn('bundle', ['exec', 'jekyll', 'build', ], {stdio: 'inherit', env: env}).on('close', done);
-});
-
-
-// Rebuild Jekyll & do page reload
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
-    browserSync.notify('Rebuilded Jekyll');
-    browserSync.reload();
+  browserSync.notify('Rebuilded Jekyll');
+  browserSync.reload();
 });
 
-// Wait for jekyll-build, then launch the Server
 gulp.task('server', ['jekyll-build'], (done) => {
-    browserSync.init({
-        notify: false,
-        server: {
-            baseDir: '_site'
-        },
-        host: "localhost"
-    }, done);
+  browserSync.init({
+    notify: false,
+    server: { baseDir: '_site' },
+    host: 'localhost',
+  }, done);
 });
 
-// Build the page, start a server and watch files for changes
 gulp.task('serve', () => {
-    gulp.watch('_scss/**/*.scss', ['styles']);
-    gulp.watch('_scripts/**/*.js', ['scripts']);
+  gulp.watch('_scss/**/*.scss', ['styles']);
+  gulp.watch('_scripts/**/*.js', ['scripts']);
 
-    runSequence('build', 'server', () => {
-        gulp.watch([
-            '!./node_modules/**/*',
-            '_data/**/*',
-            '_includes/**/*',
-            '_layouts/**/*',
-            '_plugins/**/*',
-            '_posts/**/*',
-            '*.html',
-            './**/*.md',
-            'assets/fonts/**/*',
-            'assets/images/**/*',
-            BUILD_DIR + '**/*.js'
-        ], ['jekyll-rebuild']);
-    });
+  runSequence('build', 'server', () => {
+    gulp.watch([
+      '_data/**/*',
+      '_includes/**/*',
+      '_layouts/**/*',
+      '_pages/**/*',
+      '_plugins/**/*',
+      '_posts/**/*',
+      '*.html',
+      './**/*.md',
+      `${BUILD_DIR}/fonts/**/*`,
+      `${BUILD_DIR}/images/**/*`,
+      `${BUILD_DIR}**/*.js`,
+    ], ['jekyll-rebuild']);
+  });
 });
 
-// Build all assets and then the Jekyill Site
 gulp.task('build', () => {
-    runSequence(['styles', 'scripts', 'fonts', 'images'], 'jekyll-build');
+  runSequence(['styles', 'scripts', 'fonts', 'images'], 'jekyll-build');
 });
 
-// Cleanup
 gulp.task('clean', () => {
-    del([BUILD_DIR, 'assets/fonts/*']);
-    return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], {stdio: 'inherit'});
+  del([BUILD_DIR, 'assets/fonts/*']);
+  return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], { stdio: 'inherit' });
 });
 
-// Default action: build the complete in production mode
-gulp.task('default', () => {
-    return new Promise(resolve => {
-        dev = false;
-        runSequence('clean', ['styles', 'scripts', 'fonts', 'images'], 'jekyll-build-prod', 'html', 'size', resolve);
-    });
-});
+gulp.task('default', () => new Promise((resolve) => {
+  DEV = false;
+  runSequence('clean', ['lint', 'styles', 'scripts', 'fonts', 'images'], 'jekyll-build-prod', 'html', 'size', resolve);
+}));
