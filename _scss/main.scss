@@ -4,8 +4,8 @@
  */
 
 // Base /Settings
-@import "0_base/base.variables";
-@import "0_base/base.templates";
+@import "base/base.variables";
+@import "base/base.templates";
 
 // Bootstrap: Core variables and mixins
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
@@ -31,35 +31,32 @@
 @import "../node_modules/font-awesome/scss/font-awesome";
 
 // Tools
-@import "1_tools/tools.mixins";
-@import "1_tools/tools.animations";
+@import "tools/tools.mixins";
+@import "tools/tools.animations";
 
 // Objects
-@import "3_objects/objects.collapsible";
-@import "3_objects/objects.text-icon";
+@import "objects/objects.collapsible";
+@import "objects/objects.text-icon";
 
 // Elements
-@import "2_elements/elements.page";
-@import "2_elements/elements.headings";
-@import "2_elements/elements.text";
-@import "2_elements/elements.anchors";
-@import "2_elements/elements.lists";
-@import "2_elements/elements.mono";
+@import "elements/elements.page";
+@import "elements/elements.headings";
+@import "elements/elements.text";
+@import "elements/elements.anchors";
+@import "elements/elements.lists";
+@import "elements/elements.code";
 
 // Components
-@import "4_components/components.nav";
-@import "4_components/components.title";
-@import "4_components/components.footer";
-@import "4_components/components.button";
-@import "4_components/components.tags";
-@import "4_components/components.asterisk";
-@import "4_components/components.quote";
-@import "4_components/components.cv";
-@import "4_components/components.collapsible";
-@import "4_components/components.project-list";
-@import "4_components/components.post-list";
-@import "4_components/components.post";
-@import "4_components/components.code";
-
-// obsolete
-// @import "poetry";
+@import "components/components.nav";
+@import "components/components.title";
+@import "components/components.footer";
+@import "components/components.button";
+@import "components/components.tags";
+@import "components/components.asterisk";
+@import "components/components.quote";
+@import "components/components.cv";
+@import "components/components.collapsible";
+@import "components/components.project-list";
+@import "components/components.post-list";
+@import "components/components.post";
+@import "components/components.rouge";

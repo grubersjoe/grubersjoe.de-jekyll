@@ -6,7 +6,7 @@ $color-s: hsl(180,  92%, 24%);   // Secondary
 $color-t: hsl($hue, 74%, 20%);   // Tertiary
 
 $color-b: adjust_color($body-bg, $lightness: -18%); // Borders
-$color-b-light: lighten($color-b, 6%); // Borders light
+$color-b-light: adjust_color($color-b, $lightness: -6%); // Borders light
 
 $text-color: hsl($hue, 16%, 16%);
 $link-color: change_color($color-p, $lightness: 36%);
