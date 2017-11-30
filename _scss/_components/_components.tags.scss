@@ -8,7 +8,7 @@
 	> a {
 		position: relative;
 		float: left;
-		//color: scale-color($color-s, $lightness: -16%);
+		color: $color-t;
 
 		&, &:hover {
 			border-bottom: none;

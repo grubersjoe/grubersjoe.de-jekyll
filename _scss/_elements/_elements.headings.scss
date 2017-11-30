@@ -1,77 +1,69 @@
-// TODO: this is just the title, the current h2 should actually be h1s
-h1 {
-	@include clearfix;
-	display: inline-block;
-	margin: 0 0 1rem 0;
-	padding-bottom: 12px;
-	border-bottom: .45rem solid $color-b;
-	font-weight: 700;
-	line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-feature-settings: 'lnum';
+    hyphens: none;
 
-	&,
     a,
+    a:active,
+    a:focus,
     a:hover {
-		color: $color-p;
-	}
+        color: inherit;
+    }
+}
 
-	@include media-sm {
-		font-size: 5rem;
-	}
+h1 {
+    @include clearfix;
+    display: inline-block;
+    margin: 0 0 1rem 0;
+    padding-bottom: 12px;
+    border-bottom: .45rem solid $color-b;
+    font-weight: 700;
+    line-height: 1.2;
 
-	@include media-max(360px) {
-		font-size: 3.5rem;
-	}
+    @include media-sm {
+        font-size: 5rem;
+    }
+
+    @include media-max(360px) {
+        font-size: 3.5rem;
+    }
 }
 
 h2 {
-	@include clearfix;
-	display: inline-block;
-	margin: 0 0 2rem;
-	padding: 0 0 .5rem;
-	border-bottom: .3rem solid lighten($color-b, 6%);
-	font-weight: 900;
-
-	&, a {
-		color: $color-t;
-	}
+    @include clearfix;
+    display: inline-block;
+    margin: 0 0 2rem;
+    padding: 0 0 .5rem;
+    border-bottom: .3rem solid lighten($color-b, 6%);
+    font-weight: 900;
+    color: $color-t;
 }
 
 h3 {
-	margin: 2rem 0 1.25rem;
+    margin: 2rem 0 1.25rem;
 
-	a, a:focus, a:hover {
-		color: $color-s;
-	}
-
-	a:focus, a:hover {
-		border-bottom: 2px solid;
-	}
+    a:focus, a:hover {
+        border-bottom: 2px solid;
+    }
 }
 
 h4 {
-	margin: 1.75rem 0 1rem;
-	font-weight: 600;
-
-	&, a, a:focus, a:hover {
-		color: scale-color($color-p, $lightness: -12%);
-	}
+    margin: 1.75rem 0 1rem;
+    font-weight: 600;
+    color: $color-t;
 }
 
 h5 {
-	margin: 1.5rem 0 1rem;
-	font-weight: 600;
-	color: $color-t;
-}
-
-h1, h2, h3, h4, h5 {
-	font-feature-settings: "lnum";
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
+    color: $color-t;
 }
 
 // FIXME: this indicates bad styling choices
 h2 + h3 {
-	margin-top: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	hyphens: none;
+    margin-top: 0;
 }

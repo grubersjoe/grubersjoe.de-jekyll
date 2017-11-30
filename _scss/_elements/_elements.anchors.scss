@@ -1,16 +1,10 @@
 a {
 	border-bottom: solid 1px transparent;
 
-	&,
 	&:active,
 	&:focus,
 	&:hover {
 		color: $link-color;
-	}
-
-	&:active,
-	&:focus,
-	&:hover {
 		text-decoration: none;
 		border-bottom: 1px solid;
 	}
@@ -25,7 +19,9 @@ a {
 	}
 }
 
-a, .btn, .tag {
+a,
+.btn,
+.tag {
 	transition: color .3s ease-in-out, background .3s ease-in-out, border .3s ease-in-out;
 	will-change: color, background, border;
 }
