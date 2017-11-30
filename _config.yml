@@ -5,6 +5,13 @@ email: hi@grubersjoe.de
 description: Website von Jonathan Gruber - Webentwickler in Leipzig
 baseurl: ""
 
+# Social
+social:
+  github: https://github.com/grubersjoe
+  git: https://git.grubersjoe.de
+  xing: https://www.xing.com/profile/Jonathan_Gruber
+  instagram: false
+
 # Defaults
 defaults:
   -
@@ -15,6 +22,8 @@ defaults:
 markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
+    span:
+      disable: true
     block:
       line_numbers: true
 
