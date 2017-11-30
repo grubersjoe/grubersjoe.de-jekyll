@@ -104,10 +104,10 @@ $bs: 8px; // (= Blocksize)
 $page-padding-top: 5.5rem;
 
 // Code
-$pre-bg: darken($body-bg, 4%);
-$pre-color: $text-color;
-$code-color: $text-color;
-$code-bg: $pre-bg;
+$pre-bg: transparent;
+$pre-color: inherit;
+$code-color: inherit;
+$code-bg: darken($body-bg, 6%);
 
 // Buttons
 $btn-font-weight: 600;

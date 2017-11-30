@@ -1,0 +1,22 @@
+pre,
+code {
+	border: none;
+    font-size: 70%;
+}
+
+pre {
+	margin: 2rem 0;
+	padding: 1rem;
+	font-size: 70%;
+}
+
+p code {
+	margin: 0 .1rem;
+	padding: .2rem .4rem;
+    border-radius: 3px;
+
+    a, a:focus, a:hover {
+		border-bottom: none;
+	}
+}
+
