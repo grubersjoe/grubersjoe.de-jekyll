@@ -13,13 +13,16 @@ $rougeColor: $text-color;
     $rougeColor: $base05;
 }
 
+.post pre,
 .highlighter-rouge {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     overflow-x: scroll;
     border-radius: 3px;
     background-color: $rougeBg;
     color: $rougeColor;
+}
 
+.highlighter-rouge {
     pre {
         margin: 0;
     }

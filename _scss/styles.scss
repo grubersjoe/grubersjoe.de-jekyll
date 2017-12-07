@@ -44,7 +44,7 @@
 @import "_elements/elements.text";
 @import "_elements/elements.anchors";
 @import "_elements/elements.lists";
-@import "_elements/elements.code";
+@import "_elements/elements.mono";
 
 // Components
 @import "_components/components.nav";
@@ -59,4 +59,4 @@
 @import "_components/components.project-list";
 @import "_components/components.post-list";
 @import "_components/components.post";
-@import "_components/components.rouge";
+@import "_components/components.code";

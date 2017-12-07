@@ -1,12 +1,12 @@
-// Colors: https://coolors.co/e4eef1-409ab5-057676-0d4759-a7c8d2
+// Colors: https://coolors.co/e4eef1-409ab5-057676-0d4759-a7c8d2 (not up to date)
 $hue: 194;
-$body-bg: hsl($hue, 32%, 95%);      // Background (92)
-$color-p: hsl($hue, 54%, 44%);      // Primary;
-$color-s: hsl($hue, 74%, 20%);      // Secondary
-$color-stupid: hsl(180,  92%, 24%); // Tertiary
+$body-bg: hsl($hue, 32%, 95%);  // Background (92)
+$color-p: hsl($hue, 54%, 44%);  // Primary;
+$color-s: hsl($hue, 74%, 20%);  // Secondary
+$color-t: hsl($hue, 27%, 35%);  // Tertiary
 
-$color-b: adjust_color($body-bg, $lightness: -18%); // Borders
-$color-b-light: adjust_color($color-b, $lightness: -6%); // Borders light
+$color-b: adjust_color($body-bg, $lightness: -18%);         // Borders
+$color-b-light: adjust_color($color-b, $lightness: 6%);    // Borders light
 
 $text-color: hsl($hue, 16%, 16%);
 $link-color: change_color($color-p, $lightness: 36%);
@@ -106,8 +106,10 @@ $page-padding-top: 5.5rem;
 // Code
 $pre-bg: transparent;
 $pre-color: inherit;
+$pre-padding: .75rem;
 $code-color: inherit;
 $code-bg: darken($body-bg, 6%);
+$code-font-size: 70%;
 
 // Buttons
 $btn-font-weight: 600;

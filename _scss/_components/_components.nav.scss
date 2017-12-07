@@ -27,7 +27,7 @@
 
 	a {
 		padding: 2px 0;
-		color: change_color($color-stupid, $saturation: 20%, $lightness: 72%);
+		color: change_color($color-t, $saturation: 20%, $lightness: 72%);
 		font-size: 1.3rem;
 		font-weight: 600;
 		border-width: .15rem;
@@ -35,11 +35,11 @@
 		&:hover,
 		&.active {
 			border-width: .15rem;
-			border-bottom-color: change_color($color-stupid, $lightness: 92%);
+			border-bottom-color: change_color($color-t, $lightness: 92%);
 		}
 
 		&.active {
-			color: change_color($color-stupid, $lightness: 92%);
+			color: change_color($color-t, $lightness: 92%);
 		}
 	}
 

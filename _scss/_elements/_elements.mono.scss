@@ -1,13 +1,12 @@
 pre,
 code {
 	border: none;
-    font-size: 70%;
+    font-size: $code-font-size;
 }
 
 pre {
 	margin: 2rem 0;
-	padding: 1rem;
-	font-size: 70%;
+	padding: $pre-padding;
 }
 
 p code {

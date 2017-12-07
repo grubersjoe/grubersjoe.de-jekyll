@@ -20,7 +20,7 @@ h1 {
     display: inline-block;
     margin: 0 0 1rem 0;
     padding-bottom: 12px;
-    border-bottom: .45rem solid $color-b;
+    border-bottom: .44rem solid $color-b;
     font-weight: 700;
     line-height: 1.2;
 
@@ -38,7 +38,7 @@ h2 {
     display: inline-block;
     margin: 0 0 2rem;
     padding: 0 0 .5rem;
-    border-bottom: .3rem solid lighten($color-b, 6%);
+    border-bottom: .3rem solid $color-b-light;
     font-weight: 900;
     color: $color-s;
 }

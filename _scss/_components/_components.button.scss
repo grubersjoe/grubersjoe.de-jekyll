@@ -17,10 +17,10 @@
 	}
 
 	&.btn--secondary {
-		background-color: $color-stupid;
+		background-color: $color-t;
 
 		&:hover {
-			background-color: lighten($color-stupid, 6%);
+			background-color: lighten($color-t, 6%);
 		}
 	}
 
