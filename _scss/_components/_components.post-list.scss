@@ -21,7 +21,7 @@ $gradient-width: 2rem;
 
 	h3 {
 		margin: 0 0 .75rem;
-		color: $color-t;
+		color: $color-s;
 
 		a, a:focus, a:hover {
 			border-bottom: none;
@@ -52,7 +52,7 @@ $gradient-width: 2rem;
 			width: $box-width;
 			margin: .3rem $box-margin 0 0;
 			padding: $box-padding 0;
-			background-color: $color-p; // TODO: change to $color-t later
+			background-color: $color-p; // TODO: change to $color-s later
 			border-radius: $box-border-radius;
 			color: hsl($hue, 32%, 98%);
 			text-align: center;

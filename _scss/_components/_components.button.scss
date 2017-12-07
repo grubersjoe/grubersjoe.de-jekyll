@@ -17,18 +17,18 @@
 	}
 
 	&.btn--secondary {
-		background-color: $color-s;
+		background-color: $color-stupid;
 
 		&:hover {
-			background-color: lighten($color-s, 6%);
+			background-color: lighten($color-stupid, 6%);
 		}
 	}
 
 	&.btn--tertiary {
-		background-color: $color-t;
+		background-color: $color-s;
 
 		&:hover {
-			background-color: lighten($color-t, 6%);
+			background-color: lighten($color-s, 6%);
 		}
 	}
 }
@@ -46,5 +46,5 @@
 }
 
 .text-btn {
-	color: $color-t;
+	color: $color-s;
 }

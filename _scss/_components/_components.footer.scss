@@ -12,7 +12,7 @@
 		a {
 			transition: color .3s, transform 1s;
 			will-change: color, transform;
-			color: $color-t;
+			color: $color-s;
 
 			&:hover,
 			&:focus {
@@ -63,7 +63,7 @@
 		}
 
 		.text-icon {
-			color: $color-t;
+			color: $color-s;
 		}
 
 		.heart {

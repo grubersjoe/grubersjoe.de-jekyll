@@ -18,7 +18,7 @@
 			left: -$size / 2 - $border-width / 2;
 			display: block;
 			content: '';
-			background: $color-t;
+			background: $color-s;
 			border: 3px solid $body-bg;
 		}
 	}
@@ -39,7 +39,7 @@
 		$width: 8rem;
 		font-weight: 600;
 		font-size: $font-size-small-rel;
-		color: $color-t;
+		color: $color-s;
 
 		@include media-sm {
 			position: absolute;
@@ -68,7 +68,7 @@
 	}
 
 	.collapsible a {
-        color: $color-t;
+        color: $color-s;
 		border-bottom: none;
 	}
 }

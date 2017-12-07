@@ -1,9 +1,9 @@
 // Colors: https://coolors.co/e4eef1-409ab5-057676-0d4759-a7c8d2
 $hue: 194;
-$body-bg: hsl($hue, 32%, 95%); // Background (92)
-$color-p: hsl($hue, 54%, 44%); // Primary;
-$color-s: hsl(180,  92%, 24%);   // Secondary
-$color-t: hsl($hue, 74%, 20%);   // Tertiary
+$body-bg: hsl($hue, 32%, 95%);      // Background (92)
+$color-p: hsl($hue, 54%, 44%);      // Primary;
+$color-s: hsl($hue, 74%, 20%);      // Secondary
+$color-stupid: hsl(180,  92%, 24%); // Tertiary
 
 $color-b: adjust_color($body-bg, $lightness: -18%); // Borders
 $color-b-light: adjust_color($color-b, $lightness: -6%); // Borders light
@@ -29,7 +29,7 @@ $font-size-large: round($font-size-base * 1.2);
 $font-size-small: round($font-size-base * 0.9);
 $font-size-small-rel: 90%;
 
-$font-size-h1: 4.2rem;
+$font-size-h1: 4rem;
 $font-size-h2: 2.1rem;
 $font-size-h3: 1.6rem;
 $font-size-h4: 1.5rem;

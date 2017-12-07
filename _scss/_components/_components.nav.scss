@@ -27,7 +27,7 @@
 
 	a {
 		padding: 2px 0;
-		color: change_color($color-s, $saturation: 20%, $lightness: 72%);
+		color: change_color($color-stupid, $saturation: 20%, $lightness: 72%);
 		font-size: 1.3rem;
 		font-weight: 600;
 		border-width: .15rem;
@@ -35,11 +35,11 @@
 		&:hover,
 		&.active {
 			border-width: .15rem;
-			border-bottom-color: change_color($color-s, $lightness: 92%);
+			border-bottom-color: change_color($color-stupid, $lightness: 92%);
 		}
 
 		&.active {
-			color: change_color($color-s, $lightness: 92%);
+			color: change_color($color-stupid, $lightness: 92%);
 		}
 	}
 
@@ -49,16 +49,16 @@
 		padding: 1.5rem 0;
 
 		a {
-			color: change_color($color-t, $lightness: 54%, $saturation: 20%);
+			color: change_color($color-s, $lightness: 54%, $saturation: 20%);
 
 			&:hover {
-				border-color: change_color($color-t, $lightness: 72%, $saturation: 20%);
+				border-color: change_color($color-s, $lightness: 72%, $saturation: 20%);
 			}
 
 			&.active {
 				cursor: default;
-				color: $color-t;
-				border-bottom-color: $color-t;
+				color: $color-s;
+				border-bottom-color: $color-s;
 			}
 		}
 	}
