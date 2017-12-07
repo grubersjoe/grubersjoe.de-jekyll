@@ -3,7 +3,7 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	background: fade_out($color-s, 0.08);
+	background: fade_out($color-s, 0.06);
 	padding: 1rem 0;
 	font-weight: 700;
 	z-index: $zindex-navbar-fixed;
@@ -27,19 +27,18 @@
 
 	a {
 		padding: 2px 0;
-		color: change_color($color-t, $saturation: 20%, $lightness: 72%);
+		color: lighten($color-t, 40%);
 		font-size: 1.3rem;
 		font-weight: 600;
-		border-width: .15rem;
+		border-width: .14rem;
 
-		&:hover,
-		&.active {
-			border-width: .15rem;
-			border-bottom-color: change_color($color-t, $lightness: 92%);
+		&:hover {
+            border-bottom-color: transparent;
 		}
 
 		&.active {
-			color: change_color($color-t, $lightness: 92%);
+			color: $body-bg;
+            border-bottom-color: $body-bg;
 		}
 	}
 
@@ -49,10 +48,10 @@
 		padding: 1.5rem 0;
 
 		a {
-			color: change_color($color-s, $lightness: 54%, $saturation: 20%);
+            color: lighten($color-t, 16%);
 
 			&:hover {
-				border-color: change_color($color-s, $lightness: 72%, $saturation: 20%);
+				border-color: lighten($color-t, 16%);
 			}
 
 			&.active {

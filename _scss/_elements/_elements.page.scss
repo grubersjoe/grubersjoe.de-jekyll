@@ -12,6 +12,7 @@ body {
 	font-variant-ligatures: common-ligatures;
 
 	@include media-sm {
+		padding-top: $page-padding-top - .5rem;
 		font-size: $font-size-base-lg;
 	}
 }
@@ -19,7 +20,7 @@ body {
 hr {
 	margin: 2rem 0;
 	background: transparent;
-§	border-bottom: 3px double scale-color($color-t, $lightness: 60%);
+	border-bottom: 3px double $color-b-light;
 }
 
 main {
