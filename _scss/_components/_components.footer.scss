@@ -1,61 +1,13 @@
 
 #footer {
 	margin: 3rem 0;
-	padding-top: 1.5rem;
+	//padding-top: 1.5rem;
 	border-top: 4px solid $color-b;
 	font-family: $font-family-sans-serif;
 	//font-weight: 600;
 
-	.footer-icons {
-		margin-bottom: 2rem;
-
-		a {
-			transition: color .3s, transform 1s;
-			will-change: color, transform;
-			color: $color-s;
-
-			&:hover,
-			&:focus {
-				color: $link-color;
-			}
-		}
-
-		.icon-mail {
-			@include include-icon($fa-var-paper-plane-o);
-		}
-
-		.icon-github {
-			@include include-icon($fa-var-github);
-		}
-
-		.icon-git {
-			@include include-icon($fa-var-code-fork);
-		}
-
-		.icon-xing {
-			@include include-icon($fa-var-xing);
-		}
-
-		.icon-instagram {
-			@include include-icon($fa-var-instagram);
-		}
-
-		// the order of rules *does* matter here!
-		// (above mixin sets e.g. the font-size)
-		> .icon {
-			margin-right: 2rem;
-			font-size: 3rem;
-			text-align: center;
-
-			&:hover,
-			&:focus {
-				border-bottom: none;
-			}
-		}
-	}
-
 	.footer-note {
-		margin-bottom: 1.5rem;
+		margin: .5rem 0 1.5rem;
 		font-size: $font-size-small-rel;
 
 		.asterisk {
@@ -66,7 +18,7 @@
 			color: $color-s;
 		}
 
-		.heart {
+		.heart-btn {
 			@extend .text-icon;
 			border-bottom: none;
 			color: hsl(350, 65%, 46%);

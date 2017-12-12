@@ -1,45 +1,30 @@
-$(() => {
-  const viewport = $('html, body');
+import { getHeight, scrollToTop } from './util';
 
-  function easeInOutCubic(t) {
-    // eslint-disable-next-line no-mixed-operators
-    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-  }
+const domElems = {
+  collapsible: Array.from(document.querySelectorAll('.collapsible')),
+  topLinks: Array.from(document.querySelectorAll('.top-btn')),
+};
 
-  function scrollTo(top, dur = 2000) {
-    viewport.stop().animate({ scrollTop: top }, dur, easeInOutCubic);
-  }
-
-  $('.to-top').click(() => {
-    scrollTo(0);
-    return false;
-  });
-
-  viewport.on('scroll mousedown wheel keydown touchstart', () => {
-    viewport.stop();
-  });
-
-  $('.collapsible').click(function handler() {
-    $(this).toggleClass('open');
-    $(this).find('.collapse').stop().slideToggle();
+domElems.collapsible.forEach((button) => {
+  button.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    button.classList.toggle('open');
+    const list = button.querySelector('.collapse');
+    list.style.display = 'block';
+    list.style.height = `${getHeight(list)}px`;
   });
 });
 
-// TODO: try max-height approach
-// window.getHeight = function (elem) {
-//   let style = getComputedStyle(elem);
-//
-//   if (style.display !== 'none') {
-//     return elem.clientHeight;
-//   }
-//
-//   elem.style.display = 'block';
-//   elem.style.visibility = 'hidden';
-//
-//   let height = elem.clientHeight;
-//
-//   elem.style.display = 'none';
-//   elem.style.visibility = 'visible';
-//
-//   return height;
-// };
+domElems.topLinks.forEach((elem) => {
+  elem.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    scrollToTop();
+  });
+});
+
+// $(() => {
+//   $('.collapsible').click(function handler() {
+//     $(this).toggleClass('open');
+//     $(this).find('.collapse').stop().slideToggle();
+//   });
+// });

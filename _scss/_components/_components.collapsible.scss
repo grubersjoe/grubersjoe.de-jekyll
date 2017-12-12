@@ -3,7 +3,7 @@
 		margin-top: .5rem;
 	}
 
-	.icon {
+	.social-btn {
 		position: relative;
 		top: -.1em;
 		margin-right: .4rem;
@@ -11,7 +11,7 @@
 		font-size: 80%;
 	}
 
-	&.open .icon {
+	&.open .social-btn {
 		transform: rotate(180deg);
 		transform-origin: 50%;
 	}

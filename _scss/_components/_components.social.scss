@@ -1,0 +1,54 @@
+.social {
+    position: relative;
+
+    .social-btn--mail {
+        @include include-icon($fa-var-paper-plane-o);
+    }
+
+    .social-btn--github {
+        @include include-icon($fa-var-github);
+    }
+
+    .social-btn--git {
+        @include include-icon($fa-var-code-fork);
+    }
+
+    .social-btn--xing {
+        @include include-icon($fa-var-xing);
+    }
+
+    .social-btn--instagram {
+        @include include-icon($fa-var-instagram);
+    }
+
+    .btn,
+    .social-btn {
+        padding: 1.5rem 1rem;
+        transition: color .3s ease-in-out;
+        color: $color-s;
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: lighten($color-s, 12%);
+            border-bottom: none;
+        }
+    }
+
+    .social-btn {
+        font-size: 3rem;
+        text-align: center;
+
+        &:first-of-type {
+            padding-left: 0;
+        }
+    }
+
+    .top-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1.25rem 0 1.25rem 1.25rem;
+        font-size: 1.25rem;
+    }
+}

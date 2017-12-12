@@ -9,36 +9,49 @@
 	white-space: nowrap;
 	user-select: none;
 
+	&,
 	&:active,
 	&:focus,
 	&:hover {
-		border: none;
-		background-color: lighten($btn-default-bg, 6%);
+        border: none;
+        background-color: lighten($btn-default-bg, 6%);
+        outline: none !important;
 	}
+}
 
-	&.btn--secondary {
-		background-color: $color-t;
+.btn--unstyled {
+    margin: 0;
 
-		&:hover {
-			background-color: lighten($color-t, 6%);
-		}
-	}
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        color: inherit;
+        box-shadow: none;
+    }
+}
 
-	&.btn--tertiary {
-		background-color: $color-s;
+.btn--secondary {
+    background-color: $color-t;
 
-		&:hover {
-			background-color: lighten($color-s, 6%);
-		}
-	}
+    &:hover {
+        background-color: lighten($color-t, 6%);
+    }
+}
+
+.btn--tertiary {
+    background-color: $color-s;
+
+    &:hover {
+        background-color: lighten($color-s, 6%);
+    }
 }
 
 .btn-lg {
-	// line-height: ensure even-numbered height of button next to large input
 	@include button-size($padding-large-vertical-rem, $padding-large-horizontal-rem, $font-size-large, $line-height-large, $btn-border-radius-large);
 }
 .btn-sm {
-	// line-height: ensure proper height of button next to small input
 	@include button-size($padding-small-vertical-rem, $padding-small-horizontal-rem, $font-size-small, $line-height-small, $btn-border-radius-small);
 }
 .btn-xs {
