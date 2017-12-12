@@ -3,5 +3,16 @@
     "env": {
         "browser": true,
         "jquery": true
+    },
+    "rules": {
+        "no-param-reassign": [
+            "error",
+            {
+                "props": true,
+                "ignorePropertyModificationsFor": [
+                    "elem"
+                ]
+            }
+        ]
     }
 }
