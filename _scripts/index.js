@@ -1,19 +1,12 @@
-import { getHeight, scrollToTop } from './util';
+import { scrollToTop } from './util';
+import setCollapsible from './collapsible';
 
 const domElems = {
-  collapsible: Array.from(document.querySelectorAll('.collapsible')),
+  collapsibleWrapper: Array.from(document.querySelectorAll('.collapsible-wrapper')),
   topLinks: Array.from(document.querySelectorAll('.top-btn')),
 };
 
-domElems.collapsible.forEach((button) => {
-  button.addEventListener('click', (ev) => {
-    ev.preventDefault();
-    button.classList.toggle('open');
-    const list = button.querySelector('.collapse');
-    list.style.display = 'block';
-    list.style.height = `${getHeight(list)}px`;
-  });
-});
+setCollapsible(domElems.collapsibleWrapper);
 
 domElems.topLinks.forEach((elem) => {
   elem.addEventListener('click', (ev) => {
@@ -21,10 +14,3 @@ domElems.topLinks.forEach((elem) => {
     scrollToTop();
   });
 });
-
-// $(() => {
-//   $('.collapsible').click(function handler() {
-//     $(this).toggleClass('open');
-//     $(this).find('.collapse').stop().slideToggle();
-//   });
-// });

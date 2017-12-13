@@ -1,9 +1,11 @@
-.collapsible {
+.collapsible-wrapper {
 	a {
 		cursor: pointer;
 	}
 
-	.collapse {
+	.collapsible {
 		display: none; // hide in beginning
+		overflow: hidden;
+		transition: height .5s ease-in-out;
 	}
 }

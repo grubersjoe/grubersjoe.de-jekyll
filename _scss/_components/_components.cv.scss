@@ -6,7 +6,7 @@
 
 	> article {
 		position: relative;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 		padding-left: 1.75rem;
 
 		&:before {
@@ -67,8 +67,12 @@
 		}
 	}
 
-	.collapsible a {
-        color: $color-s;
-		border-bottom: none;
-	}
+    .collapsible-wrapper {
+        a {
+			display: inline-block;
+            margin-bottom: .5rem;
+            color: $color-s;
+            border-bottom: none;
+        }
+    }
 }

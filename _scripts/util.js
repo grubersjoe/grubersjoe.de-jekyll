@@ -1,19 +1,19 @@
-export function getHeight(elem) {
+export function calcHeight(elem) {
   const style = getComputedStyle(elem);
 
   if (style.display !== 'none') {
-    return elem.clientHeight;
+    return elem.scrollHeight;
   }
 
+  const { display, visibility } = elem.style;
+
   elem.style.display = 'block';
-  elem.style.height = 'auto';
   elem.style.visibility = 'hidden';
 
-  const height = elem.clientHeight;
+  const height = elem.scrollHeight;
 
-  elem.style.display = 'none';
-  elem.style.height = '0px';
-  elem.style.visibility = 'visible';
+  elem.style.display = display;
+  elem.style.visibility = visibility;
 
   return height;
 }
