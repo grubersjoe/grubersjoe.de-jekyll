@@ -1,75 +1,77 @@
 .cv {
-	$border-width: 4px;
-	padding-top: .5rem;
-	border-left: $border-width solid $color-b;
-	font-size: $font-size-small-rel;
+    $border-width: 4px;
+    padding-top: .5rem;
+    border-left: $border-width solid $color-b;
+    font-size: $font-size-small-rel;
 
-	> article {
-		position: relative;
-		margin-bottom: 1.5rem;
-		padding-left: 1.75rem;
+    > article {
+        position: relative;
+        margin-bottom: 1.5rem;
+        padding-left: 1.75rem;
 
-		&:before {
-			$size: 16px;
-			@include square($size);
-			@include circle;
-			position: absolute;
-			top: .2 * $size;
-			left: -$size / 2 - $border-width / 2;
-			display: block;
-			content: '';
-			background: $color-s;
-			border: 3px solid $body-bg;
-		}
-	}
+        &:before {
+            $size: 16px;
+            @include square($size);
+            @include circle;
+            position: absolute;
+            top: .2 * $size;
+            left: -$size / 2 - $border-width / 2;
+            display: block;
+            content: '';
+            background: $color-s;
+            border: 3px solid $body-bg;
+        }
+    }
 
-	header {
-		font-weight: 700;
+    header {
+        font-weight: 700;
 
-		.note, .subtitle {
-			font-weight: normal;
-		}
+        .note, .subtitle {
+            font-weight: normal;
+        }
 
-		.subtitle {
-			display: block;
-		}
-	}
+        .subtitle {
+            display: block;
+        }
+    }
 
-	.time-span {
-		$width: 8rem;
-		font-weight: 600;
-		font-size: $font-size-small-rel;
-		color: $color-s;
+    .time-span {
+        $width: 8rem;
+        margin: .25rem 0;
+        font-weight: 600;
+        color: $color-s;
 
-		@include media-sm {
-			position: absolute;
-			top: 0;
-			left: -$width - 1.25rem;
-			width: $width;
-		}
-	}
+        @media (min-width: 1024px) {
+            position: absolute;
+            top: 0;
+            left: -$width - 1.25rem;
+            width: $width;
+            margin: 0;
+            font-size: $font-size-small-rel;
+        }
+    }
 
-	.desc {
-		margin: .5rem 0;
-		line-height: 1.3;
-		font-variant-numeric: lining-nums;
+    .desc {
+        margin: .5rem 0;
+        line-height: 1.3;
+        font-variant-numeric: lining-nums;
 
-		p {
-			margin-bottom: .75rem;
-		}
+        p {
+            margin-bottom: .75rem;
+        }
 
-		strong {
-			font-weight: 600;
-		}
+        strong {
+            font-weight: 600;
+        }
 
-		li {
-			margin-left: -1rem;
-		}
-	}
+        li {
+            margin-left: -1rem;
+        }
+    }
 
     .collapsible-wrapper {
         a {
-			display: inline-block;
+            display: inline-block;
             margin-bottom: .5rem;
             color: $color-s;
             border-bottom: none;
