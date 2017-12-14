@@ -12,21 +12,20 @@ export function calcHeight(elem) {
 
   const height = elem.scrollHeight;
 
+  // restore original style
   elem.style.display = display;
   elem.style.visibility = visibility;
 
   return height;
 }
 
-
-// Ease in and out
 export function scrollToTop(duration = 2000) {
   const cosParam = window.scrollY / 2;
   let scrollCount = 0;
-  let tOld = performance.now();
+  let prevTimestamp = performance.now();
 
-  function step(tNew) {
-    scrollCount += Math.PI / (duration / (tNew - tOld));
+  function step(curTimestamp) {
+    scrollCount += Math.PI / (duration / (curTimestamp - prevTimestamp));
 
     if (scrollCount >= Math.PI) {
       window.scrollTo(0, 0);
@@ -37,7 +36,8 @@ export function scrollToTop(duration = 2000) {
     }
 
     window.scrollTo(0, Math.round(cosParam + (cosParam * Math.cos(scrollCount))));
-    tOld = tNew;
+    prevTimestamp = curTimestamp;
+
     requestAnimationFrame(step);
   }
 
