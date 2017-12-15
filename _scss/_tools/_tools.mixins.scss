@@ -22,6 +22,21 @@
 	}
 }
 
+@mixin btn-unstyled {
+	margin: 0;
+	background: none;
+	border: none;
+
+	&,
+	&:active,
+	&:focus,
+	&:hover {
+		color: inherit;
+		box-shadow: none;
+		outline: none;
+	}
+}
+
 @mixin include-icon($icon) {
 	@include fa-icon;
 

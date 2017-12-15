@@ -47,9 +47,12 @@ function expand(elem, callback) {
   });
 }
 
-export default function setCollapsible(wrappers) {
-  wrappers.forEach((wrapper) => {
-    const collapsible = wrapper.querySelector('.collapsible');
+export default function initCollapsibles() {
+  const toggleBtns = document.querySelectorAll('.collapsible-toggle');
+
+  toggleBtns.forEach((btn) => {
+    // const target = btn.getAttribute('data-target');
+    const collapsible = document.querySelector(btn.getAttribute('data-target')) || btn.parentNode.querySelector('.collapsible');
 
     if (!collapsible) {
       return;
@@ -57,13 +60,13 @@ export default function setCollapsible(wrappers) {
 
     collapsible.setAttribute('data-collapsed', 'true'); // init
 
-    wrapper.addEventListener('click', () => {
+    btn.addEventListener('click', () => {
       const isCollapsed = collapsible.getAttribute('data-collapsed') === 'true';
 
       if (isCollapsed) {
-        expand(collapsible, () => wrapper.classList.add('open'));
+        expand(collapsible, () => btn.classList.add('open'));
       } else {
-        collapse(collapsible, () => wrapper.classList.remove('open'));
+        collapse(collapsible, () => btn.classList.remove('open'));
       }
     });
   });

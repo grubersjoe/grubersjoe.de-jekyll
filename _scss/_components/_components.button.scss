@@ -20,16 +20,7 @@
 }
 
 .btn--unstyled {
-    margin: 0;
-
-    &,
-    &:active,
-    &:focus,
-    &:hover {
-        background-color: transparent;
-        color: inherit;
-        box-shadow: none;
-    }
+    @include btn-unstyled;
 }
 
 .btn--secondary {

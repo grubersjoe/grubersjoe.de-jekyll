@@ -67,13 +67,10 @@
         }
     }
 
-    .collapsible-wrapper {
-        a {
-            display: inline-block;
-            margin-bottom: .5rem;
-            color: $color-s;
-            border-bottom: none;
-        }
+    .collapsible-toggle {
+        display: inline-block;
+        margin-bottom: .5rem;
+        color: $color-s;
     }
 
     .footnotes {

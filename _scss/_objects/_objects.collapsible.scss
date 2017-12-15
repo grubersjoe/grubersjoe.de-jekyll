@@ -1,6 +1,6 @@
 .collapsible-wrapper {
-	a {
-		cursor: pointer;
+	.collapsible-toggle {
+		@include btn-unstyled;
 	}
 
 	.collapsible {

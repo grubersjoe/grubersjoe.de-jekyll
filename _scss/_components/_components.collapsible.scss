@@ -6,7 +6,9 @@
         transition: transform .3s ease-in-out;
         font-size: 80%;
     }
+}
 
+.collapsible-toggle {
     &.open .icon {
         transform: rotate(180deg);
         transform-origin: 50%;

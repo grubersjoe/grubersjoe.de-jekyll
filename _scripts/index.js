@@ -6,11 +6,13 @@ const domElems = {
   topLinks: Array.from(document.querySelectorAll('.top-btn')),
 };
 
-setCollapsible(domElems.collapsibleWrapper);
+document.addEventListener('DOMContentLoaded', () => {
+  setCollapsible();
 
-domElems.topLinks.forEach((elem) => {
-  elem.addEventListener('click', (ev) => {
-    ev.preventDefault();
-    scrollToTop();
+  domElems.topLinks.forEach((elem) => {
+    elem.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      scrollToTop();
+    });
   });
 });
