@@ -65,10 +65,6 @@
         strong {
             font-weight: 600;
         }
-
-        li {
-            margin-left: -1rem;
-        }
     }
 
     .collapsible-wrapper {
@@ -78,5 +74,11 @@
             color: $color-s;
             border-bottom: none;
         }
+    }
+
+    .footnotes {
+        @include list-unstyled;
+        margin: -.5rem 0 0;
+        font-size: 80%;
     }
 }
