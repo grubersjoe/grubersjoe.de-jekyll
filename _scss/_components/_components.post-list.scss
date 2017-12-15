@@ -5,122 +5,122 @@ $box-border-radius: 3px;
 $gradient-width: 2rem;
 
 .post-list__post {
-	margin-bottom: 1.5rem;
-	padding-bottom: 1.5rem;
-	border-bottom: 3px double $color-b-light;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 3px double $color-b-light;
 
-	&:last-of-type {
-		border-bottom: none;
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
+    &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
-	.post-meta {
-		display: none;
-	}
+    .post-meta {
+        display: none;
+    }
 
-	h3 {
-		margin: 0 0 .75rem;
-		color: $color-s;
+    h3 {
+        margin: 0 0 .75rem;
+        color: $color-s;
 
-		a, a:focus, a:hover {
-			border-bottom: none;
-		}
-	}
+        a, a:focus, a:hover {
+            border-bottom: none;
+        }
+    }
 
-	.post__excerpt {
-		margin: 0 0 .5rem;
-		color: $text-color;
-	}
+    .post__excerpt {
+        margin: 0 0 .5rem;
+        color: $text-color;
+    }
 
-	.post__read-on {
-		display: inline-block;
-		font-style: italic;
-	}
+    .post__read-on {
+        display: inline-block;
+        font-style: italic;
+    }
 
-	@include media-sm {
-		.flexbox {
-			display: flex;
-			align-items: flex-start;
-		}
+    @include media-sm {
+        .flexbox {
+            display: flex;
+            align-items: flex-start;
+        }
 
-		.post-meta {
-			display: flex;
-			flex-flow: column wrap;
-			flex: 0 0 $box-width;
-			justify-content: flex-start;
-			width: $box-width;
-			margin: .3rem $box-margin 0 0;
-			padding: $box-padding 0;
-			background-color: $color-p; // TODO: change to $color-s later
-			border-radius: $box-border-radius;
-			color: hsl($hue, 32%, 98%);
-			text-align: center;
-			font-weight: 700;
-			font-size: $font-size-small-rel;
+        .post-meta {
+            display: flex;
+            flex-flow: column wrap;
+            flex: 0 0 $box-width;
+            justify-content: flex-start;
+            width: $box-width;
+            margin: .3rem $box-margin 0 0;
+            padding: $box-padding 0;
+            background-color: $color-p; // TODO: change to $color-s later
+            border-radius: $box-border-radius;
+            color: hsl($hue, 32%, 98%);
+            text-align: center;
+            font-weight: 700;
+            font-size: $font-size-small-rel;
 
-			hr {
-				margin: $box-padding 0;
-				border: none;
-				border-bottom: solid 2px $color-b-light;
-			}
-		}
+            hr {
+                margin: $box-padding 0;
+                border: none;
+                border-bottom: solid 2px $color-b-light;
+            }
+        }
 
-		.post-meta__row {
-			padding: 0 $box-padding;
-			line-height: 1;
-			user-select: none;
+        .post-meta__row {
+            padding: 0 $box-padding;
+            line-height: 1;
+            user-select: none;
 
-			.social-btn {
-				float: left;
-			}
-		}
+            .social-btn {
+                float: left;
+            }
+        }
 
-		.reading-time {
-			&:before {
-				@include fa-icon;
-				margin-right: .4em;
-				content: $fa-var-book;
-			}
+        .reading-time {
+            &:before {
+                @include fa-icon;
+                margin-right: .4em;
+                content: $fa-var-book;
+            }
 
-			font-size: .85 * $font-size-base;
-			font-variant-numeric: lining-nums;
-		}
+            font-size: .85 * $font-size-base;
+            font-variant-numeric: lining-nums;
+        }
 
-		.post-meta__day {
-			position: relative;
-			top: -.1em;
-			margin-bottom: .25rem;
-			font-variant-numeric: lining-nums;
-			font-size: 220%;
-		}
+        .post-meta__day {
+            position: relative;
+            top: -.1em;
+            margin-bottom: .25rem;
+            font-variant-numeric: lining-nums;
+            font-size: 220%;
+        }
 
-		.post-meta__date {
-			font-variant-numeric: lining-nums;
-			font-size: 80%;
-		}
+        .post-meta__date {
+            font-variant-numeric: lining-nums;
+            font-size: 80%;
+        }
 
-		.post-meta__category {
-			@include text-overflow;
-			margin: $box-padding 0 (-$box-padding);
-			padding: 0;
-			background-color: darken($color-p, 12%);
-			border-top: 1px solid darken($color-p, 14%);
-			border-bottom-left-radius: $box-border-radius;
-			border-bottom-right-radius: $box-border-radius;
-			transition: background .3s ease-in-out;
-			font-weight: 600;
-			font-size: $font-size-small-rel;
-			hyphens: none;
+        .post-meta__category {
+            @include text-overflow;
+            margin: $box-padding 0 (-$box-padding);
+            padding: 0;
+            background-color: darken($color-p, 12%);
+            border-top: 1px solid darken($color-p, 14%);
+            border-bottom-left-radius: $box-border-radius;
+            border-bottom-right-radius: $box-border-radius;
+            transition: background .3s ease-in-out;
+            font-weight: 600;
+            font-size: $font-size-small-rel;
+            hyphens: none;
 
-			a {
-				padding: ($box-padding / 3 * 2) $box-padding;
-				display: block;
-			}
+            a {
+                padding: ($box-padding / 3 * 2) $box-padding;
+                display: block;
+            }
 
-			&:hover {
-				background-color: darken($color-p, 16%);
-			}
-		}
-	}
+            &:hover {
+                background-color: darken($color-p, 16%);
+            }
+        }
+    }
 }

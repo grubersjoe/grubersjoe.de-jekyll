@@ -1,11 +1,11 @@
 .collapsible-wrapper {
-	.collapsible-toggle {
-		@include btn-unstyled;
-	}
+    .collapsible-toggle {
+        @include btn-unstyled;
+    }
 
-	.collapsible {
-		display: none; // hide in beginning
-		overflow: hidden;
-		transition: height .5s ease-in-out;
-	}
+    .collapsible {
+        display: none; // hide in beginning
+        overflow: hidden;
+        transition: height .5s ease-in-out;
+    }
 }

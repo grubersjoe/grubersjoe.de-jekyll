@@ -1,20 +1,20 @@
 .quote {
-	@extend blockquote;
+    @extend blockquote;
 
-	.author {
-		display: block;
-		margin-top: .875rem;
-		border-bottom: none !important;
-		font-size: $font-size-small;
-		font-style: normal;
-		font-weight: 600;
+    .author {
+        display: block;
+        margin-top: .875rem;
+        border-bottom: none !important;
+        font-size: $font-size-small;
+        font-style: normal;
+        font-weight: 600;
 
-		&:before {
-			content: '― ';
-		}
+        &:before {
+            content: '― ';
+        }
 
-		@include media-sm {
-			font-size: round($font-size-base-lg * 0.95);
-		}
-	}
+        @include media-sm {
+            font-size: round($font-size-base-lg * 0.95);
+        }
+    }
 }

@@ -1,32 +1,32 @@
 
 #footer {
-	margin: 3rem 0;
-	//padding-top: 1.5rem;
-	border-top: 4px solid $color-b;
-	font-family: $font-family-sans-serif;
-	//font-weight: 600;
+    margin: 3rem 0;
+    //padding-top: 1.5rem;
+    border-top: 4px solid $color-b;
+    font-family: $font-family-sans-serif;
+    //font-weight: 600;
 
-	.footer-note {
-		margin: .5rem 0 1.5rem;
-		font-size: $font-size-small-rel;
+    .footer-note {
+        margin: .5rem 0 1.5rem;
+        font-size: $font-size-small-rel;
 
-		.asterisk {
-			margin: 0 .6em;
-		}
+        .asterisk {
+            margin: 0 .6em;
+        }
 
-		.text-icon {
-			color: $color-s;
-		}
+        .text-icon {
+            color: $color-s;
+        }
 
-		.heart-btn {
-			@extend .text-icon;
-			border-bottom: none;
-			color: hsl(350, 65%, 46%);
-			font-weight: bold; // reset by fa to 'normal'
+        .heart-btn {
+            @extend .text-icon;
+            border-bottom: none;
+            color: hsl(350, 65%, 46%);
+            font-weight: bold; // reset by fa to 'normal'
 
-			&:hover {
-				animation: heartbeat 2s infinite;
-			}
-		}
-	}
+            &:hover {
+                animation: heartbeat 2s infinite;
+            }
+        }
+    }
 }

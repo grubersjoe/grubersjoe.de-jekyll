@@ -1,28 +1,28 @@
 .tags {
-	@include list-unstyled;
-	@include clearfix;
-	margin-bottom: 1rem;
-	font-size: $font-size-small-rel;
-	font-weight: 600;
+    @include list-unstyled;
+    @include clearfix;
+    margin-bottom: 1rem;
+    font-size: $font-size-small-rel;
+    font-weight: 600;
 
-	> a {
-		position: relative;
-		float: left;
-		color: $color-s;
+    > a {
+        position: relative;
+        float: left;
+        color: $color-s;
 
-		&, &:hover {
-			border-bottom: none;
-		}
+        &, &:hover {
+            border-bottom: none;
+        }
 
-		&:after {
-			position: relative;
-			top: 3px;
-			margin: 0 .5rem;
-			content: '*';
-		}
+        &:after {
+            position: relative;
+            top: 3px;
+            margin: 0 .5rem;
+            content: '*';
+        }
 
-		&:last-of-type:after {
-			content: '';
-		}
-	}
+        &:last-of-type:after {
+            content: '';
+        }
+    }
 }

@@ -1,5 +1,5 @@
 #title {
-	margin: 0 0 3rem;
+    margin: 0 0 3rem;
 
     h1 {
         // text-transform: lowercase;
@@ -12,19 +12,19 @@
 }
 
 #subtitle {
-	margin: 0;
-	font-size: 0.4 * $font-size-h1;
-	font-weight: 600;
-	font-family: $font-family-sans-serif;
-	color: $color-t;
-	cursor: default;
+    margin: 0;
+    font-size: 0.4 * $font-size-h1;
+    font-weight: 600;
+    font-family: $font-family-sans-serif;
+    color: $color-t;
+    cursor: default;
 
-	.asterisk {
-		position: relative;
-		top: .32rem;
-	}
+    .asterisk {
+        position: relative;
+        top: .32rem;
+    }
 
-	@include media-max(360px) {
-		font-size: 0.3 * $font-size-h1;
-	}
+    @include media-max(360px) {
+        font-size: 0.3 * $font-size-h1;
+    }
 }

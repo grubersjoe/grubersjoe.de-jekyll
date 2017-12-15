@@ -1,35 +1,35 @@
 // Set a reasonable base value for REM unit
 html {
-	font-size: 12px;
+    font-size: 12px;
 
-	@include media-sm {
-		font-size: 16px;
-	}
+    @include media-sm {
+        font-size: 16px;
+    }
 }
 
 body {
-	padding-top: $page-padding-top;
-	font-variant-ligatures: common-ligatures;
+    padding-top: $page-padding-top;
+    font-variant-ligatures: common-ligatures;
 
-	@include media-sm {
-		padding-top: $page-padding-top - .5rem;
-		font-size: $font-size-base-lg;
-	}
+    @include media-sm {
+        padding-top: $page-padding-top - .5rem;
+        font-size: $font-size-base-lg;
+    }
 }
 
 hr {
-	margin: 2rem 0;
-	background: transparent;
-	border-bottom: 3px double $color-b-light;
+    margin: 2rem 0;
+    background: transparent;
+    border-bottom: 3px double $color-b-light;
 }
 
 main {
-	// FIXME: refactor this mess. is this really necessary?
-	> section:first-of-type,
-	> article:first-of-type {
-		> header + h3,
-		> header + h4 {
-			margin-top: .5rem;
-		}
-	}
+    // FIXME: refactor this mess. is this really necessary?
+    > section:first-of-type,
+    > article:first-of-type {
+        > header + h3,
+        > header + h4 {
+            margin-top: .5rem;
+        }
+    }
 }

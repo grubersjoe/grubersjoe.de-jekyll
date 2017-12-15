@@ -5,22 +5,22 @@
     font-size: 1.8rem;
     font-weight: 400;
 
-	*, #subtitle {
-		color: #fff;
-	}
+    *, #subtitle {
+        color: #fff;
+    }
 
-	#title {
-		margin-bottom: 3rem;
-	}
+    #title {
+        margin-bottom: 3rem;
+    }
 
     p, ul, ol {
         margin-bottom: 2.5rem;
     }
 
-	h2 {
-		margin-top: .5rem;
-		margin-bottom: 1.5rem;
-	}
+    h2 {
+        margin-top: .5rem;
+        margin-bottom: 1.5rem;
+    }
 
     a {
         &,
@@ -31,9 +31,9 @@
             border-width: .18rem;
         }
 
-	    &:hover {
-		    border-color: $color-b;
-	    }
+        &:hover {
+            border-color: $color-b;
+        }
     }
 
     h1 {
@@ -41,7 +41,7 @@
     }
 
     li {
-	    margin-bottom: 1rem;
+        margin-bottom: 1rem;
 
         &:before {
             color: $color-b-light;
@@ -52,9 +52,9 @@
         }
     }
 
-	.posts {
-		.date {
-			font-size: 90%;
-		}
-	}
+    .posts {
+        .date {
+            font-size: 90%;
+        }
+    }
 }

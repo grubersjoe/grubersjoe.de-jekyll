@@ -1,27 +1,27 @@
 a {
-	border-bottom: solid 1px transparent;
+    border-bottom: solid 1px transparent;
 
-	&:active,
-	&:focus,
-	&:hover {
-		color: $link-color;
-		text-decoration: none;
-		border-bottom: 1px solid;
-	}
+    &:active,
+    &:focus,
+    &:hover {
+        color: $link-color;
+        text-decoration: none;
+        border-bottom: 1px solid;
+    }
 
-	&.unstyled {
-		border: none;
-		color: inherit;
-	}
+    &.unstyled {
+        border: none;
+        color: inherit;
+    }
 
-	> i {
-		margin-right: 4px;
-	}
+    > i {
+        margin-right: 4px;
+    }
 }
 
 a,
 .btn,
 .tag {
-	transition: color .3s ease-in-out, background .3s ease-in-out, border .3s ease-in-out;
-	will-change: color, background, border;
+    transition: color .3s ease-in-out, background .3s ease-in-out, border .3s ease-in-out;
+    will-change: color, background, border;
 }

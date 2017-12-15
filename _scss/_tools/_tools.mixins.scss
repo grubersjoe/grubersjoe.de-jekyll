@@ -1,50 +1,50 @@
 @mixin media($width) {
-	@media (min-width: $width) {
-		@content;
-	}
+    @media (min-width: $width) {
+        @content;
+    }
 }
 
 @mixin media-max($width) {
-	@media (max-width: $width) {
-		@content;
-	}
+    @media (max-width: $width) {
+        @content;
+    }
 }
 
 @mixin media-sm {
-	@media (min-width: $screen-sm) {
-		@content;
-	}
+    @media (min-width: $screen-sm) {
+        @content;
+    }
 }
 
 @mixin media-md {
-	@media (min-width: $screen-md) {
-		@content;
-	}
+    @media (min-width: $screen-md) {
+        @content;
+    }
 }
 
 @mixin btn-unstyled {
-	margin: 0;
-	background: none;
-	border: none;
+    margin: 0;
+    background: none;
+    border: none;
 
-	&,
-	&:active,
-	&:focus,
-	&:hover {
-		color: inherit;
-		box-shadow: none;
-		outline: none;
-	}
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+        color: inherit;
+        box-shadow: none;
+        outline: none;
+    }
 }
 
 @mixin include-icon($icon) {
-	@include fa-icon;
+    @include fa-icon;
 
-	&:before {
-		content: $icon;
-	}
+    &:before {
+        content: $icon;
+    }
 }
 
 @mixin circle() {
-	border-radius: 50%;
+    border-radius: 50%;
 }

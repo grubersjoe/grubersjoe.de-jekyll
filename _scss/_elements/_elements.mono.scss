@@ -1,21 +1,21 @@
 pre,
 code {
-	border: none;
+    border: none;
     font-size: $code-font-size;
 }
 
 pre {
-	margin: 2rem 0;
-	padding: $pre-padding;
+    margin: 2rem 0;
+    padding: $pre-padding;
 }
 
 main code {
-	margin: 0 .1rem;
-	padding: .2rem .5rem;
+    margin: 0 .1rem;
+    padding: .2rem .5rem;
     border-radius: 2px;
 
     a, a:focus, a:hover {
-		border-bottom: none;
-	}
+        border-bottom: none;
+    }
 }
 
