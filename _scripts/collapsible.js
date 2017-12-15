@@ -11,8 +11,6 @@ function collapse(elem, callback) {
     elem.style.transition = transition;
 
     requestAnimationFrame(() => {
-      elem.style.height = `${0}px`;
-
       elem.addEventListener('transitionend', function listener() {
         elem.removeEventListener('transitionend', listener);
         elem.setAttribute('data-collapsed', 'true');
@@ -21,6 +19,10 @@ function collapse(elem, callback) {
         if (typeof callback === 'function') {
           callback();
         }
+      });
+
+      requestAnimationFrame(() => {
+        elem.style.height = `${0}px`;
       });
     });
   });
@@ -33,8 +35,6 @@ function expand(elem, callback) {
   elem.style.height = `${0}px`;
 
   requestAnimationFrame(() => {
-    elem.style.height = `${sectionHeight}px`;
-
     elem.addEventListener('transitionend', function listener() {
       elem.removeEventListener('transitionend', listener);
       elem.setAttribute('data-collapsed', 'false');
@@ -43,6 +43,10 @@ function expand(elem, callback) {
       if (typeof callback === 'function') {
         callback();
       }
+    });
+
+    requestAnimationFrame(() => {
+      elem.style.height = `${sectionHeight}px`;
     });
   });
 }
