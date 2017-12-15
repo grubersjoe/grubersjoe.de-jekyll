@@ -132,7 +132,10 @@ gulp.task('build', () => {
 });
 
 gulp.task('clean', () => {
-  del([BUILD_DIR, 'assets/fonts/*']);
+  del([
+    `${BUILD_DIR}/*`,
+    `!${BUILD_DIR}/files`,
+  ]);
   return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], { stdio: 'inherit' });
 });
 

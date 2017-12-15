@@ -72,17 +72,23 @@ layout: skeleton
                     <a title="Tätigkeitsschwerpunkte anzeigen">
                         <span class="icon fa fa-arrow-down"></span>Tätigkeitsschwerpunkte
                     </a>
-                    <ul class="collapsible">
-                        <li>JavaScript (AngularJS, Plain JS, jQuery)</li>
-                        <li>Frontend (HTML, CSS / Less / SCSS, Bootstrap)</li>
-                        <li>PHP (Silex, Slim, Twig)</li>
-                        <li>RESTful Services</li>
-                        <li><s>TYPO3 (CMS-Integration, Extbase-Extensions, Fluid)</s> <sup class="footnote">1</sup></li>
-                        <li>WordPress (Plugins / Themes)</li>
-                        <li>Build-Automatisierung (Grunt, Gulp, NPM, Bower etc.)</li>
-                        <li>Shell- und Python-Scripts</li>
-                        <li>Administration von Webservern (Ubuntu)</li>
-                    </ul>
+                    <div class="collapsible">
+                        <ul>
+                            <li>JavaScript (AngularJS, Plain JS, jQuery)</li>
+                            <li>Frontend (HTML, CSS / Less / SCSS, Bootstrap)</li>
+                            <li>PHP (Silex, Slim, Twig)</li>
+                            <li>RESTful Services</li>
+                            <li><s>TYPO3 (CMS-Integration, Extbase-Extensions, Fluid)</s> <sup class="footnote">1</sup></li>
+                            <li>WordPress (Plugins / Themes)</li>
+                            <li>Build-Automatisierung (Grunt, Gulp, NPM, Bower etc.)</li>
+                            <li>Shell- und Python-Scripts</li>
+                            <li>Administration von Webservern (Ubuntu)</li>
+                        </ul>
+
+                        <ul class="footnotes">
+                            <li><sup class="footnote">1</sup> ich verzichte zukünftig dankend.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </article>
@@ -106,14 +112,15 @@ layout: skeleton
                         Online-Wirtschaftssimulation</em>“ (Lua, C++, Java)
                     </li>
                     <!-- TODO: link work -->
-                    <li>Bachelorarbeit: „<em>Darstellung interaktiver 3D-Grafik im Webbrowser</em>“ (Note 1,0)</li>
+                    <li>Bachelorarbeit: <a href="{{ "/assets/files/Darstellung_interaktiver_3D-Grafik_im_Webbrowser.pdf" | relative_url }}" target="_blank"><em>„Darstellung interaktiver 3D-Grafik im Webbrowser“</em></a> (Note 1,0)</li>
                 </ul>
             </div>
         </article>
 
         <article>
-            <header>Praktikant Webentwicklung bei <a href="http://www.ercasdieagentur.de/willkommen.htm"
-                                                     target="_blank">ercas GmbH &amp; Co KG</a></header>
+            <header>
+                Praktikant Webentwicklung bei <a href="http://www.ercasdieagentur.de/willkommen.htm" target="_blank">ercas GmbH &amp; Co KG</a>
+            </header>
             <div class="time-span">
                 <time datetime="2014-08">09/2013</time>
                 –
@@ -125,12 +132,18 @@ layout: skeleton
                     <a title="Tätigkeitsschwerpunkte anzeigen">
                         <span class="icon fa fa-arrow-down"></span>Tätigkeitsschwerpunkte
                     </a>
-                    <ul class="collapsible">
-                        <li>Frontend (HTML, CSS / Less)</li>
-                        <li>JavaScript (jQuery)</li>
-                        <li>PHP</li>
-                        <li><s>TYPO3 (CMS-Integration, Extbase-Extensions, Fluid)</s> <sup class="footnote">1</sup></li>
-                    </ul>
+                    <div class="collapsible">
+                        <ul>
+                            <li>Frontend (HTML, CSS / Less)</li>
+                            <li>JavaScript (jQuery)</li>
+                            <li>PHP</li>
+                            <li><s>TYPO3 (CMS-Integration, Extbase-Extensions, Fluid)</s> <sup class="footnote">1</sup></li>
+                        </ul>
+
+                        <ul class="footnotes">
+                            <li><sup class="footnote">1</sup> ich verzichte zukünftig dankend.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </article>
@@ -162,10 +175,5 @@ layout: skeleton
                 </div>
             </div>
         </article>
-    </div>
-
-    <!-- TODO: move footnotes to actual sections -->
-    <div class="footnotes">
-        <small><sup class="footnote">1</sup> ich verzichte zukünftig dankend.</small>
     </div>
 </section>
