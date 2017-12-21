@@ -31,9 +31,10 @@
     &:active,
     &:focus,
     &:hover {
-        color: inherit;
+        background: none;
         box-shadow: none;
         outline: none;
+        color: inherit;
     }
 }
 
