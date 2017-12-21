@@ -136,7 +136,8 @@ gulp.task('clean', () => {
     `${BUILD_DIR}/*`,
     `!${BUILD_DIR}/files`,
   ]);
-  return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], { stdio: 'inherit' });
+
+  cp.spawn('bundle', ['exec', 'jekyll', 'clean'], { stdio: 'inherit' });
 });
 
 gulp.task('default', () => new Promise((resolve) => {
