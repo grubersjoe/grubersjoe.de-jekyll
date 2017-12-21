@@ -7,12 +7,12 @@ Da Fenster das Dock in Mac OS nicht überlappen, bietet es sich insbesondere auf
 
 Glücklicherweise kann diese Zeitdauer aber durch einen `defaults write` Befehl im Terminal mit einem beliebigen Wert konfiguriert werden:
 
-```sh
+```none
 defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock
 ```
 
 Möchte man zurück zum Standardverhalten, so kann der entsprechende Konfigurationsschlüssel einfach gelöscht werden:
 
-```sh
+```none
 defaults delete com.apple.dock autohide-time-modifier; killall Dock
 ```
