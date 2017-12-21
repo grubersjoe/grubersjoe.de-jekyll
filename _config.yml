@@ -42,6 +42,7 @@ exclude:
     - package-lock.json
     - yarn.lock
     - npm-debug.log
+    - webpack.config.js
     - src
 
 # Plugins
