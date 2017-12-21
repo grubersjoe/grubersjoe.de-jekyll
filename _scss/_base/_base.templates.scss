@@ -1,13 +1,7 @@
 .template-frontpage {
-    padding: 4rem 0;
-    background: $color-p;
-    color: #fff;
-    font-size: 1.8rem;
+    padding: 3rem 0;
+    font-size: 1.7rem;
     font-weight: 400;
-
-    *, #subtitle {
-        color: #fff;
-    }
 
     #title {
         margin-bottom: 3rem;
@@ -27,7 +21,6 @@
         &:active,
         &:focus,
         &:hover {
-            color: #fff;
             border-width: .18rem;
         }
 
@@ -42,10 +35,6 @@
 
     li {
         margin-bottom: 1rem;
-
-        &:before {
-            color: $color-b-light;
-        }
 
         a {
             padding-bottom: 4px;

@@ -5,7 +5,7 @@ permalink: /
 exclude: true
 ---
 
-Hey! Ich bin Jo. Seit vielen Jahre gestalte und realisiere ich Websites und Webapps und bin nach wie vor begeistert.
+Hey! Ich bin Jo. Seit etwa zehn Jahren gestalte und programmiere ich Websites und Webanwendungen und bin nach wie vor begeistert.
 
 * [Über mich]({% link _pages/about.md %})
 * [Projekte]({% link _pages/projects.md %})
