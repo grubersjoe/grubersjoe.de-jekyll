@@ -1,4 +1,4 @@
-import { calcHeight } from './util';
+import { calcElemHeight, findSibling } from './util';
 
 function collapse(elem, callback) {
   const sectionHeight = elem.scrollHeight;
@@ -29,7 +29,7 @@ function collapse(elem, callback) {
 }
 
 function expand(elem, callback) {
-  const sectionHeight = calcHeight(elem);
+  const sectionHeight = calcElemHeight(elem);
 
   elem.style.display = 'block';
   elem.style.height = `${0}px`;
@@ -55,8 +55,8 @@ export default function initCollapsibles() {
   const toggleBtns = document.querySelectorAll('.collapsible-toggle');
 
   toggleBtns.forEach((btn) => {
-    // const target = btn.getAttribute('data-target');
-    const collapsible = document.querySelector(btn.getAttribute('data-target')) || btn.parentNode.querySelector('.collapsible');
+    const target = document.querySelector(btn.getAttribute('data-target'));
+    const collapsible = target || findSibling(btn, '.collapsible');
 
     if (!collapsible) {
       return;

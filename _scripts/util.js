@@ -1,4 +1,18 @@
-export function calcHeight(elem) {
+export function findSibling(elem, selector) {
+  let next = elem.nextElementSibling;
+
+  while (next) {
+    if (next.matches(selector)) {
+      return next;
+    }
+
+    next = next.nextElementSibling;
+  }
+
+  return null;
+}
+
+export function calcElemHeight(elem) {
   const style = getComputedStyle(elem);
 
   if (style.display !== 'none') {
