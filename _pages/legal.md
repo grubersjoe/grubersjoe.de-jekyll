@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Impressum
-permalink: /impressum/
+permalink: /legal/
 exclude: true
+languages: 
+  - de
 ---
 
 ### Angaben gemäß § 5 TMG

@@ -1,5 +1,5 @@
 ---
-layout: skeleton
+layout: default
 ---
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -7,7 +7,7 @@ layout: skeleton
 	<header class="post-header">
 		<h2 class="post-title" itemprop="name headline">{{ page.title | escape }}</h2>
 		<p class="post-meta">
-			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d. %B %Y" }}</time>
+			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | tdate: 'page.date_format' }}</time>
 			{% if page.category %}
 				in <a href="{% link _pages/blog.md %}{{ page.category | downcase }}">{{ page.category | capitalize }}</a>
 			{% endif %}

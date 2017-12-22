@@ -3,5 +3,6 @@ layout: blog
 title: Blog
 permalink: /blog/
 order: 2
-language: de
+languages: 
+  - de
 ---

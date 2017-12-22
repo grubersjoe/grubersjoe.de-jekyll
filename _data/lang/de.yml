@@ -1,6 +1,9 @@
 ---
 post:
-  date_format: '%d.%m.%Y'
+  date_format: '%-d. %B %Y'
+  date_format_month: '%b %Y'
+page:
+  date_format: '%-d. %B %Y'
 date:
   abbr_daynames: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
   daynames: ['Sonntag', 'Montag', 'Dienstag', 'Mitwoch', 'Donnerstag', 'Freitag', 'Samstag']

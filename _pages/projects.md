@@ -3,7 +3,8 @@ layout: projects
 title: Projekte
 permalink: /projects/
 order: 1
-language: de
+languages: 
+  - de
 ---
 
 Ich habe einige, kleinere OpenSource Projekte:

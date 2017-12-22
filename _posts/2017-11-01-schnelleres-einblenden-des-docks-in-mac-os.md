@@ -1,6 +1,8 @@
 ---
 title: Schnelleres Einblenden des Docks in Mac OS
 category: tipps
+languages:
+  - de
 ---
 
 Da Fenster das Dock in Mac OS nicht überlappen, bietet es sich insbesondere auf MacBooks an das Dock auszublenden, um Platz in der Vertikalen einzusparen. Leider gibt es hierbei jedoch immer einen gewisse Verzögerung beim Ein- aus Ausblenden. Diese finde ich persönlich sehr störend im Workflow.
