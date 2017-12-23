@@ -1,6 +1,6 @@
 ---
 title: "Farbschemata für Dummies und andere die es werden moechten"
-published: true
+published: false
 languages:
   - de
 ---
