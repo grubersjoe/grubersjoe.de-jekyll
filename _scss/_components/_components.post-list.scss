@@ -1,6 +1,7 @@
-$box-width: 6.5rem;
+$box-width: 6.25rem;
 $box-margin: 1.5rem;
-$box-padding: .9rem;
+$box-padding: .8rem;
+$box-padding-vertical: $box-padding + .1rem;
 $box-border-radius: 3px;
 $gradient-width: 2rem;
 
@@ -51,13 +52,12 @@ $gradient-width: 2rem;
             justify-content: flex-start;
             width: $box-width;
             margin: .3rem $box-margin 0 0;
-            padding: $box-padding 0;
-            background-color: $color-p; // TODO: change to $color-s later
+            padding: $box-padding-vertical 0;
+            background-color: $color-p;
             border-radius: $box-border-radius;
             color: hsl($hue, 32%, 98%);
             text-align: center;
-            font-weight: 700;
-            font-size: $font-size-small-rel;
+            font-size: 75%;
 
             hr {
                 margin: $box-padding 0;
@@ -83,43 +83,43 @@ $gradient-width: 2rem;
                 content: $fa-var-book;
             }
 
-            font-size: .85 * $font-size-base;
             font-variant-numeric: lining-nums;
         }
 
         .post-meta__day {
-            position: relative;
-            top: -.1em;
-            margin-bottom: .25rem;
+            margin-bottom: $box-padding / 2;
+            font-weight: 700;
             font-variant-numeric: lining-nums;
-            font-size: 220%;
+            font-size: 2.5rem;
         }
 
         .post-meta__date {
             font-variant-numeric: lining-nums;
-            font-size: 80%;
         }
 
         .post-meta__category {
-            @include text-overflow;
-            margin: $box-padding 0 (-$box-padding);
+            margin: ($box-padding + .2rem) 0 (-$box-padding-vertical);
             padding: 0;
             background-color: darken($color-p, 12%);
-            border-top: 1px solid darken($color-p, 14%);
+            border-top: 1px solid darken($color-p, 16%);
             border-bottom-left-radius: $box-border-radius;
             border-bottom-right-radius: $box-border-radius;
             transition: background .3s ease-in-out;
-            font-weight: 600;
-            font-size: $font-size-small-rel;
+            text-transform: uppercase;
             hyphens: none;
 
             a {
-                padding: ($box-padding / 3 * 2) $box-padding;
+                @include text-overflow;
+                padding: $box-padding / 5 * 3;
                 display: block;
             }
 
             &:hover {
                 background-color: darken($color-p, 16%);
+            }
+
+            &:active {
+                background-color: darken($color-p, 18%);
             }
         }
     }
