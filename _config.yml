@@ -3,7 +3,7 @@ title: Jonathan Gruber
 author: Jonathan Gruber
 email: hi@grubersjoe.de
 description: Website von Jonathan Gruber - Webentwickler in Leipzig
-baseurl: ""
+baseurl: ''
 
 # Social
 social:
@@ -16,7 +16,7 @@ social:
 defaults:
   -
     values:
-      layout: "post"
+      layout: 'post'
 
 # Markdown config
 markdown: kramdown
