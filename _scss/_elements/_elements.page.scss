@@ -1,5 +1,5 @@
 // Set a reasonable base value for REM unit
-html {
+:root {
     font-size: 12px;
 
     @include media-sm {
