@@ -1,8 +1,10 @@
 #title {
+    position: relative;
     margin: 0 0 3rem;
 
     h1 {
-        // text-transform: lowercase;
+        @include text-outline($body-bg);
+        text-transform: lowercase;
         letter-spacing: -.015em;
     }
 
@@ -11,7 +13,15 @@
     }
 }
 
+#particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 #subtitle {
+    @include text-outline($body-bg);
     margin: 0;
     font-size: 0.4 * $font-size-h1;
     font-weight: 600;

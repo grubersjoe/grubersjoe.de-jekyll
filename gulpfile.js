@@ -108,7 +108,7 @@ gulp.task('server', ['jekyll-build'], (done) => {
 
 gulp.task('serve', () => {
   gulp.watch('_scss/**/*.scss', ['styles']);
-  gulp.watch('_scripts/**/*.js', ['scripts']);
+  gulp.watch('_scripts/**/*', ['scripts']);
 
   runSequence('build', 'server', () => {
     gulp.watch([
@@ -135,6 +135,7 @@ gulp.task('clean', () => {
   del([
     `${BUILD_DIR}/*`,
     `!${BUILD_DIR}/files`,
+    `!${BUILD_DIR}/images`,
   ]);
 
   cp.spawn('bundle', ['exec', 'jekyll', 'clean'], { stdio: 'inherit' });

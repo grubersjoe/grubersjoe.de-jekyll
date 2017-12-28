@@ -49,3 +49,7 @@
 @mixin circle() {
     border-radius: 50%;
 }
+
+@mixin text-outline($color) {
+    text-shadow: -1px 0 0 $color, 1px 0 0 $color, 0 -1px 0 $color,  0 1px 0 $color;
+}

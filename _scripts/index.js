@@ -1,5 +1,6 @@
 import { scrollToTop } from './util';
 import setCollapsible from './collapsible';
+import './title';
 
 const domElems = {
   collapsibleWrapper: Array.from(document.querySelectorAll('.collapsible-wrapper')),
