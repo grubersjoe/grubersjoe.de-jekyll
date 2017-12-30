@@ -19,10 +19,12 @@ h1 {
     @include clearfix;
     display: inline-block;
     margin: 0 0 1rem 0;
-    padding-bottom: 12px;
+    padding-bottom: .6rem;
     border-bottom: .44rem solid $color-b;
+    text-transform: lowercase;
     font-weight: 700;
     line-height: 1.2;
+    letter-spacing: -.015em;
 
     @include media-sm {
         font-size: 5rem;

@@ -1,35 +1,33 @@
-/**
- * Following loosely the ideas of ITCSS - Inverted Triangle CSS
- * (https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture)
- */
 // Base /Settings
 @import "_base/base.variables";
 @import "_base/base.templates";
-// Bootstrap: Core variables and mixins
+
+// Bootstrap
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-// Bootstrap: Reset and dependencies
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
-// Bootstrap: Core CSS
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
-// Bootstrap: Components
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
 // Font Awesome
 @import "../node_modules/font-awesome/scss/font-awesome";
+
 // Tools
 @import "_tools/tools.mixins";
 @import "_tools/tools.animations";
+
 // Objects
 @import "_objects/objects.collapsible";
 @import "_objects/objects.asterisk";
 @import "_objects/objects.text-icon";
+
 // Elements
 @import "_elements/elements.page";
 @import "_elements/elements.headings";
@@ -37,6 +35,7 @@
 @import "_elements/elements.anchors";
 @import "_elements/elements.lists";
 @import "_elements/elements.mono";
+
 // Components
 @import "_components/components.nav";
 @import "_components/components.title";

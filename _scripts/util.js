@@ -12,7 +12,7 @@ export function findSibling(elem, selector) {
   return null;
 }
 
-export function calcElemHeight(elem) {
+export function calcElemDimensions(elem) {
   const style = getComputedStyle(elem);
 
   if (style.display !== 'none') {
@@ -24,13 +24,34 @@ export function calcElemHeight(elem) {
   elem.style.display = 'block';
   elem.style.visibility = 'hidden';
 
+  const width = elem.offsetWidth;
   const height = elem.scrollHeight;
 
   // restore original style
   elem.style.display = display;
   elem.style.visibility = visibility;
 
-  return height;
+  return { width, height };
+}
+
+export function debounce(func, wait, immediate) {
+  let timeout;
+  return () => {
+    const later = () => {
+      timeout = null;
+      if (!immediate) {
+        func.call(this, wait, immediate);
+      }
+    };
+
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait || 200);
+
+    if (callNow) {
+      func.call(this, wait, immediate);
+    }
+  };
 }
 
 export function scrollToTop(duration = 2000) {

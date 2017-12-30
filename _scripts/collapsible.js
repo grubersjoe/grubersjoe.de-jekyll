@@ -1,4 +1,4 @@
-import { calcElemHeight, findSibling } from './util';
+import { calcElemDimensions, findSibling } from './util';
 
 function collapse(elem, callback) {
   const sectionHeight = elem.scrollHeight;
@@ -29,7 +29,7 @@ function collapse(elem, callback) {
 }
 
 function expand(elem, callback) {
-  const sectionHeight = calcElemHeight(elem);
+  const { height } = calcElemDimensions(elem);
 
   elem.style.display = 'block';
   elem.style.height = `${0}px`;
@@ -46,7 +46,7 @@ function expand(elem, callback) {
     });
 
     requestAnimationFrame(() => {
-      elem.style.height = `${sectionHeight}px`;
+      elem.style.height = `${height}px`;
     });
   });
 }

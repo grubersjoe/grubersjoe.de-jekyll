@@ -7,8 +7,27 @@
         margin-bottom: 3rem;
     }
 
-    p, ul, ol {
+    #typed-border {
+        width: 0;
+        height: 0.44rem;
+        margin-top: .6rem;
+        background: #b2ced7;
+        transition: width 2s linear;
+    }
+
+    .typed-cursor {
+        transition: opacity .7s ease;
+    }
+
+    p,
+    ul,
+    ol {
         margin-bottom: 2.5rem;
+    }
+
+    h1 {
+        padding: 0;
+        border: none;
     }
 
     h2 {
