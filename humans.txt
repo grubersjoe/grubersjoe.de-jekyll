@@ -11,8 +11,9 @@ with varying technologies and design approaches, I settled in the end with the
 following:
 
 * Jekyll as blogging software
-* A small subset of Bootstrap as frontend framework
+* A small subset of Bootstrap 3 as frontend framework
 * SCSS as CSS preprocessor
 * Adobe Typekit for web fonts (Calluna)
-* A Gulp / NPM / Browsersync combination for development, asset management and 
-  build automation
+* A Gulp / NPM / Webpack for asset management and build automation
+* The typing animation in the title uses TypedJS:
+  https://github.com/mattboldt/typed.js/
