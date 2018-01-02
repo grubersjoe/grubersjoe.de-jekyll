@@ -14,6 +14,6 @@ following:
 * A small subset of Bootstrap 3 as frontend framework
 * SCSS as CSS preprocessor
 * Adobe Typekit for web fonts (Calluna)
-* A Gulp / NPM / Webpack for asset management and build automation
-* The typing animation in the title uses TypedJS:
+* A Gulp / NPM / Webpack combination for asset management and build automation
+* The typing animation on the frontpage uses TypedJS:
   https://github.com/mattboldt/typed.js/
