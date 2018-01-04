@@ -7,15 +7,22 @@ code {
 pre {
     margin: 2rem 0;
     padding: $pre-padding;
+    line-height: 1.4;
 }
 
-main code {
-    margin: 0 .1rem;
-    padding: .2rem .5rem;
-    border-radius: 2px;
+main {
+    code {
+        margin: 0 .1rem;
+        padding: .2rem .5rem;
+        border-radius: 2px;
 
-    a, a:focus, a:hover {
-        border-bottom: none;
+        a, a:focus, a:hover {
+            border-bottom: none;
+        }
+    }
+
+    pre code {
+        padding: 0;
     }
 }
 

@@ -5,16 +5,26 @@ languages:
   - de
 ---
 
-Da Fenster das Dock in Mac OS nicht überlappen, bietet es sich insbesondere auf MacBooks an das Dock auszublenden, um Platz in der Vertikalen einzusparen. Leider gibt es hierbei jedoch immer einen gewisse Verzögerung beim Ein- aus Ausblenden. Diese finde ich persönlich sehr störend im Workflow.
+Da Fenster das Dock in Mac OS nicht überlappen, bietet es sich insbesondere auf kleineren Geräten wie einem MacBook an das Dock auszublenden, um vertikale Bildschirmfläche einzusparen. Standardmäßig gibt es hierbei jedoch immer eine gewisse Verzögerung bis das Einblenden ausgelöst wird, welche ich persönlich sehr störend im Workflow finde. Insbesondere bei externen Mäusen entsteht so oft eine ungewollte Wartepause, bevor es weitergeht.
 
-Glücklicherweise kann diese Zeitdauer aber durch einen `defaults write` Befehl im Terminal mit einem beliebigen Wert konfiguriert werden:
+Glücklicherweise kann diese Zeitdauer aber durch eine Anpassung der `defaults` wie folgt leicht abgeändert werden:
 
 ```none
-defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock
+defaults write com.apple.dock autohide-delay -float 0
+killall Dock
 ```
 
-Möchte man zurück zum Standardverhalten, so kann der entsprechende Konfigurationsschlüssel einfach gelöscht werden:
+Das Dock muss nach der Änderung neugestartet werden (`killall Dock`). Möchte man zurück zum Standardverhalten, so kann der entsprechende Konfigurationsschlüssel einfach wieder gelöscht werden:
 
 ```none
-defaults delete com.apple.dock autohide-time-modifier; killall Dock
+defaults delete com.apple.dock autohide-delay
+killall Dock
+```
+
+Auch die Zeitdauer des Ein- und Ausblendens des Docks kann mit einem ähnlichen Befehl gesteuert werden. Möchte man beispielsweise die Animationsdauer auf eine halbe Sekunde setzen, so ergeben sich kombiniert folgende Befehle:
+
+```none
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+killall Dock
 ```
