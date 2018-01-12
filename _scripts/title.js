@@ -27,6 +27,10 @@ function hideCursor() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (!typedElem) {
+    return;
+  }
+
   // eslint-disable-next-line no-unused-vars
   const typed = new Typed(typedElem, {
     strings: ['Jonathan Gruber'],
