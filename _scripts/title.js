@@ -2,8 +2,8 @@ import Typed from 'typed.js';
 import { debounce, findSibling } from './util';
 
 const TITLE_WIDTH = {
-  sm: 317,
-  lg: 529,
+  sm: 327,
+  lg: 546,
 };
 const SM_BREAKPOINT = 768;
 
@@ -18,7 +18,7 @@ function hideCursor() {
 
   cursor.addEventListener('animationend', () => {
     requestAnimationFrame(() => {
-      // cursor.addEventListener('transitionend', cursor.remove);
+      cursor.addEventListener('transitionend', cursor.remove);
       requestAnimationFrame(() => {
         cursor.style.opacity = '0';
       });
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startDelay: 700,
     typeSpeed: 100,
     cursorChar: '_',
-    fadeOut: true, // required for blinking cursor: see !332
+    fadeOut: true, // required for blinking cursor: see https://github.com/mattboldt/typed.js/issues/332
     preStringTyped: () => {
       const width = initialScreenWidth < SM_BREAKPOINT ? TITLE_WIDTH.sm : TITLE_WIDTH.lg;
       border.style.width = `${width}px`;
