@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync').create();
+const commandExistsSync = require('command-exists').sync;
 const cp = require('child_process');
 const del = require('del');
 const runSequence = require('run-sequence');
@@ -78,19 +79,27 @@ gulp.task('size', () => gulp
   .pipe($.size({ title: 'build', gzip: true })));
 
 gulp.task('jekyll-build', (done) => {
-  browserSync.notify('Building Jekyll');
-  return cp
-    .spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
-    .on('close', done);
+  if (commandExistsSync('jekyll')) {
+    browserSync.notify('Building Jekyll');
+    return cp
+      .spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
+      .on('close', done);
+  } else {
+    console.error('Please install `Jekyll` first');
+  }
 });
 
 gulp.task('jekyll-build-prod', (done) => {
-  browserSync.notify('Building Jekyll (Production)');
-  const env = Object.create(process.env);
-  env.JEKYLL_ENV = 'production';
-  return cp
-    .spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit', env })
-    .on('close', done);
+  if (commandExistsSync('jekyll')) {
+    browserSync.notify('Building Jekyll (Production)');
+    const env = Object.create(process.env);
+    env.JEKYLL_ENV = 'production';
+    return cp
+      .spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit', env })
+      .on('close', done);
+  } else {
+    console.error('Please install `Jekyll` first');
+  }
 });
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
@@ -141,6 +150,10 @@ gulp.task('clean', () => {
 });
 
 gulp.task('default', () => new Promise((resolve) => {
+  if (!commandExistsSync('jekyll')) {
+    console.error('Please install `Jekyll` first');
+    return;
+  }
   DEV = false;
   runSequence('clean', ['lint', 'styles', 'scripts', 'fonts', 'images'], 'jekyll-build-prod', 'html', 'size', resolve);
 }));
