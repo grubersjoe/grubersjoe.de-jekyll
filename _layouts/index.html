@@ -4,26 +4,25 @@
 {% include head.html %}
 
 <body class="template-frontpage">
-    <div id="page" class="container">
-        {% include title.animated.html %}
+  <div id="page" class="container">
+    {% include title.animated.html %}
 
-        <main aria-label="Content">
-	        {{ content }}
+    <main aria-label="Content">
+      {{ content }}
 
-	        <h2>Aktuelle Posts</h2>
-	        <ul class="posts">
-		        {% for post in site.posts limit:2 %}
-		        <li>
-			        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-		        </li>
-		        {% endfor %}
-	        </ul>
+      <h2>Aktuelle Posts</h2>
+      <ul class="posts">
+        {% for post in site.posts limit:2 %}
+        <li>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
 
-	        <a href="{% link _pages/blog.md %}" class="btn btn--tertiary">Alle Posts</a>
-        </main>
+      <a href="{% link _pages/blog.md %}" class="btn btn--tertiary">Alle Posts</a>
+    </main>
 
-	    {% include scripts.html %}
-    </div>
+    {% include scripts.html %}
+  </div>
 </body>
-
 </html>

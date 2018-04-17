@@ -1,29 +1,29 @@
 <footer id="footer">
-	<div class="social">
-		{% if site.author %}
-			<a class="social-btn social-btn--mail" title="Mail" href="mailto:{{ site.email }}"></a>
-		{% endif %}
+  <div class="social">
+    {% if site.author %}
+      <a class="social-btn social-btn--mail" title="Mail" href="mailto:{{ site.email }}"></a> {%
+    endif %}
 
-        {% if site.social.github %}
-            <a class="social-btn social-btn--github" title="GitHub" href="{{ site.social.github  }}" target="_blank"></a>
-		{% endif %}
+    {% if site.social.github %}
+      <a class="social-btn social-btn--github" title="GitHub" href="{{ site.social.github  }}" target="_blank"></a>
+    {% endif %}
 
-        {% if site.social.git %}
-            <a class="social-btn social-btn--git" title="Private Git Repositories" href="{{ site.social.git }}" target="_blank"></a>
-        {% endif %}
+    {% if site.social.git %}
+      <a class="social-btn social-btn--git" title="Private Git Repositories" href="{{ site.social.git }}" target="_blank"></a>
+    {% endif %}
 
-        {% if site.social.xing %}
-            <a class="social-btn social-btn--xing" title="XING" href="{{ site.social.xing }}" target="_blank"></a>
-        {% endif %}
+    {% if site.social.xing %}
+      <a class="social-btn social-btn--xing" title="XING" href="{{ site.social.xing }}" target="_blank"></a>
+    {% endif %}
 
-        {% if site.social.instagram %}
-            <a class="social-btn social-btn--instagram" title="Instagram" href="{{ site.social.instagram }}" target="_blank"></a>
-        {% endif %}
+    {% if site.social.instagram %}
+      <a class="social-btn social-btn--instagram" title="Instagram" href="{{ site.social.instagram }}" target="_blank"></a>
+    {% endif %}
 
-        <button class="btn btn--unstyled top-btn" title="Beam me up, Scotty!">
-            <span class="fa fa-chevron-up" aria-hidden="true"></span>
-        </button>
-	</div>
+    <button class="btn btn--unstyled top-btn" title="Beam me up, Scotty!">
+      <span class="fa fa-chevron-up" aria-hidden="true"></span>
+    </button>
+  </div>
 
 	<div class="footer-note">
 		Made with <a href="/humans.txt" target="_blank" class="heart-btn fa fa-heart-o"></a><span class="asterisk hidden-xs"></span><span class="hidden-xs">powered by <a href='https://jekyllrb.com'>Jekyll</a></span><span class="asterisk"></span><a href="{% link _pages/legal.md %}">Impressum</a><span class="asterisk"></span><a rel="alternate" type="application/rss+xml" href="/feed.xml" title="Atom Feed" class="text-icon fa fa-rss"></a>
