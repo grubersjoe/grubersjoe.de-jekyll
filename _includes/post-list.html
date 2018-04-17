@@ -1,38 +1,38 @@
 <div class="post-list">
-	{% if site.posts == empty %}
-		<p>Leider gibt es noch keine Beiträge :(</p>
-	{% else %}
-		{% for post in site.posts %}
-			{% if post.language == page.language %}
-				<article class="post-list__post">
-					<div class="flexbox">
-						<aside class="post-meta">
-							<div class="post-meta__row">{{ post.content | reading_time }}</div>
-							<div class="post-meta__row"><hr></div>
-							<div class="post-meta__row post-meta__day">{{ post.date | date: '%d.' }}</div>
-							<div class="post-meta__row post-meta__date">{{ post.date | tdate: 'post.date_format_month' }}</div>
+  {% if site.posts == empty %}
+    <p>Leider gibt es noch keine Beiträge :(</p>
+  {% else %}
+    {% for post in site.posts %}
+      {% if post.language == page.language %}
+        <article class="post-list__post">
+          <div class="flexbox">
+            <aside class="post-meta">
+              <div class="post-meta__row">{{ post.content | reading_time }}</div>
+              <div class="post-meta__row"><hr></div>
+              <div class="post-meta__row post-meta__day">{{ post.date | date: '%d.' }}</div>
+              <div class="post-meta__row post-meta__date">{{ post.date | tdate: 'post.date_format_month' }}</div>
 
-							{% if post.category %}
-								<div class="post-meta__row post-meta__category">
-									<a class="unstyled" href="{% link _pages/blog.md %}{{ post.category | downcase }}">{{ post.category | capitalize }}</a>
-								</div>
-							{% endif %}
-						</aside>
+              {% if post.category %}
+                <div class="post-meta__row post-meta__category">
+                  <a class="unstyled" href="{% link _pages/blog.md %}{{ post.category | downcase }}">{{ post.category | capitalize }}</a>
+                </div>
+              {% endif %}
+            </aside>
 
-						<div>
-							<a class="post__link" href="{{ post.url | relative_url }}">
-								<h3>{{ post.title | escape }}</h3>
-							</a>
+            <div>
+              <a class="post__link" href="{{ post.url | relative_url }}">
+                <h3>{{ post.title | escape }}</h3>
+              </a>
 
-							{% if post.category %}
-								<p class="post__excerpt" href="{{ post.url | relative_url }}">{{ post.content | strip_html | truncatewords: 40 }}</p>
-							{% else %}
-								<p class="post__excerpt" href="{{ post.url | relative_url }}">{{ post.content | strip_html | truncatewords: 30 }}</p>
-							{% endif %}
-						</div>
-					</div>
-				</article>
-			{% endif %}
-		{% endfor %}
-	{% endif %}
+              {% if post.category %}
+                <p class="post__excerpt" href="{{ post.url | relative_url }}">{{ post.content | strip_html | truncatewords: 40 }}</p>
+              {% else %}
+                <p class="post__excerpt" href="{{ post.url | relative_url }}">{{ post.content | strip_html | truncatewords: 30 }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 </div>

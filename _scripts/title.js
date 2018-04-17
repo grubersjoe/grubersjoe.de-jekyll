@@ -7,28 +7,31 @@ const TITLE_WIDTH = {
 };
 const SM_BREAKPOINT = 768;
 
-const initialScreenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-const typedElem = document.getElementById('typed');
-const border = document.getElementById('typed-border');
-
-function hideCursor() {
-  const cursor = findSibling(typedElem, '.typed-cursor');
-  cursor.style.animationIterationCount = '3';
-  cursor.style.animationName = 'blink';
-
-  cursor.addEventListener('animationend', () => {
-    requestAnimationFrame(() => {
-      cursor.addEventListener('transitionend', cursor.remove);
-      requestAnimationFrame(() => {
-        cursor.style.opacity = '0';
-      });
-    });
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
+  const initialScreenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  const typedElem = document.getElementById('typed');
+  const border = document.getElementById('typed-border');
+
   if (!typedElem) {
     return;
+  }
+
+  // hide no JS fallback
+  document.getElementById('title-fallback').setAttribute('hidden', 'hidden');
+
+  function hideCursor() {
+    const cursor = findSibling(typedElem, '.typed-cursor');
+    cursor.style.animationIterationCount = '3';
+    cursor.style.animationName = 'blink';
+
+    cursor.addEventListener('animationend', () => {
+      requestAnimationFrame(() => {
+        cursor.addEventListener('transitionend', cursor.remove);
+        requestAnimationFrame(() => {
+          cursor.style.opacity = '0';
+        });
+      });
+    });
   }
 
   // eslint-disable-next-line no-unused-vars

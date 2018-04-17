@@ -7,11 +7,16 @@
         margin-bottom: 3rem;
     }
 
+    #title-fallback {
+        border-bottom: .44rem solid $color-b;
+        padding-bottom: .6rem;
+    }
+
     #typed-border {
         width: 0;
         height: 0.44rem;
         margin-top: .6rem;
-        background: #b2ced7;
+        background: $color-b;
         transition: width 2s linear;
     }
 
