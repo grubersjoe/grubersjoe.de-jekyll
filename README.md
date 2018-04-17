@@ -9,7 +9,7 @@ This is the source code of my personal Jekyll based website [grubersjoe.de](http
     ```shell
     [sudo] npm install -g gulp-cli
     ```
-1. Execute `yarn install` in the project root directory
+1. Execute `[npm|yarn] install` in the project root directory
 1. Now you can execute different gulp commands:
     1. `gulp` builds the whole page (result in `_site`)
     1. `gulp clean` cleans the build
