@@ -1,6 +1,9 @@
-# grubersjoe.de
+# grubersjoe.de (Jekyll)
 
-This is the source code of my personal Jekyll based website [grubersjoe.de](https://grubersjoe.de).
+> I've build a new version of my site based on GatsbyJS:<br>
+> https://github.com/grubersjoe/grubersjoe.de
+
+This is the source code of my personal Jekyll based website.
 
 ## Setup
 
